@@ -1,0 +1,1 @@
+export { DiscoverIcon } from './DiscoverIcon';

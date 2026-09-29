@@ -1,0 +1,1 @@
+export { GiftCardTermsAndConditionsDialog } from './GiftCardTermsAndConditionsDialog';

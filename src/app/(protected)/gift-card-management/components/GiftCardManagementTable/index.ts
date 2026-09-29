@@ -1,0 +1,1 @@
+export { GiftCardManagementTable } from './GiftCardManagementTable';

@@ -1,0 +1,1 @@
+export { CatalogListingsTabSection } from './CatalogListingsTabSection';

@@ -1,0 +1,1 @@
+export { getFormStepCircleContent } from './FormStepCircleContent';

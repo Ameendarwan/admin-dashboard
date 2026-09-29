@@ -1,0 +1,1 @@
+export { OfferDetailClient } from './OfferDetailClient';

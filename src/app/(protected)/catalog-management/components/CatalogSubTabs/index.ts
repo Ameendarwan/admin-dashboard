@@ -1,0 +1,1 @@
+export { CatalogSubTabs } from './CatalogSubTabs';

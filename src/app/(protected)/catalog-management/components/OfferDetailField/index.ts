@@ -1,0 +1,1 @@
+export { OfferDetailField } from './OfferDetailField';

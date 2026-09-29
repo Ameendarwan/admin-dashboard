@@ -1,0 +1,1 @@
+export { CategoryManagementEmptyIllustration } from './CategoryManagementEmptyIllustration';

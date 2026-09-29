@@ -1,0 +1,1 @@
+export { GiftCardDetailHeroImage } from './GiftCardDetailHeroImage';

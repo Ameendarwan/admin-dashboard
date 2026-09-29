@@ -1,0 +1,1 @@
+export { OrderDetailBadgesRow } from './OrderDetailBadgesRow';

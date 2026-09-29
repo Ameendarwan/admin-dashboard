@@ -1,0 +1,1 @@
+export { InfoFieldEmailValue } from './InfoFieldEmailValue';

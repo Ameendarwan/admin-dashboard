@@ -1,0 +1,1 @@
+export { TenantFloatWalletsTable } from './TenantFloatWalletsTable';

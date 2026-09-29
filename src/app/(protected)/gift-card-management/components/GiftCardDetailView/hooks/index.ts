@@ -1,0 +1,1 @@
+export { useGiftCardDetailView } from './useGiftCardDetailView';

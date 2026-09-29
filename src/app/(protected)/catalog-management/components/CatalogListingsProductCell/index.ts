@@ -1,0 +1,1 @@
+export { CatalogListingsProductCell } from './CatalogListingsProductCell';

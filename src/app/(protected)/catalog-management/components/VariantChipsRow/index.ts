@@ -1,0 +1,1 @@
+export { VariantChipsRow } from './VariantChipsRow';

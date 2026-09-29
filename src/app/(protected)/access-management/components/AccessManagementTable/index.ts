@@ -1,0 +1,1 @@
+export { AccessManagementTable } from './AccessManagementTable';

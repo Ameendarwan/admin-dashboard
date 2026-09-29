@@ -1,0 +1,1 @@
+export { WalletFreezeInfoCallout } from './WalletFreezeInfoCallout';

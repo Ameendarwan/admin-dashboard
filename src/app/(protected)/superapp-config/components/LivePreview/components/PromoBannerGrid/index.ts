@@ -1,0 +1,1 @@
+export { PromoBannerGrid } from './PromoBannerGrid';

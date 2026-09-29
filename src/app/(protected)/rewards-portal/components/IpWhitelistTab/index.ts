@@ -1,0 +1,1 @@
+export { IpWhitelistTab } from './IpWhitelistTab';

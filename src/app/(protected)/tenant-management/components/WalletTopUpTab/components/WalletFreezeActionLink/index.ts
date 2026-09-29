@@ -1,0 +1,1 @@
+export { WalletFreezeActionLink } from './WalletFreezeActionLink';

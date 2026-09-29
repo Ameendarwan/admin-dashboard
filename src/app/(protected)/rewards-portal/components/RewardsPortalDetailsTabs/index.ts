@@ -1,0 +1,1 @@
+export { RewardsPortalDetailsTabs } from './RewardsPortalDetailsTabs';

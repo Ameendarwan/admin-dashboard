@@ -1,0 +1,1 @@
+export { WalletBalanceSection } from './WalletBalanceSection';

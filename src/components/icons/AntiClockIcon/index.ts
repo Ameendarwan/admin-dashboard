@@ -1,0 +1,1 @@
+export { AntiClockIcon } from './AntiClockIcon';

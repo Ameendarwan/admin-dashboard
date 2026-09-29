@@ -1,0 +1,1 @@
+export { ListingDetailAttributes } from './ListingDetailAttributes';

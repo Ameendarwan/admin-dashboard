@@ -1,0 +1,30 @@
+export const SIDEBAR_ITEM_IDS = {
+  DASHBOARD: 'dashboard',
+  LISTINGS_OFFERS: 'listings-offers',
+  TENANT_MANAGEMENT: 'tenant-management',
+  SAAS_TENANTS: 'saas-tenants',
+  SELLERS: 'sellers',
+  ACCESS_MANAGEMENT: 'access-management',
+  SUPER_APP: 'superapp-config',
+  BANNERS_CONFIGURATION: 'banners-configuration',
+  CATALOG_MANAGEMENT: 'catalog-management',
+  CATEGORY_MANAGEMENT: 'category-management',
+  GIFT_CARD_MANAGEMENT: 'gift-card-management',
+  REWARDS_PORTAL: 'rewards-portal',
+  STOREFRONT: 'storefronts',
+} as const;
+
+export const SIDEBAR_ROUTES = {
+  DASHBOARD: '/dashboard',
+  CATALOG_LISTINGS: '/catalog-management/listings',
+  CATEGORY_MANAGEMENT: '/category-management',
+  GIFT_CARD_MANAGEMENT: '/gift-card-management',
+  TENANT_MANAGEMENT: '/tenant-management',
+  SAAS_TENANTS: '/tenant-management',
+  SELLERS: '/sellers',
+  ACCESS_MANAGEMENT: '/access-management',
+  SUPER_APP: '/superapp-config',
+  BANNERS_CONFIGURATION: '/superapp-config',
+  REWARDS_PORTAL: '/rewards-portal',
+  STOREFRONTS: '/storefronts',
+} as const;

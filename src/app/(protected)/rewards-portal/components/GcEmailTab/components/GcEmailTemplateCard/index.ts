@@ -1,0 +1,1 @@
+export { GcEmailTemplateCard } from './GcEmailTemplateCard';

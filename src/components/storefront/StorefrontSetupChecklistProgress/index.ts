@@ -1,0 +1,1 @@
+export { StorefrontSetupChecklistProgress } from './StorefrontSetupChecklistProgress';

@@ -1,0 +1,1 @@
+export { TopUpDetailsProofFile } from './TopUpDetailsProofFile';

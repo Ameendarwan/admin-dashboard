@@ -1,0 +1,108 @@
+---
+description: Feature folder structure — colocate components, hooks, and index barrels (access-management pattern)
+alwaysApply: true
+---
+
+# Feature folder structure
+
+Follow the `src/app/(protected)/access-management` layout for every feature/page.
+
+## Layout
+
+```
+feature-name/
+  page.tsx                 # thin: compose hooks + components only
+  components/
+    index.ts               # barrel: re-export all feature components
+    ComponentName/
+      ComponentName.tsx    # PascalCase folder === PascalCase file
+      index.ts             # export { ComponentName } from './ComponentName'
+  hooks/
+    index.ts               # barrel for hooks
+    useFeatureName.ts      # state, handlers, API wiring
+    useFeatureNameTable.tsx
+  utils/                   # optional pure helpers
+```
+
+## Rules
+
+1. **Break down large UI** into small components under that feature’s `components/` folder — not one giant `page.tsx`.
+2. **Extract logic** (state, effects, handlers, derived data, API mutations) into custom hooks under `hooks/`. Keep components mostly presentational.
+3. **Naming**: component folder and file share the same **PascalCase** name (`EditUserDialog/EditUserDialog.tsx`).
+4. **Index files**: every component folder has an `index.ts`; also maintain `components/index.ts` and `hooks/index.ts` barrels.
+5. **Import via barrels** when possible: `@/.../access-management/components`, not deep paths to the `.tsx` file.
+6. **Component props**: declare props with **`interface`**, not `type` (e.g. `interface EditUserDialogProps { ... }`). Use `type` only when an interface cannot express the shape (e.g. a union of prop variants). Annotate the component parameter as **`Readonly<...Props>`** (e.g. `}: Readonly<EditUserDialogProps>)`).
+7. **Shared vs feature-local**:
+   - **Feature-only** (used in one feature/page) → keep under that feature’s `components/`, `hooks/`, or `utils/`.
+   - **Reused in multiple places** → put in the global folders:
+     - Components → `src/components/` — **every** component is `ComponentName/ComponentName.tsx` + `index.ts` (PascalCase). Domain groups may nest (e.g. `Icons/FileIcon/`, `Storefront/StorefrontStatusMenu/`, `create-storefront/CreateStorefrontPageClient/`) but each leaf component still uses the same folder + file + index pattern. On Windows, rename folders with a two-step temp name so case-only renames are applied correctly.
+     - Hooks → `src/hooks/`
+     - Utils → `src/utils/`
+   - Do **not** duplicate shared code inside a feature folder. If something becomes reused, move it up to `src/`.
+   - Do **not** leave flat `ComponentName.tsx` files directly under `src/components/` (or under a domain subfolder).
+
+## Example (good)
+
+```
+access-management/
+  page.tsx
+  components/
+    index.ts
+    EditUserDialog/
+      EditUserDialog.tsx
+      index.ts
+    InviteUserDialog/
+      InviteUserDialog.tsx
+      index.ts
+  hooks/
+    index.ts
+    useAccessManagement.ts
+
+src/components/BaseDialog/     # shared across features
+src/hooks/useLocalization.ts   # shared across features
+src/utils/errorLogger.ts       # shared across features
+```
+
+```tsx
+// ❌ BAD — fat page with state + huge JSX
+export default function Page() {
+  const [open, setOpen] = useState(false);
+  // 200 lines of handlers + markup...
+}
+
+// ❌ BAD — shared util buried in one feature
+// access-management/utils/formatCurrency.ts  (also needed by sellers)
+
+// ❌ BAD — component props as type alias
+type EditUserDialogProps = { isOpen: boolean; onSave: () => void };
+
+// ✅ GOOD — page wires hook + components
+export default function Page() {
+  const { isEditDialogOpen, handleSaveEditUser, ... } = useAccessManagement();
+  return <EditUserDialog isOpen={isEditDialogOpen} onSave={handleSaveEditUser} />;
+}
+
+// ✅ GOOD — component props as interface + Readonly parameter
+interface EditUserDialogProps {
+  isOpen: boolean;
+  onSave: () => void;
+}
+
+export function EditUserDialog({
+  isOpen,
+  onSave,
+}: Readonly<EditUserDialogProps>) {
+  return null;
+}
+
+// ✅ GOOD — shared helper lives globally
+// src/utils/formatCurrency.ts
+```
+
+## Do not
+
+- Put a large feature component as a single file next to `page.tsx` without a folder + `index.ts`
+- Mix camelCase/kebab-case for component folders/files
+- Leave substantial business logic inside presentational components when a hook would own it
+- Keep globally reused components/hooks/utils inside a feature folder — promote them to `src/components`, `src/hooks`, or `src/utils`
+- Declare component props with `type` when an `interface` can express the shape

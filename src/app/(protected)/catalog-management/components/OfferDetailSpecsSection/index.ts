@@ -1,0 +1,1 @@
+export { OfferDetailSpecsSection } from './OfferDetailSpecsSection';

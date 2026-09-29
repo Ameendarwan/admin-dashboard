@@ -1,0 +1,1 @@
+export { WalletFreezeConfirmLayout } from './WalletFreezeConfirmLayout';

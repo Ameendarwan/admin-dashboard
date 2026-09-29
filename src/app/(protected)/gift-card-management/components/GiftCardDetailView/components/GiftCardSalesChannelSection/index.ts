@@ -1,0 +1,1 @@
+export { GiftCardSalesChannelSection } from './GiftCardSalesChannelSection';

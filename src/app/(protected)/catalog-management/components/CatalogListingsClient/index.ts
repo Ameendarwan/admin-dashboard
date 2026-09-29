@@ -1,0 +1,1 @@
+export { CatalogListingsClient } from './CatalogListingsClient';

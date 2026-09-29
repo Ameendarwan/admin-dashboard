@@ -1,0 +1,1 @@
+export { ActivationRequestDetailView } from './ActivationRequestDetailView';

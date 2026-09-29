@@ -1,0 +1,1 @@
+export { VariantImageSlot } from './VariantImageSlot';

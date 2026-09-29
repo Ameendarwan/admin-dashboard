@@ -1,0 +1,1 @@
+export { WalletTopUpTab } from './WalletTopUpTab';

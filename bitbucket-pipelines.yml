@@ -1,0 +1,464 @@
+clone:
+  depth: full
+
+definitions:
+  services:
+    docker:
+      memory: 3072
+  caches:
+    sonar: ~/.sonar/cache
+
+  scripts:
+    # Load BB_AUTH_* (username, email, token) from the comma-separated GCP
+    # Secret Manager artifact written by &setup-bb-auth into this step's env.
+    # Use a here-string (<<<) so read always returns 0: a secret value without a
+    # trailing newline makes `read < file` exit 1 (EOF without newline), which
+    # under Bitbucket's set -e kills the step before the export runs.
+    - script: &load-bb-auth |
+        IFS=',' read -r BB_AUTH_USERNAME BB_AUTH_EMAIL BB_AUTH_TOKEN <<< "$(cat wif-creds/bb-auth.txt)"
+        export BB_AUTH_USERNAME BB_AUTH_EMAIL BB_AUTH_TOKEN
+
+    # ── Git HTTPS auth setup from BB_AUTH_USERNAME/BB_AUTH_TOKEN ────────────
+    - script: &setup-git |
+        git remote set-url origin "https://${BB_AUTH_USERNAME}:${BB_AUTH_TOKEN}@bitbucket.org/${BITBUCKET_REPO_FULL_NAME}.git"
+
+    # ── Safe merge helper ──────────────────────────────────────────────
+    - script: &safe-merge |
+        safe_merge() {
+          SOURCE="$1"
+          TARGET="$2"
+          echo ">>> Merging $SOURCE → $TARGET"
+
+          git fetch origin
+          git fetch origin +refs/heads/*:refs/remotes/origin/* 2>/dev/null || true
+
+          if ! git rev-parse --verify "origin/$SOURCE" >/dev/null 2>&1; then
+            echo "❌ Source branch 'origin/$SOURCE' does not exist!"
+            exit 1
+          fi
+          if ! git rev-parse --verify "origin/$TARGET" >/dev/null 2>&1; then
+            echo "❌ Target branch 'origin/$TARGET' does not exist!"
+            exit 1
+          fi
+
+          git config user.email "pipeline@bitbucket.com"
+          git config user.name "Bitbucket Pipeline"
+
+          git checkout -b "$TARGET" "origin/$TARGET" 2>/dev/null || git checkout "$TARGET"
+          git reset --hard "origin/$TARGET"
+
+          if git merge --no-ff "origin/$SOURCE" \
+              -m "chore: back merge $SOURCE into $TARGET"; then
+            echo "✅ Merge succeeded: $SOURCE → $TARGET"
+            if git push origin "$TARGET"; then
+              echo "✅ Push succeeded: $TARGET"
+            else
+              echo "❌ Push failed: $TARGET"
+              exit 1
+            fi
+          else
+            echo "❌ Conflict: $SOURCE → $TARGET"
+            git merge --abort || true
+            exit 1
+          fi
+        }
+
+  steps:
+    - step: &validate-env-vars
+        name: Validate Environment Variables
+        script:
+          - |
+            required_vars=(
+              # Common deployment variables
+              "GCP_PROJECT_ID"
+              "GCP_REGION"
+              "DOCKER_REGISTRY"
+              "DOCKER_IMAGE"
+              "CLOUD_RUN_SERVICE"
+              # Merit admin portal frontend specific variables
+              "NEXT_PUBLIC_FIREBASE_API_KEY"
+              "NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN"
+              "NEXT_PUBLIC_FIREBASE_PROJECT_ID"
+              "NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET"
+              "NEXT_PUBLIC_FIREBASE_APP_ID"
+              "NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID"
+              "NEXT_PUBLIC_IDENTITY_SERVICE_API_BASE_URL"
+              "NEXT_PUBLIC_API_URL"
+              "NEXT_PUBLIC_ACCOUNTS_URL"
+              "NEXT_PUBLIC_STOREFRONT_APP_ROOT_DOMAIN"
+              "BITBUCKET_DEPLOYMENT_ENVIRONMENT"
+            )
+            for var in "${required_vars[@]}"; do
+              if [ -z "${!var}" ]; then
+                echo "Error: Required environment variable $var is not set"
+                exit 1
+              fi
+            done
+            echo "All required environment variables are set for environment"
+
+            export GCP_PROJECT_ID="${GCP_PROJECT_ID}"
+            export GCP_REGION="${GCP_REGION}"
+            export DOCKER_REGISTRY="${DOCKER_REGISTRY}"
+            export DOCKER_IMAGE="${DOCKER_IMAGE}"
+            export CLOUD_RUN_SERVICE="${CLOUD_RUN_SERVICE}"
+
+    # Authenticates with GCP once via WIF and exports a short-lived access
+    # token as an artifact, so each downstream npmrc/build/deploy/playwright/
+    # back-merge step can reuse it without repeating the WIF heredoc.
+    - step: &setup-gcp-auth
+        name: Setup GCP Auth
+        image: google/cloud-sdk:alpine
+        oidc: true
+        script:
+          - mkdir -p wif-creds
+          - echo $BITBUCKET_STEP_OIDC_TOKEN > wif-creds/bb-token
+          - |
+            cat > wif-creds/wif-credentials.json <<EOF
+            {
+              "type": "external_account",
+              "audience": "//iam.googleapis.com/${WORKLOAD_IDENTITY_PROVIDER_RESOURCE_NAME}",
+              "subject_token_type": "urn:ietf:params:oauth:token-type:jwt",
+              "token_url": "https://sts.googleapis.com/v1/token",
+              "credential_source": {
+                "file": "wif-creds/bb-token"
+              },
+              "service_account_impersonation_url": "https://iamcredentials.googleapis.com/v1/projects/-/serviceAccounts/${SERVICE_ACCOUNT_EMAIL}:generateAccessToken"
+            }
+            EOF
+          - gcloud auth login --brief --cred-file=wif-creds/wif-credentials.json
+          - gcloud auth print-access-token > wif-creds/access-token
+        artifacts:
+          - wif-creds/access-token
+
+    - step: &setup-npmrc
+        name: Setup NPMRC
+        image: google/cloud-sdk:alpine
+        script:
+          # Reuse the access token produced by the Setup GCP Auth step (artifact)
+          - export GCP_NPM_TOKEN=$(cat wif-creds/access-token)
+          # Configure .npmrc for GCP Artifact Registry (merit-design-system)
+          - echo "//${GCP_ARTIFACT_REGION}-npm.pkg.dev/${GCP_ARTIFACT_PROJECT_ID}/merit-design-system/:_authToken=$GCP_NPM_TOKEN" > .npmrc
+          - echo "@merit-incentives:registry=https://${GCP_ARTIFACT_REGION}-npm.pkg.dev/${GCP_ARTIFACT_PROJECT_ID}/merit-design-system/" >> .npmrc
+        artifacts:
+          - .npmrc
+
+    - step: &build-test-sonarcloud
+        name: Build, test and analyze on SonarQube Cloud
+        script:
+          - pipe: sonarsource/sonarcloud-scan:4.0.0
+
+    - step: &check-quality-gate-sonarcloud
+        name: Check the Quality Gate on SonarQube Cloud
+        script:
+          - pipe: sonarsource/sonarcloud-quality-gate:0.1.6
+
+    - step: &build-push-docker
+        name: Build and Push Docker Image
+        image: docker:27-cli
+        runtime:
+          cloud:
+            version: 3
+        services:
+          - docker
+        script:
+          - export IMAGE_NAME=$DOCKER_REGISTRY/$DOCKER_IMAGE:${BITBUCKET_COMMIT:0:7}
+          - export IMAGE_NAME_LATEST=$DOCKER_REGISTRY/$DOCKER_IMAGE:latest
+          - export IMAGE_NAME_CACHE=$DOCKER_REGISTRY/$DOCKER_IMAGE:cache
+
+          # Create .env file
+          - echo "NEXT_PUBLIC_FIREBASE_API_KEY=$NEXT_PUBLIC_FIREBASE_API_KEY" >> .env
+          - echo "NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=$NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN" >> .env
+          - echo "NEXT_PUBLIC_FIREBASE_PROJECT_ID=$NEXT_PUBLIC_FIREBASE_PROJECT_ID" >> .env
+          - echo "NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=$NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET" >> .env
+          - echo "NEXT_PUBLIC_FIREBASE_APP_ID=$NEXT_PUBLIC_FIREBASE_APP_ID" >> .env
+          - echo "NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=$NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID" >> .env
+          - echo "NEXT_PUBLIC_IDENTITY_SERVICE_API_BASE_URL=$NEXT_PUBLIC_IDENTITY_SERVICE_API_BASE_URL" >> .env
+          - echo "NEXT_PUBLIC_API_URL=$NEXT_PUBLIC_API_URL" >> .env
+          - echo "NEXT_PUBLIC_ACCOUNTS_URL=$NEXT_PUBLIC_ACCOUNTS_URL" >> .env
+          - echo "NEXT_PUBLIC_ENVIRONMENT=$BITBUCKET_DEPLOYMENT_ENVIRONMENT" >> .env
+          - echo "NEXT_PUBLIC_STOREFRONT_APP_ROOT_DOMAIN=$NEXT_PUBLIC_STOREFRONT_APP_ROOT_DOMAIN" >> .env
+
+          # Authenticate to the registry using the GCP access token (artifact)
+          - cat wif-creds/access-token | docker login -u oauth2accesstoken --password-stdin $DOCKER_REGISTRY
+
+          # Build & push Docker image (npm auth via BuildKit secret, registry layer cache)
+          - docker buildx create --use --name bb-builder --driver docker-container
+          - |
+            docker buildx build \
+              --secret id=npmrc,src=.npmrc \
+              --cache-from type=registry,ref=$IMAGE_NAME_CACHE \
+              --cache-to   type=registry,ref=$IMAGE_NAME_CACHE,mode=max \
+              --push \
+              -t $IMAGE_NAME \
+              -t $IMAGE_NAME_LATEST \
+              .
+          - echo "Successfully built and pushed $IMAGE_NAME and $IMAGE_NAME_LATEST"
+        after-script:
+          - docker buildx rm bb-builder || true
+
+    # Base step for every gcloud step below: just the image, reused via merge.
+    - step: &gcloud-step
+        name: GCP step
+        image: google/cloud-sdk:alpine
+
+    # Fetches BB_AUTH credentials (BB_AUTH_USERNAME,BB_AUTH_EMAIL,BB_AUTH_TOKEN)
+    # from a single comma-separated GCP Secret Manager secret and writes them to
+    # an artifact so downstream steps (back-merge, release) can load them via
+    # &load-bb-auth without each fetching the secret themselves.
+    - step: &setup-bb-auth
+        <<: *gcloud-step
+        name: Setup BB Auth from Secret Manager
+        script:
+          - export CLOUDSDK_AUTH_ACCESS_TOKEN=$(cat wif-creds/access-token)
+          - |
+            gcloud secrets versions access latest --secret="${BB_AUTH_SECRET_ID}" --project="${GCP_PROJECT_ID}" --quiet > wif-creds/bb-auth.txt
+            if [ ! -s wif-creds/bb-auth.txt ]; then
+              echo "❌ Failed to read BB auth secret ${BB_AUTH_SECRET_ID}"
+              exit 1
+            fi
+        artifacts:
+          - wif-creds/bb-auth.txt
+
+    - step: &deploy-to-cloudrun
+        <<: *gcloud-step
+        name: Deploy to Cloud Run
+        script:
+          - export CLOUDSDK_AUTH_ACCESS_TOKEN=$(cat wif-creds/access-token)
+          - export IMAGE_NAME=$DOCKER_REGISTRY/$DOCKER_IMAGE:${BITBUCKET_COMMIT:0:7}
+          - gcloud run deploy $CLOUD_RUN_SERVICE --image $IMAGE_NAME --platform managed --quiet --region $GCP_REGION --project $GCP_PROJECT_ID --allow-unauthenticated
+
+    - step: &run-docker-playwright-tests
+        name: Run Playwright E2E Tests via Docker Image
+        image: google/cloud-sdk:alpine
+        services:
+          - docker
+        script:
+          # Login to registry using the GCP access token (artifact)
+          - cat wif-creds/access-token | docker login -u oauth2accesstoken --password-stdin $DOCKER_REGISTRY
+          - export PLAYWRIGHT_IMAGE_NAME=us.gcr.io/merit-incentives-production/live-be-liveops-automation:latest
+          - echo "Pulling image $PLAYWRIGHT_IMAGE_NAME..."
+          - docker pull $PLAYWRIGHT_IMAGE_NAME
+          # Run Playwright tests using the pulled image
+          - mkdir -p reports/html-report reports/test-results
+          - echo "Running Playwright E2E tests..."
+          - |
+            docker run --rm -e FIREBASE_API_KEY="$NEXT_PUBLIC_FIREBASE_API_KEY" -v $(pwd)/reports/html-report:/app/reports/html-report -v $(pwd)/reports/test-results:/app/reports/test-results $PLAYWRIGHT_IMAGE_NAME
+        artifacts:
+          upload:
+            - name: "Playwright Test Reports"
+              type: "test-reports"
+              paths:
+                - "reports/test-results/junit.xml"
+
+    # ── Step: Create release branch from staging ──────────────────────────────
+    - step: &create-release-branch
+        <<: *gcloud-step
+        name: "Create release branch from staging"
+        script:
+          - *load-bb-auth
+          - *setup-git
+          - apk add --no-cache curl >/dev/null
+          - |
+            if [ -z "$MAJOR_VERSION" ]; then
+              echo "❌ MAJOR_VERSION repo variable is required"
+              exit 1
+            fi
+
+            API_BASE="https://api.bitbucket.org/2.0/repositories/${BITBUCKET_REPO_OWNER}/${BITBUCKET_REPO_SLUG}/pipelines_config/variables"
+
+            # Fetch current MINOR_VERSION + its UUID (pagelen=100 to avoid pagination
+            # cutting it off; next() defaults to '' so a missing variable yields a
+            # clean error instead of a Python StopIteration crash)
+            VAR_JSON=$(curl -s -u "$BB_AUTH_EMAIL:$BB_AUTH_TOKEN" "${API_BASE}?pagelen=100")
+            MINOR_VERSION=$(echo "$VAR_JSON" | python3 -c "import sys, json; d=json.load(sys.stdin); print(next((v['value'] for v in d.get('values',[]) if v['key']=='MINOR_VERSION'), ''))")
+            VAR_UUID=$(echo "$VAR_JSON" | python3 -c "import sys, json; d=json.load(sys.stdin); print(next((v['uuid'] for v in d.get('values',[]) if v['key']=='MINOR_VERSION'), ''))")
+
+            if [ -z "$MINOR_VERSION" ] || [ "$MINOR_VERSION" = "null" ]; then
+              echo "❌ Failed to fetch MINOR_VERSION from Bitbucket API"
+              echo "Response: $VAR_JSON"
+              exit 1
+            fi
+            if [ -z "$VAR_UUID" ] || [ "$VAR_UUID" = "null" ]; then
+              echo "❌ Failed to fetch MINOR_VERSION UUID"
+              echo "Response: $VAR_JSON"
+              exit 1
+            fi
+
+            echo ">>> Current MINOR_VERSION: $MINOR_VERSION (uuid: $VAR_UUID)"
+
+            # Cast to int and increment
+            NEW_MINOR=$((MINOR_VERSION + 1))
+            echo ">>> New MINOR_VERSION: $NEW_MINOR"
+
+            RELEASE_VERSION="${MAJOR_VERSION}.${NEW_MINOR}.0"
+            RELEASE_BRANCH="release/v${RELEASE_VERSION}"
+            echo ">>> Release branch: $RELEASE_BRANCH"
+
+            echo ">>> Creating $RELEASE_BRANCH from origin/staging"
+
+            git fetch origin
+            git fetch origin +refs/heads/*:refs/remotes/origin/* 2>/dev/null || true
+
+            if ! git rev-parse --verify "origin/staging" >/dev/null 2>&1; then
+              echo "❌ 'origin/staging' branch does not exist!"
+              exit 1
+            fi
+
+            git config user.email "pipeline@bitbucket.com"
+            git config user.name "Bitbucket Pipeline"
+
+            if git ls-remote --exit-code --heads origin "$RELEASE_BRANCH" 2>/dev/null; then
+              echo "⚠️  Branch $RELEASE_BRANCH already exists remotely — skipping."
+              exit 0
+            fi
+
+            git checkout -b "$RELEASE_BRANCH" "origin/staging"
+            git push origin "$RELEASE_BRANCH"
+
+            echo "✅ Created and pushed $RELEASE_BRANCH"
+
+            # URL-encode braces in UUID for the PUT URL
+            VAR_UUID_ENCODED=$(echo "$VAR_UUID" | sed 's/{/%7B/g; s/}/%7D/g')
+
+            # Update MINOR_VERSION back to repo variable
+            UPDATE_RESP=$(curl -s -X PUT -u "$BB_AUTH_EMAIL:$BB_AUTH_TOKEN" \
+              -H "Content-Type: application/json" \
+              -d "{\"key\":\"MINOR_VERSION\",\"value\":\"${NEW_MINOR}\",\"secured\":false}" \
+              "${API_BASE}/${VAR_UUID_ENCODED}")
+
+            if echo "$UPDATE_RESP" | python3 -c "import sys, json; d=json.load(sys.stdin); exit(0 if d.get('key')=='MINOR_VERSION' else 1)" 2>/dev/null; then
+              echo "✅ MINOR_VERSION updated to $NEW_MINOR in repo variables"
+            else
+              echo "❌ Failed to update MINOR_VERSION"
+              echo "Response: $UPDATE_RESP"
+              exit 1
+            fi
+
+    # ── Step: Production → Staging back merge ────────────────────────────────
+    - step: &backmerge-production-to-staging
+        <<: *gcloud-step
+        name: "Back merge: production → staging"
+        script:
+          - *load-bb-auth
+          - *setup-git
+          - *safe-merge
+          - |
+            safe_merge "production" "staging"
+
+    # ── Step: Staging → Develop back merge ────────────────────────────────────
+    - step: &backmerge-staging-to-develop
+        <<: *gcloud-step
+        name: "Back merge: staging → develop"
+        script:
+          - *load-bb-auth
+          - *setup-git
+          - *safe-merge
+          - |
+            safe_merge "staging" "develop"
+
+pipelines:
+  pull-requests:
+    '**':
+      - stage:
+          name: Build & Test (PR)
+          deployment: develop
+          steps:
+            - step:
+                <<: *setup-gcp-auth
+            - step:
+                <<: *setup-npmrc
+            - step:
+                <<: *build-test-sonarcloud
+            - step:
+                <<: *check-quality-gate-sonarcloud
+
+    staging:
+      - step:
+          name: 'No build for PRs to staging'
+          script:
+            - echo "This pipeline is disabled for pull requests to staging."
+    production:
+      - step:
+          name: 'No build for PRs to production'
+          script:
+            - echo "This pipeline is disabled for pull requests to production."
+
+  branches:
+    develop:
+      - stage:
+          name: Build & Deploy to Develop
+          deployment: develop
+          steps:
+            - step:
+                <<: *validate-env-vars
+            - step:
+                <<: *setup-gcp-auth
+            - step:
+                <<: *setup-npmrc
+            - step:
+                <<: *build-push-docker
+            - step:
+                <<: *deploy-to-cloudrun
+
+    staging:
+      - stage:
+          name: Build & Deploy to Staging
+          deployment: staging
+          steps:
+            - step:
+                <<: *validate-env-vars
+            - step:
+                <<: *setup-gcp-auth
+            - step:
+                <<: *setup-npmrc
+            - step:
+                <<: *build-push-docker
+            - step:
+                <<: *deploy-to-cloudrun
+            - step:
+                <<: *run-docker-playwright-tests
+
+    production:
+      - stage:
+          name: Build & Deploy to Production
+          deployment: production
+          steps:
+            - step:
+                <<: *validate-env-vars
+            - step:
+                <<: *setup-gcp-auth
+            - step:
+                <<: *setup-npmrc
+            - step:
+                <<: *build-push-docker
+            - step:
+                <<: *deploy-to-cloudrun
+
+  custom:
+    # ── Release flow: production → staging → release branch + staging → develop
+    # setup-gcp-auth + setup-bb-auth must run inside a deployment stage so the
+    # WIF provider / SA / project / BB_AUTH_SECRET_ID deployment-level variables
+    # are injected (without `deployment:` the WIF audience is empty → "Invalid
+    # value for audience"). Artifacts (wif-creds/bb-auth.txt) propagate to the
+    # subsequent top-level release steps (same cross-stage artifact flow as the
+    # branch pipelines' deploy block).
+    full-release-flow:
+      - stage:
+          name: Release Auth
+          deployment: develop
+          steps:
+            - step: *setup-gcp-auth
+            - step: *setup-bb-auth
+      - step: *backmerge-production-to-staging
+      - step: *create-release-branch
+      - step: *backmerge-staging-to-develop
+
+    # ── Just create release branch (no merges)
+    create-release-only:
+      - stage:
+          name: Release Auth
+          deployment: develop
+          steps:
+            - step: *setup-gcp-auth
+            - step: *setup-bb-auth
+      - step: *create-release-branch

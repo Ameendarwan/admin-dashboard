@@ -1,0 +1,1 @@
+export { RewardsPortalClient } from './RewardsPortalClient';

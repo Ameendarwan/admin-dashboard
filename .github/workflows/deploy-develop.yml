@@ -1,0 +1,190 @@
+name: Deploy to develop
+
+# The GitHub version of what bitbucket-pipelines.yml does for the develop
+# environment of merit-admin-portal.
+#
+# Same order, same image name: the image is tagged with the first 7 characters
+# of the commit, exactly as Bitbucket does, so an image built by either system
+# is named identically.
+#
+# There is no stored password. GitHub proves who it is to Google on every run
+# and Google hands back a pass that expires in about an hour.
+#
+# Bitbucket can no longer deploy this environment, so this is the only way in.
+
+on:
+  push:
+    branches: [develop]
+  workflow_dispatch:
+
+
+permissions:
+  contents: read
+  id-token: write        # needed to get the Google token
+
+jobs:
+  deploy:
+    runs-on: [self-hosted, merit]
+    timeout-minutes: 45
+    env:
+      ENVIRONMENT: develop
+      GCP_PROJECT_ID: merit-incentives-develop
+      GCP_REGION: us-central1
+      GCP_ARTIFACT_REGION: us-central1
+      GCP_ARTIFACT_PROJECT_ID: merit-incentives-develop
+      DOCKER_REGISTRY: us.gcr.io/merit-incentives-develop
+      DOCKER_IMAGE: develop-fe-meritadmin-app
+      CLOUD_RUN_SERVICE: develop-fe-meritadmin-app
+      SERVICE_ACCOUNT_EMAIL: develop-bitbucket-pipeline-sa@merit-incentives-develop.iam.gserviceaccount.com
+      WIF_PROVIDER: projects/939044613219/locations/global/workloadIdentityPools/develop-github-pool/providers/develop-github-provider
+
+    steps:
+      # Named explicitly rather than left implicit: this pipeline only ever
+      # builds develop, whichever branch someone starts it from.
+      - uses: actions/checkout@v4
+        with:
+          ref: develop
+
+      - name: Check the settings are all present
+        run: |
+          missing=""
+          for v in GCP_PROJECT_ID GCP_REGION DOCKER_REGISTRY DOCKER_IMAGE CLOUD_RUN_SERVICE; do
+            [ -n "${!v}" ] || missing="${missing:+$missing }$v"
+          done
+          [ -z "$missing" ] || { echo "::error::missing: $missing"; exit 1; }
+
+      - name: Sign in to Google
+        uses: google-github-actions/auth@v2
+        with:
+          workload_identity_provider: ${{ env.WIF_PROVIDER }}
+          service_account: ${{ env.SERVICE_ACCOUNT_EMAIL }}
+
+      - uses: google-github-actions/setup-gcloud@v2
+
+      - name: Set up the private npm registry
+        run: |
+          # The same short-lived token the Bitbucket pipeline used. About an
+          # hour, and it never leaves this runner.
+          TOKEN=$(gcloud auth print-access-token)
+          REG="${GCP_ARTIFACT_REGION}-npm.pkg.dev/${GCP_ARTIFACT_PROJECT_ID}/merit-design-system"
+          echo "//${REG}/:_authToken=${TOKEN}" > .npmrc
+          echo "@merit-incentives:registry=https://${REG}/" >> .npmrc
+
+      # This is a Next.js site, so these settings are read while the image is
+      # being built and end up inside the JavaScript the browser downloads.
+      #
+      # They come from two places, on purpose. Ordinary settings — addresses,
+      # names, flags — are repository variables, which is what Bitbucket called
+      # deployment variables. Anything Bitbucket held as a secured value is NOT
+      # copied here at all; the build reads it straight out of Google Secret
+      # Manager, using the same sign-in as every other step.
+      #
+      # Handed over as job settings rather than pasted into the command, so a
+      # value containing quotes or braces — one of these is a block of JSON —
+      # arrives exactly as it was stored.
+      - name: Write the build settings
+        env:
+          NEXT_PUBLIC_FIREBASE_API_KEY: ${{ vars.NEXT_PUBLIC_FIREBASE_API_KEY }}
+          NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN: ${{ vars.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN }}
+          NEXT_PUBLIC_FIREBASE_PROJECT_ID: ${{ vars.NEXT_PUBLIC_FIREBASE_PROJECT_ID }}
+          NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET: ${{ vars.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET }}
+          NEXT_PUBLIC_FIREBASE_APP_ID: ${{ vars.NEXT_PUBLIC_FIREBASE_APP_ID }}
+          NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID: ${{ vars.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID }}
+          NEXT_PUBLIC_IDENTITY_SERVICE_API_BASE_URL: ${{ vars.NEXT_PUBLIC_IDENTITY_SERVICE_API_BASE_URL }}
+          NEXT_PUBLIC_API_URL: ${{ vars.NEXT_PUBLIC_API_URL }}
+          NEXT_PUBLIC_ACCOUNTS_URL: ${{ vars.NEXT_PUBLIC_ACCOUNTS_URL }}
+          NEXT_PUBLIC_ENVIRONMENT: ${{ vars.NEXT_PUBLIC_ENVIRONMENT }}
+          NEXT_PUBLIC_STOREFRONT_APP_ROOT_DOMAIN: ${{ vars.NEXT_PUBLIC_STOREFRONT_APP_ROOT_DOMAIN }}
+        run: |
+          : > .env
+
+          # The plain ones. Refuse to build on an empty or placeholder value:
+          # a wrong setting is worse than a missing one, because the build
+          # succeeds and the fault only shows when somebody tries to sign in.
+          for n in NEXT_PUBLIC_FIREBASE_API_KEY NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN NEXT_PUBLIC_FIREBASE_PROJECT_ID NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET NEXT_PUBLIC_FIREBASE_APP_ID NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID NEXT_PUBLIC_IDENTITY_SERVICE_API_BASE_URL NEXT_PUBLIC_API_URL NEXT_PUBLIC_ACCOUNTS_URL NEXT_PUBLIC_ENVIRONMENT NEXT_PUBLIC_STOREFRONT_APP_ROOT_DOMAIN; do
+            v="${!n}"
+            case "$v" in
+              "")            echo "::error::$n has no value"; exit 1 ;;
+              *redacted*)    echo "::error::$n is a placeholder, not a real value"; exit 1 ;;
+            esac
+            printf '%s=%s\n' "$n" "$v" >> .env
+
+            # Present is not the same as working. A Firebase key that Google no
+            # longer recognises passes every other check and still breaks
+            # sign-in for everyone, so ask Google directly before building.
+            if [ "$n" = "NEXT_PUBLIC_FIREBASE_API_KEY" ]; then
+              m=$(curl -s --max-time 30 -X POST \
+                "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=$v" \
+                -H 'Content-Type: application/json' \
+                -d '{"email":"probe@example.invalid","password":"x","returnSecureToken":true}' \
+                | python3 -c "import sys,json;print((json.load(sys.stdin).get('error') or {}).get('message','?'))")
+              case "$m" in
+                *"API key not valid"*|*blocked*)
+                  echo "::error::Google does not accept this Firebase key: $m"; exit 1 ;;
+                *) echo "  Firebase key checked against Google: accepted" ;;
+              esac
+            fi
+          done
+
+          echo "wrote $(wc -l < .env) build settings"
+
+      - uses: docker/setup-buildx-action@v3
+
+      - name: Build and push the image
+        run: |
+          SHORT=$(git rev-parse --short=7 HEAD)   # the develop commit, as Bitbucket tags it
+          IMAGE="$DOCKER_REGISTRY/$DOCKER_IMAGE:$SHORT"
+          LATEST="$DOCKER_REGISTRY/$DOCKER_IMAGE:latest"
+          CACHE="$DOCKER_REGISTRY/$DOCKER_IMAGE:cache"
+          gcloud auth print-access-token \
+            | docker login -u oauth2accesstoken --password-stdin "$DOCKER_REGISTRY"
+          # This Dockerfile installs the private @merit packages through a
+          # BuildKit secret mount, so .npmrc has to be handed in as a secret
+          # rather than copied into the image. A plain `docker build` fails
+          # with an npm 401.
+          docker buildx build \
+            --secret id=npmrc,src=.npmrc \
+            --cache-from type=registry,ref="$CACHE" \
+            --cache-to   type=registry,ref="$CACHE",mode=max \
+            --push -t "$IMAGE" -t "$LATEST" .
+          echo "IMAGE=$IMAGE" >> "$GITHUB_ENV"
+
+      - name: Deploy to Cloud Run
+        run: |
+          # --min-instances=1 is the difference between a deploy nobody notices
+          # and one that breaks logins for ten minutes. Develop leaves every
+          # service asleep and capped at one copy, so a brand new version starts
+          # cold: the first request waits about eleven seconds and everything
+          # behind it queues. Signing in touches several services at once, so it
+          # is the first thing to fall over.
+          #
+          # With a minimum of one, Cloud Run starts the new version and waits
+          # until it answers before sending it any traffic. With a maximum of
+          # four, a burst of requests is not turned away.
+          #
+          # Production already runs this way: 42 of its 49 services are min 1,
+          # max 5. This only brings develop into line. Cost is one small
+          # container per service.
+          gcloud run deploy "$CLOUD_RUN_SERVICE" \
+            --image "$IMAGE" \
+            --platform managed \
+            --region "$GCP_REGION" \
+            --project "$GCP_PROJECT_ID" \
+            --min-instances=1 \
+            --max-instances=4 \
+            --allow-unauthenticated
+
+      - name: Check it came up healthy
+        run: |
+          URL=$(gcloud run services describe "$CLOUD_RUN_SERVICE" --region "$GCP_REGION" \
+                --project "$GCP_PROJECT_ID" --format="value(status.url)")
+          READY=$(gcloud run services describe "$CLOUD_RUN_SERVICE" --region "$GCP_REGION" \
+                  --project "$GCP_PROJECT_ID" --format="value(status.conditions[0].status)")
+          echo "  url: $URL   ready: $READY"
+          [ "$READY" = "True" ] || { echo "::error::the service did not come up"; exit 1; }
+          {
+            echo "### Deployed from GitHub"
+            echo "- image: \`$IMAGE\`"
+            echo "- url: $URL"
+          } >> "$GITHUB_STEP_SUMMARY"
+

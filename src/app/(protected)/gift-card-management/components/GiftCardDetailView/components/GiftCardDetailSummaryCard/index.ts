@@ -1,0 +1,1 @@
+export { GiftCardDetailSummaryCard } from './GiftCardDetailSummaryCard';

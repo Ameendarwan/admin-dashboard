@@ -1,0 +1,1 @@
+export { GiftCardBrandCell } from './GiftCardBrandCell';

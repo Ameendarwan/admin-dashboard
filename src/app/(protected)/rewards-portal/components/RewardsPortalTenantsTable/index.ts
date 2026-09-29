@@ -1,0 +1,1 @@
+export { RewardsPortalTenantsTable } from './RewardsPortalTenantsTable';

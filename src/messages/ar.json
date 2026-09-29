@@ -1,0 +1,2621 @@
+{
+  "common": {
+    "loading": "...جاري التحميل",
+    "search": "بحث",
+    "back": "رجوع",
+    "showHideColumns": "إظهار / إخفاء الأعمدة"
+  },
+  "auth": {
+    "sessionExpired": {
+      "title": "انتهت صلاحية الجلسة",
+      "description": "جارٍ تسجيل خروجك. يرجى تسجيل الدخول مرة أخرى."
+    }
+  },
+  "calendar": {
+    "today": "اليوم",
+    "last3days": "آخر 3 أيام",
+    "thisweek": "هذا الأسبوع",
+    "thismonth": "هذا الشهر",
+    "lastweek": "الأسبوع الماضي",
+    "lastmonth": "الشهر الماضي",
+    "custom": "نطاق مخصص",
+    "startDate": "تاريخ البدء",
+    "endDate": "تاريخ الانتهاء",
+    "cancel": "إلغاء",
+    "apply": "تطبيق",
+    "selectDateRange": "تحديد نطاق التاريخ",
+    "selectDate": "اختر التاريخ"
+  },
+  "sidebar": {
+    "dashboard": "لوحة التحكم",
+    "sellers": "البائعين",
+    "saasTenants": "مستأجري SaaS",
+    "catalogManagement": "إدارة الكتالوج",
+    "categoryManagement": "إدارة الفئات",
+    "giftCardManagement": "إدارة بطاقات الهدايا",
+    "listingsAndOffers": "القوائم والعروض",
+    "tenantManagement": "إدارة المستأجرين",
+    "accessManagement": "إدارة الصلاحيات",
+    "superApp": "التطبيق الفائق",
+    "bannersConfiguration": "تكوين البانرات",
+    "rewardsPortal": "بوابة المكافآت",
+    "storefronts": "واجهات المتجر"
+  },
+  "storefronts": {
+    "pageTitle": "إدارة واجهات المتجر",
+    "createStorefront": "إنشاء واجهة متجر",
+    "searchPlaceholder": "البحث باسم واجهة المتجر أو اسم المسؤول",
+    "allTiers": "جميع المستويات",
+    "allStatuses": "جميع الحالات",
+    "noResults": "لم يتم العثور على واجهات متجر",
+    "loading": "جارٍ تحميل واجهات المتجر...",
+    "loadError": "تعذر تحميل واجهات المتجر.",
+    "retry": "إعادة المحاولة",
+    "showingResults": "عرض {from} إلى {to} من {total} نتيجة",
+    "table": {
+      "storefront": "واجهة المتجر",
+      "tenantBusiness": "المستأجر / الشركة",
+      "tier": "المستوى",
+      "status": "الحالة",
+      "setupChecklist": "خطوات الإعداد المطلوبة",
+      "storeAdmin": "مسؤول المتجر",
+      "floatBalance": "رصيد التعويم",
+      "actions": "الإجراءات"
+    },
+    "tier": {
+      "small": "صغير",
+      "medium": "متوسط",
+      "large": "كبير",
+      "enterprise": "مؤسسي"
+    },
+    "status": {
+      "live": "مباشر",
+      "draft": "مسودة",
+      "suspended": "معلق"
+    },
+    "setupChecklist": {
+      "completedOfRequired": "{completed} من {required} مكتملة"
+    },
+    "actions": {
+      "openStorefront": "فتح واجهة المتجر"
+    },
+    "statusActions": {
+      "menuAria": "إجراءات حالة واجهة المتجر",
+      "updating": "جارٍ تحديث حالة واجهة المتجر",
+      "suspend": "تعليق واجهة المتجر",
+      "restoreLive": "استعادة إلى نشط",
+      "restoreDraft": "استعادة إلى مسودة",
+      "success": "تم تحديث حالة واجهة المتجر.",
+      "error": "تعذر تحديث حالة واجهة المتجر."
+    }
+  },
+  "catalog": {
+    "eyebrow": "إدارة الكتالوج",
+    "categoryManagement": {
+      "eyebrow": "إدارة الكتالوج",
+      "pageTitle": "إدارة الفئات",
+      "newCategory": "فئة جديدة",
+      "emptyTitle": "لا توجد فئات بعد!",
+      "emptyDescription": "تنظم الفئات كتالوجك وتجمّع كيفية مطابقة المنتجات. ابدأ بإنشاء فئة.",
+      "emptySubcategories": "لا توجد فئات فرعية بعد.",
+      "dialog": {
+        "title": "فئة جديدة",
+        "categoryNameLabel": "اسم الفئة",
+        "categoryNamePlaceholder": "أدخل اسم الفئة",
+        "cancel": "إلغاء",
+        "create": "إنشاء",
+        "createSuccessToast": "تم إنشاء الفئة بنجاح."
+      },
+      "subCategoriesLine": "{count} فئة فرعية",
+      "row": {
+        "expandAria": "توسيع الفئة",
+        "collapseAria": "طي الفئة",
+        "deleteAria": "حذف الفئة",
+        "editAria": "تحرير الفئة",
+        "subDeleteAria": "حذف الفئة الفرعية",
+        "subEditAria": "تحرير الفئة الفرعية",
+        "addSubcategory": "إضافة فئة فرعية"
+      },
+      "confirmDeleteCategory": {
+        "title": "حذف الفئة؟",
+        "bodyPart1": "سيؤدي حذف",
+        "bodyPart2": "إلى إزالة جميع الفئات الفرعية أيضًا. لا يمكن التراجع عن ذلك.",
+        "deleteButton": "حذف",
+        "deleteSuccessToast": "تم حذف الفئة بنجاح."
+      },
+      "confirmDeleteSubcategory": {
+        "title": "حذف الفئة الفرعية؟",
+        "afterBold": "ستُزال نهائيًا من {parentName}. لا يمكن التراجع عن ذلك.",
+        "deleteButton": "حذف",
+        "deleteSuccessToast": "تم حذف الفئة الفرعية بنجاح."
+      },
+      "editCategoryDialog": {
+        "title": "تحرير الفئة",
+        "save": "حفظ",
+        "saveSuccessToast": "تم تحديث الفئة بنجاح."
+      },
+      "editSubcategoryDialog": {
+        "title": "تحرير الفئة الفرعية",
+        "save": "حفظ",
+        "saveSuccessToast": "تم تحديث الفئة الفرعية بنجاح."
+      },
+      "subcategoryDialog": {
+        "title": "إضافة فئة فرعية",
+        "subcategoryNameLabel": "اسم الفئة الفرعية",
+        "subcategoryNamePlaceholder": "أدخل اسم الفئة الفرعية",
+        "cancel": "إلغاء",
+        "create": "إنشاء",
+        "createSuccessToast": "تم إنشاء الفئة الفرعية بنجاح."
+      }
+    },
+    "giftCardManagement": {
+      "pageTitle": "إدارة بطاقات الهدايا",
+      "addGiftCard": "إضافة بطاقة هدية",
+      "giftCardsEmpty": "لا توجد بطاقات هدايا.",
+      "giftCardsLoadError": "تعذر تحميل بطاقات الهدايا. يرجى المحاولة مرة أخرى.",
+      "giftCardsRetry": "إعادة المحاولة",
+      "searchPlaceholder": "بحث",
+      "menuView": "عرض الطلب",
+      "tabs": {
+        "giftCards": "بطاقات الهدايا",
+        "activationRequests": "طلبات التفعيل ({count})"
+      },
+      "filters": {
+        "denominationType": "نوع الفئة",
+        "allTenants": "جميع المستأجرين"
+      },
+      "denominationType": {
+        "open": "مفتوح",
+        "fixed": "ثابت"
+      },
+      "table": {
+        "card": "البطاقة",
+        "category": "الفئة",
+        "denominationType": "نوع الفئة",
+        "salesChannels": "قنوات البيع",
+        "activations": "التفعيلات",
+        "country": "الدولة",
+        "status": "الحالة"
+      },
+      "status": {
+        "giftCard": {
+          "active": "نشط",
+          "inactive": "غير نشط"
+        },
+        "product": {
+          "published": "نشط",
+          "draft": "مسودة",
+          "proposed": "مقترح",
+          "rejected": "مرفوض"
+        },
+        "request": {
+          "PENDING": "قيد الانتظار",
+          "PROCESSING": "قيد المعالجة",
+          "PARTIALLY_APPROVED": "موافق عليه جزئياً",
+          "APPROVED": "موافق عليه",
+          "REJECTED": "مرفوض"
+        },
+        "item": {
+          "PENDING": "قيد الانتظار",
+          "APPROVED": "موافق عليه",
+          "REJECTED": "مرفوض"
+        }
+      },
+      "activationRequests": {
+        "stats": {
+          "pending": "قيد الانتظار",
+          "approved": "موافق عليه",
+          "rejected": "مرفوض"
+        },
+        "searchPlaceholder": "بحث",
+        "empty": "لا توجد طلبات تفعيل.",
+        "loadError": "تعذر تحميل طلبات التفعيل.",
+        "retry": "إعادة المحاولة",
+        "cardCount": "{count, plural, one {بطاقة واحدة} other {# بطاقات}}",
+        "table": {
+          "tenant": "المستأجر/الشركة",
+          "owner": "مالك العمل",
+          "cards": "البطاقات",
+          "submitted": "تاريخ الإرسال"
+        }
+      },
+      "detail": {
+        "pageTitle": "طلب تفعيل البطاقة",
+        "loading": "جارٍ تحميل طلب التفعيل…",
+        "notFound": "لم يتم العثور على طلب التفعيل.",
+        "backToList": "العودة إلى القائمة",
+        "closeRequest": "إغلاق الطلب",
+        "requestedCardsEmptyTitle": "لا توجد بطاقات في هذا الطلب",
+        "requestedCardsEmptyBody": "لا يحتوي طلب التفعيل هذا على عناصر بطاقات للمراجعة.",
+        "tenantDetails": "تفاصيل المستأجر",
+        "tenantId": "معرف المستأجر",
+        "business": "الشركة",
+        "businessOwner": "مالك العمل",
+        "accountStatus": "حالة الحساب",
+        "kybStatus": "حالة KYB",
+        "complianceFlag": "علامة الامتثال",
+        "activeCards": "البطاقات النشطة",
+        "orders30Days": "الطلبات (30 يوماً)",
+        "floatBalance": "رصيد Float",
+        "requestedCards": "البطاقات المطلوبة",
+        "expectedSpend": "الإنفاق المتوقع (شهرياً)",
+        "preferredDenominations": "الفئات المفضلة",
+        "cardId": "معرف البطاقة",
+        "copyCardId": "نسخ معرف البطاقة",
+        "copied": "تم النسخ!",
+        "category": "الفئة",
+        "minDenomination": "الحد الأدنى",
+        "maxDenomination": "الحد الأقصى",
+        "denominationType": "نوع الفئة",
+        "validity": "الصلاحية",
+        "deliveryMode": "طريقة التسليم",
+        "redemption": "الاسترداد",
+        "country": "الدولة",
+        "usageLimitation": "قيود الاستخدام",
+        "rejectRequest": "رفض الطلب",
+        "sendForBrandApproval": "إرسال لموافقة العلامة",
+        "approveRequest": "الموافقة على الطلب",
+        "accountStatusValue": {
+          "active": "نشط",
+          "inactive": "غير نشط"
+        },
+        "kybStatusValue": {
+          "verified": "موثق",
+          "pending": "قيد الانتظار",
+          "rejected": "مرفوض"
+        },
+        "activeCardsValue": "{count} بطاقات",
+        "ordersValue": "{count} طلبات"
+      },
+      "giftCardDetail": {
+        "pageTitle": "تفاصيل البطاقة",
+        "loading": "جارٍ تحميل بطاقة الهدية…",
+        "notFound": "بطاقة الهدية غير موجودة.",
+        "backToList": "العودة إلى القائمة",
+        "editBrand": "تعديل العلامة",
+        "activateBrand": "تفعيل العلامة",
+        "thirdParty": "طرف ثالث",
+        "cardId": "معرف البطاقة",
+        "copyCardId": "نسخ معرف البطاقة",
+        "copied": "تم النسخ!",
+        "category": "الفئة",
+        "denominationType": "نوع الفئة",
+        "preferredDenomination": "الفئات المفضلة",
+        "validity": "الصلاحية",
+        "usageLimitations": "قيود الاستخدام",
+        "deliveryMode": "طريقة التسليم",
+        "country": "الدولة",
+        "redemption": "الاسترداد",
+        "redemptionOnline": "عبر الإنترنت",
+        "termsAndConditions": "الشروط والأحكام",
+        "view": "عرض",
+        "termsModal": {
+          "title": "الشروط والأحكام",
+          "generalTerm1": "تكون بطاقات الهدايا على شكل قسائم إلكترونية وليست بطاقات فعلية.",
+          "generalTerm2": "يمكن استخدام الرصيد لشراء جميع المنتجات في جميع الفئات على المنصة/المنصات، بما في ذلك منتجات التخفيضات.",
+          "generalTerm3": "لا يمكن إرجاع بطاقات الهدايا أو استرداد قيمتها بعد استبدال الرصيد على أي من المنصات.",
+          "redemptionProcessTitle": "عملية الاسترداد",
+          "redemptionStep1": "سجّل الدخول أو أنشئ حسابًا على www.noon.com",
+          "redemptionStep2": "انتقل إلى «حساباتي» واختر «بطاقة الهدايا»",
+          "redemptionStep3": "اضغط على «استبدال بطاقة الهدايا». أدخل رقم بطاقة الهدايا المكوّن من 16 رقمًا ورقم التعريف الشخصي المكوّن من 4 أرقام. اضغط على «متابعة»، وسيُضاف المبلغ إلى رصيد استرداد نقد noon pay الظاهر في صفحة الدفع.",
+          "redemptionStep4": "بعد الاستبدال، يُضاف المبلغ إلى محفظة رصيد noon credits الخاصة بالعميل المعني.",
+          "redemptionStep5": "يمكن استخدام رصيد Noon Credits على المنصات الرقمية التالية: noon.com وnoon Daily وnoon Food (قريبًا) وKul.com و/أو SIVVI.com",
+          "redemptionStep6": "رصيد Noon Credits هو رمز أبجدي رقمي تنتهي صلاحيته بعد عام واحد من تاريخ الإصدار.",
+          "redemptionStep7": "ومع ذلك، بعد استبدال الرمز، لا تنتهي صلاحية الرصيد في محفظة العميل.",
+          "redemptionStep8": "إذا أجرى العميل معاملة على منصة noon أو على منصة أي من الشركات التابعة لها، وأعاد المنتج، فسيُضاف المبلغ المستحق للاسترداد إلى محفظة رصيد noon credits الخاصة بالعميل."
+        },
+        "tabs": {
+          "salesChannel": "قناة البيع",
+          "activationLog": "سجل التفعيل"
+        },
+        "salesChannel": {
+          "product": "المنتج",
+          "status": "الحالة",
+          "active": "نشط",
+          "loading": "جارٍ تحميل قنوات البيع…",
+          "errorTitle": "تعذّر تحميل قنوات البيع.",
+          "retry": "إعادة المحاولة",
+          "updateError": "تعذّر تحديث قناة البيع. حاول مرة أخرى.",
+          "noEligibleOffers": "لا توجد عروض نشطة بعملة قناة البيع لهذه البطاقة. أضف عروضاً أو فعّلها قبل التمكين.",
+          "offersNotReady": "تعذّر تفعيل البطاقة بالكامل على هذه القناة. جرّب إيقاف التفعيل ثم إعادته.",
+          "missingCategoryId": "لا يوجد معرّف فئة لهذه البطاقة. لا يمكن التفعيل على قناة البيع.",
+          "toggleAria": "تبديل قناة {channel}",
+          "emptyTitle": "لا توجد قنوات بيع مُعدّة"
+        },
+        "activationLog": {
+          "action": "الإجراء",
+          "actor": "المنفّذ",
+          "timestamp": "الوقت",
+          "emptyTitle": "لا يوجد سجل تفعيل بعد",
+          "emptyBody": "سجلات التفعيل عبر المستأجرين غير متاحة في admin-be بعد."
+        }
+      },
+      "approveDialog": {
+        "title": "الموافقة على تفعيل البطاقة",
+        "subtitle": "راجع التفاصيل قبل التأكيد",
+        "card": "البطاقة",
+        "brand": "العلامة",
+        "productId": "معرف المنتج",
+        "tenant": "المستأجر",
+        "businessOwner": "مالك العمل",
+        "whatHappensNext": "ماذا يحدث بعد ذلك:",
+        "nextItem1": "يُعلَّم العنصر كموافق عليه لكنه يبقى قيد الانتظار حتى إغلاق الطلب",
+        "nextItem2": "تُنشأ تفعيلات المنتج عند إغلاق الطلب",
+        "cancel": "إلغاء",
+        "confirm": "تأكيد الموافقة"
+      },
+      "brandApprovalDialog": {
+        "title": "إرسال لموافقة العلامة",
+        "emailLabel": "البريد الإلكتروني لمسؤول العلامة",
+        "emailPlaceholder": "مثال: walter.h@noon.com",
+        "messageLabel": "الرسالة إلى العلامة",
+        "messagePlaceholder": "صف طلب المستأجر وتقدير الحجم…",
+        "cancel": "إلغاء",
+        "confirm": "إرسال إلى العلامة"
+      },
+      "rejectDialog": {
+        "title": "رفض تفعيل البطاقة",
+        "subtitle": "راجع التفاصيل قبل الرفض",
+        "card": "البطاقة",
+        "brand": "العلامة",
+        "productId": "معرف المنتج",
+        "tenant": "المستأجر",
+        "businessOwner": "مالك العمل",
+        "reasonLabel": "سبب الرفض",
+        "reasonPlaceholder": "اختر سبباً",
+        "notesLabel": "ملاحظات إضافية (اختياري)",
+        "notesPlaceholder": "أضف سياقاً للمستأجر...",
+        "whatHappensNext": "ماذا يحدث بعد ذلك:",
+        "nextItem1": "يُعلَّم الطلب كمرفوض",
+        "nextItem2": "يُبلغ المستأجر بالسبب",
+        "nextItem3": "يمكن للمستأجر إعادة الإرسال",
+        "cancel": "إلغاء",
+        "confirm": "تأكيد الرفض",
+        "reasons": {
+          "notAvailableInRegion": "البطاقة غير متوفرة في المنطقة",
+          "complianceNotMet": "متطلبات الامتثال غير مستوفاة",
+          "commercialTermsNotAgreed": "الشروط التجارية غير متفق عليها",
+          "duplicateRequest": "طلب مكرر"
+        }
+      },
+      "toast": {
+        "approveSuccess": "تمت الموافقة على عنصر البطاقة.",
+        "approveError": "تعذرت الموافقة على عنصر البطاقة. حاول مرة أخرى.",
+        "rejectSuccess": "تم رفض عنصر البطاقة.",
+        "rejectError": "تعذر رفض عنصر البطاقة. حاول مرة أخرى.",
+        "brandApprovalSuccess": "تم إرسال الطلب لموافقة العلامة.",
+        "closeSuccess": "تم إغلاق طلب التفعيل.",
+        "closeError": "تعذر إغلاق طلب التفعيل. حاول مرة أخرى."
+      },
+      "closeDialog": {
+        "title": "إغلاق طلب التفعيل",
+        "subtitle": "إنهاء العناصر المعلقة وإنشاء التفعيلات",
+        "requestId": "معرف الطلب: {id}",
+        "actionLabel": "إجراء الإغلاق",
+        "actionPlaceholder": "اختر إجراءً",
+        "actions": {
+          "approveAllPending": "الموافقة على جميع العناصر المعلقة",
+          "rejectAllPending": "رفض جميع العناصر المعلقة"
+        },
+        "notesLabel": "ملاحظات (اختياري)",
+        "notesPlaceholder": "أضف ملاحظات داخلية لهذا القرار…",
+        "whatHappensNext": "ماذا يحدث بعد ذلك:",
+        "nextItem1": "تُوافق على العناصر المعلقة المتبقية أو تُرفض دفعة واحدة وفق الإجراء الذي تختاره.",
+        "nextItem2": "تصبح العناصر الموافق عليها تفعيلات منتج نشطة للمستأجر عند إغلاق الطلب.",
+        "nextItem3": "يُعلَّم الطلب كحالة نهائية (موافق عليه أو مرفوض أو موافق عليه جزئياً) ولا يمكن إعادة فتحه.",
+        "nextItem4": "يُبلَّغ صاحب العمل الذي قدّم الطلب عبر البريد الإلكتروني.",
+        "cancel": "إلغاء",
+        "confirm": "إغلاق الطلب"
+      }
+    },
+    "pageTitle": "القوائم والعروض",
+    "listingsTab": "القوائم",
+    "offersTab": "العروض",
+    "offersTabTooltip": "عرض مجموع العروض من البائعين.",
+    "sectionTitle": "القوائم",
+    "sectionSubtitle": "أدر قوائم الكتالوج واعرض عروض البائعين.",
+    "subTabActive": "القوائم النشطة",
+    "subTabRequests": "طلبات القوائم",
+    "createNewListing": "إنشاء قائمة جديدة",
+    "createNewListingToast": "سيتوفر إنشاء القائمة عند جاهزية واجهة الكتالوج.",
+    "newListing": {
+      "pageTitle": "قائمة جديدة",
+      "back": "رجوع",
+      "loadTaxonomyError": "تعذر تحميل الفئات. حاول مرة أخرى.",
+      "loadCategoryFieldsError": "تعذر تحميل خصائص الفئة وحقول المتغيرات. حاول مرة أخرى.",
+      "loadingCategoryFields": "جاري تحميل خصائص الفئة…",
+      "submitSuccess": "تم حفظ القائمة بنجاح.",
+      "updateSuccess": "تم تحديث القائمة بنجاح.",
+      "loadEditError": "تعذر تحميل هذه القائمة للتعديل. حاول مرة أخرى.",
+      "submitError": "حدث خطأ أثناء الحفظ. حاول مرة أخرى.",
+      "steps": {
+        "details": "التفاصيل",
+        "attributes": "الخصائص",
+        "images": "الصور",
+        "variants": "المتغيرات",
+        "review": "مراجعة وإرسال"
+      },
+      "actions": {
+        "continue": "متابعة",
+        "back": "رجوع",
+        "submit": "إرسال"
+      },
+      "taxonomy": {
+        "categories": {
+          "electronics": "إلكترونيات",
+          "fashion": "أزياء"
+        },
+        "subcategories": {
+          "smartPhones": "هواتف ذكية",
+          "laptops": "حواسيب محمولة",
+          "wearables": "أجهزة قابلة للارتداء",
+          "apparel": "ملابس"
+        }
+      },
+      "attributeLabels": {
+        "screenSize": "حجم الشاشة",
+        "screenType": "نوع الشاشة",
+        "displayResolution": "دقة العرض",
+        "refreshRate": "معدل التحديث",
+        "processor": "المعالج / الشريحة",
+        "ram": "الذاكرة العشوائية",
+        "internalStorage": "التخزين الداخلي",
+        "rearCamera": "الكاميرا الخلفية",
+        "frontCamera": "الكاميرا الأمامية",
+        "batteryCapacity": "سعة البطارية",
+        "fastCharging": "الشحن السريع",
+        "operatingSystem": "نظام التشغيل",
+        "fiveGSupport": "دعم 5G",
+        "simType": "نوع الشريحة",
+        "biometricSecurity": "الأمان الحيوي",
+        "weight": "الوزن",
+        "dimensions": "الأبعاد",
+        "expandableStorage": "تخزين قابل للتوسعة",
+        "wirelessCharging": "الشحن اللاسلكي",
+        "waterResistance": "مقاومة الماء",
+        "laptopCpu": "المعالج",
+        "laptopGpu": "الرسومات",
+        "laptopStorage": "التخزين"
+      },
+      "attributeSuffixes": {
+        "inches": "بوصة",
+        "mah": "مللي أمبير",
+        "grams": "جرام"
+      },
+      "details": {
+        "sectionTitle": "تفاصيل المنتج",
+        "sectionSubtitle": "أدخل تفاصيل المنتج لإنشاء قائمة.",
+        "category": "الفئة",
+        "subcategory": "الفئة الفرعية",
+        "selectCategory": "اختر الفئة",
+        "selectSubcategory": "اختر الفئة الفرعية",
+        "productTitle": "عنوان المنتج",
+        "productTitlePlaceholder": "أدخل عنوان المنتج",
+        "brand": "العلامة",
+        "brandPlaceholder": "أدخل اسم العلامة",
+        "description": "وصف المنتج",
+        "descriptionPlaceholder": "أدخل الوصف",
+        "descriptionHint": "يُنصح بحد أدنى {min} حرفاً.",
+        "featuresLabel": "الميزات الرئيسية (نقاط)",
+        "featurePlaceholder": "ميزة {n}",
+        "addFeature": "إضافة ميزة",
+        "removeFeature": "إزالة الميزة"
+      },
+      "attributes": {
+        "productSection": "خصائص المنتج",
+        "subtitle": "املأ خصائص المنتج لهذه الفئة الفرعية. الحقول المطلوبة مُعلَّمة بـ *.",
+        "noExtraFields": "لا توجد حقول مُعرَّفة لهذه الفئة الفرعية.",
+        "selectPlaceholder": "اختر",
+        "textPlaceholder": "أدخل القيمة",
+        "dynamicTitle": "خصائص {name}",
+        "fallbackName": "المنتج"
+      },
+      "variants": {
+        "sectionTitle": "متغيرات المنتج",
+        "subtitle": "كل صف يمثل متغيراً قابلاً للبيع (مثلاً لون مختلف). كل الصفوف تستخدم نفس حقول الخيارات للفئة. استخدم «إضافة متغير آخر» لمزيد من الـ SKU.",
+        "variantRowHeading": "المتغير {n}",
+        "addVariant": "إضافة متغير آخر",
+        "removeVariant": "إزالة المتغير",
+        "variantImages": "صور المتغير",
+        "variantImagesHint": "أضف حتى 5 صور PNG أو JPEG لهذا المتغير (اختياري).",
+        "variantImageSelect": "إضافة صورة متغير",
+        "variantImageRemove": "إزالة صورة المتغير",
+        "noVariantFields": "لا تتطلب هذه الفئة خيارات متغيرات. تابع إلى مراجعة القائمة.",
+        "selectPlaceholder": "اختر",
+        "textPlaceholder": "أدخل القيمة"
+      },
+      "images": {
+        "sectionTitle": "صور المنتج",
+        "sectionSubtitle": "أضف صوراً عالية الجودة. يُنصح بـ 3 إلى 5 صور على الأقل.",
+        "dropHint": "SVG أو PNG أو JPEG (الحد الأقصى 5 ميجابايت)",
+        "mainBadge": "• الصورة الرئيسية",
+        "errorType": "يرجى رفع صورة بصيغة SVG أو PNG أو JPEG.",
+        "errorSize": "يجب ألا يتجاوز حجم كل صورة {maxMb} ميجابايت."
+      },
+      "review": {
+        "sectionTitle": "مراجعة وإرسال",
+        "sectionSubtitle": "راجع جميع المعلومات قبل الإرسال.",
+        "productDetails": "تفاصيل المنتج",
+        "attributes": "الخصائص",
+        "productAttributes": "خصائص المنتج",
+        "productVariants": "متغيرات المنتج",
+        "images": "الصور",
+        "labels": {
+          "category": "الفئة",
+          "title": "عنوان المنتج",
+          "brand": "العلامة",
+          "description": "وصف المنتج",
+          "features": "الميزات الرئيسية"
+        }
+      },
+      "errors": {
+        "required": "هذا الحقل مطلوب.",
+        "requiredSelect": "يرجى الاختيار.",
+        "atLeastOneFeature": "أضف ميزة واحدة على الأقل.",
+        "imagesMin": "أضف صورة منتج واحدة على الأقل.",
+        "variantsMinOne": "أضف متغيراً واحداً على الأقل واملأ جميع حقول الخيارات (مثل اللون).",
+        "variantRowEmpty": "املأ جميع حقول الخيارات لهذا المتغير أو احذفه.",
+        "duplicateVariantRow": "هذا المتغير يطابق صفاً آخر. استخدم قيم خيارات فريدة لكل متغير.",
+        "submitVariantsInvalid": "صحّح خيارات المتغيرات في خطوة المتغيرات قبل الإرسال."
+      }
+    },
+    "allCategories": "كل الفئات",
+    "allStatuses": "كل الحالات",
+    "filters": {
+      "allSellers": "كل البائعين",
+      "sellerSearchPlaceholder": "ابحث عن بائع",
+      "allSubcategories": "كل الفئات الفرعية",
+      "allMatchResults": "كل نتائج المطابقة",
+      "sellersLoading": "جاري تحميل البائعين...",
+      "noSellerResults": "لا يوجد بائعون",
+      "allBrands": "كل العلامات",
+      "brandSearchPlaceholder": "ابحث عن علامة",
+      "brandsLoading": "جاري تحميل العلامات...",
+      "noBrandResults": "لا توجد علامات",
+      "allTypes": "كل الأنواع",
+      "merchandise": "بضائع",
+      "giftcard": "بطاقة هدية",
+      "clearFilters": "مسح الفلاتر",
+      "toggleFilters": "إظهار/إخفاء عوامل التصفية",
+      "sortByCreatedAt": "ترتيب حسب تاريخ الإنشاء"
+    },
+    "matchResult": {
+      "matchFound": "تم العثور على مطابقة",
+      "possibleMatch": "مطابقة محتملة",
+      "noMatchFound": "لا توجد مطابقة"
+    },
+    "dateFilter": "التاريخ",
+    "dateAll": "كل التواريخ",
+    "date2024": "2024",
+    "date2023": "2023",
+    "noResults": "لا توجد نتائج مطابقة لعوامل التصفية.",
+    "showingResults": "عرض {from} إلى {to} من {total} نتيجة",
+    "notFound": "تعذر العثور على هذا العنصر.",
+    "notFoundHint": "العودة إلى قائمة الكتالوج لاختيار إدراج آخر.",
+    "backToList": "العودة إلى القائمة",
+    "menuView": "عرض",
+    "menuEdit": "تعديل",
+    "menuDelete": "حذف",
+    "menuViewRequest": "عرض الطلب",
+    "placeholders": {
+      "editListing": "تدفق التعديل غير متصل بعد.",
+      "deleteListing": "الحذف غير متاح في وضع الواجهة فقط.",
+      "rowAction": "هذا الإجراء غير متاح في وضع الواجهة فقط.",
+      "offerRow": "ستُربط صفحة تفاصيل العرض بواجهة البرمجة عند الجاهزية.",
+      "editOffer": "ستُربط عملية تعديل العرض بواجهة البرمجة عند الجاهزية."
+    },
+    "offersView": {
+      "sectionTitle": "العروض",
+      "sectionSubtitle": "اعرض وأدر عروض البائعين من واجهة برمجة كتالوج المركز.",
+      "subTabActive": "العروض النشطة",
+      "searchPlaceholder": "ابحث باسم المنتج أو رمز البائع",
+      "table": {
+        "sku": "SKU",
+        "seller": "البائع",
+        "product": "المنتج",
+        "category": "الفئة",
+        "subCategory": "الفئة الفرعية",
+        "condition": "حالة السلعة",
+        "price": "السعر",
+        "stockQty": "المخزون",
+        "location": "الموقع",
+        "salesChannel": "قناة البيع",
+        "status": "الحالة",
+        "submittedOn": "تاريخ الإرسال"
+      }
+    },
+    "listings": {
+      "searchPlaceholder": "ابحث باسم المنتج",
+      "table": {
+        "product": "المنتج",
+        "brand": "العلامة",
+        "category": "الفئة",
+        "subCategory": "الفئة الفرعية",
+        "offers": "المتغيرات",
+        "status": "الحالة",
+        "createdOn": "تاريخ الإنشاء",
+        "actions": "إجراءات"
+      }
+    },
+    "requests": {
+      "searchPlaceholder": "ابحث باسم المنتج",
+      "table": {
+        "product": "المنتج",
+        "brand": "العلامة",
+        "seller": "البائع",
+        "matchResult": "نتيجة المطابقة",
+        "category": "الفئة",
+        "subCategory": "الفئة الفرعية",
+        "status": "الحالة",
+        "submittedOn": "تاريخ الإرسال",
+        "actions": "إجراءات"
+      }
+    },
+    "status": {
+      "active": "نشط",
+      "draft": "مسودة",
+      "archived": "مؤرشف",
+      "pendingReview": "قيد المراجعة",
+      "approved": "موافق",
+      "rejected": "مرفوض"
+    },
+    "offersStatus": {
+      "pending": "قيد الانتظار",
+      "inactive": "غير نشط"
+    },
+    "offerLifecycle": {
+      "active": "نشط",
+      "inactive": "غير نشط",
+      "expired": "منتهٍ"
+    },
+    "listingDetails": {
+      "title": "تفاصيل القائمة",
+      "sellerOffers": "عروض البائعين",
+      "sellerOffersSubtitle": "كل العروض المقدّمة من البائعين لهذه القائمة.",
+      "searchPlaceholder": "ابحث باسم المنتج أو البائع أو الرمز",
+      "productSection": "المنتج",
+      "productDetails": "تفاصيل المنتج",
+      "createdOn": "تاريخ الإنشاء",
+      "updatedOn": "تاريخ التحديث",
+      "handle": "المعرّف النصي",
+      "subtitle": "ملخص",
+      "tags": "وسوم",
+      "selectThumbnail": "اختر صورة المنتج {n}",
+      "showDetails": "إظهار التفاصيل",
+      "hideDetails": "إخفاء التفاصيل",
+      "keyFeatures": "ميزات رئيسية",
+      "description": "وصف المنتج",
+      "attributes": "المواصفات",
+      "variants": "المتغيرات",
+      "variant": "متغير {n}",
+      "variantImageAlt": "صورة المتغير {n}",
+      "catalogSku": "رمز SKU للكتالوج",
+      "sellerSku": "رمز SKU للبائع",
+      "listingStatus": "حالة القائمة",
+      "edit": "تعديل القائمة",
+      "delete": "حذف القائمة",
+      "statusUpdated": "تم تحديث حالة القائمة.",
+      "deleteConfirm": "حذف هذه القائمة؟ لا يمكن التراجع عن ذلك.",
+      "deleteSuccess": "تم حذف القائمة."
+    },
+    "offerDetail": {
+      "title": "تفاصيل العرض",
+      "offerStatusLabel": "حالة العرض",
+      "sellerOfferHeading": "عرض البائع",
+      "sellerOfferHeadingNamed": "عرض {sellerName}",
+      "productDetailsHeading": "تفاصيل المنتج",
+      "salesChannelsHeading": "إدارة قنوات البيع",
+      "readMore": "عرض المزيد",
+      "readLess": "عرض أقل",
+      "channels": {
+        "b2c": "تطبيق الأفراد",
+        "marketplace": "السوق",
+        "rewards": "بوابة المكافآت"
+      },
+      "labels": {
+        "category": "الفئة",
+        "subCategory": "الفئة الفرعية",
+        "sku": "SKU البائع",
+        "productSku": "SKU الكتالوج",
+        "productId": "معرّف المنتج",
+        "productVariantId": "معرّف المتغير",
+        "sellerId": "معرّف البائع",
+        "currency": "العملة",
+        "priceAmount": "المبلغ (رقمي)",
+        "conditionDisplay": "الحالة",
+        "totalStock": "إجمالي المخزون",
+        "offerPeriod": "فترة العرض",
+        "offerMetadata": "بيانات وصفية (عرض)",
+        "inventoryMetadata": "بيانات وصفية (مخزون)",
+        "seller": "البائع",
+        "submittedOn": "تاريخ الإرسال"
+      },
+      "edit": "تعديل العرض",
+      "statusUpdated": "تم تحديث حالة العرض.",
+      "offerPeriodNoEnd": "بدون تاريخ انتهاء"
+    },
+    "offerEdit": {
+      "title": "تعديل العرض",
+      "sectionImages": "الصور",
+      "mainImage": "الصورة الرئيسية",
+      "otherImages": "صور إضافية",
+      "sectionProductVariant": "المنتج والمتغير",
+      "product": "المنتج",
+      "brand": "العلامة",
+      "variant": "المتغير",
+      "selectVariant": "اختر المتغير",
+      "sectionOffer": "العرض",
+      "sku": "SKU",
+      "itemCondition": "حالة المنتج",
+      "itemConditionNew": "جديد",
+      "itemConditionUsed": "مستعمل",
+      "itemConditionRefurbished": "مجدَّد",
+      "location": "الموقع",
+      "stock": "الكمية",
+      "price": "السعر",
+      "currencySar": "ر.س",
+      "cancel": "إلغاء",
+      "update": "تحديث",
+      "savedToast": "تم تحديث العرض.",
+      "offerStatus": "حالة العرض",
+      "currencyCode": "العملة",
+      "startsAt": "يبدأ (UTC)",
+      "endsAt": "ينتهي (UTC)",
+      "validation": "تحقّق من السعر والكمية.",
+      "badEndDate": "تاريخ انتهاء غير صالح.",
+      "saving": "جاري الحفظ…",
+      "endsHint": "اترك تاريخ الانتهاء فارغًا لعرض مفتوح.",
+      "editableFieldsCaption": "لا يمكن تعديل سوى حالة العرض (نشط / غير نشط) والسعر والكمية من هنا.",
+      "expiredLifecycleHint": "حالة العرض منتهية — لتغييرات أخرى استخدم مسارات العمل المناسبة.",
+      "readOnlyHeading": "المنتج والكتالوج",
+      "readOnlyCaption": "لا يمكن تعديل هذه الحقول من هنا. عدّل بيانات المنتج من مسارات عمل الكتالوج عند الحاجة.",
+      "removeImage": "إزالة الصورة",
+      "addImage": "إضافة صورة",
+      "dragReorderHint": "اسحب الصور المصغّرة لإعادة ترتيبها. الصورة الأولى هي الصورة الرئيسية للمنتج.",
+      "dragHandle": "اسحب لإعادة الترتيب"
+    },
+    "listingRequest": {
+      "title": "طلب إدراج",
+      "reject": "رفض",
+      "approve": "قبول وإنشاء قائمة",
+      "rejectModal": {
+        "title": "رفض طلب الإدراج",
+        "description": "أخبر البائع بسبب رفض طلب الإدراج. سيُرسل هذا السبب في البريد ويظهر في نتائج الرفع.",
+        "reasonLabel": "سبب الرفض",
+        "reasonPlaceholder": "أدخل السبب",
+        "confirm": "رفض",
+        "cancel": "إلغاء"
+      },
+      "requestedBy": "مقدم الطلب",
+      "sellerName": "اسم البائع",
+      "email": "البريد",
+      "submittedOn": "تاريخ الإرسال",
+      "matchResult": "نتيجة المطابقة",
+      "rejectionReason": "سبب الرفض",
+      "productDetails": "تفاصيل المنتج",
+      "sellersOffer": "عرض البائع",
+      "variant": "متغير {n}",
+      "variantImageAlt": "صورة المتغير {n}",
+      "condition": "الحالة",
+      "sku": "الرمز",
+      "location": "الموقع",
+      "stock": "الكمية",
+      "price": "السعر"
+    },
+    "offersStatus": {
+      "pending": "معلق",
+      "inactive": "غير نشط"
+    },
+    "offersTable": {
+      "sku": "الرمز",
+      "seller": "البائع",
+      "product": "المنتج",
+      "category": "الفئة",
+      "subCategory": "الفئة الفرعية",
+      "condition": "حالة السلعة",
+      "salesChannel": "قناة البيع",
+      "variants": "المتغيرات",
+      "location": "الموقع",
+      "stock": "المخزون",
+      "price": "السعر",
+      "status": "الحالة",
+      "submittedOn": "تاريخ التقديم"
+    }
+  },
+  "media-management": {
+    "title": "تكوين التطبيق الفائق",
+    "publishChanges": "نشر التغييرات",
+    "publishing": "جاري النشر...",
+    "auditLog": "سجل المراجعة",
+    "publishConfirmation": {
+      "title": "نشر التغييرات؟",
+      "description": "ستؤثر تغييراتك على جميع مستخدمي تطبيق الجوال. هل أنت متأكد من أنك تريد نشر هذه التغييرات؟",
+      "confirmButton": "نعم، انشر",
+      "cancelButton": "إلغاء"
+    },
+    "auditLogsDrawer": {
+      "title": "سجلات المراجعة",
+      "noLogsFound": "لا توجد سجلات مراجعة",
+      "updatedBy": "تم التحديث بواسطة:",
+      "updatedOn": "تم التحديث في:",
+      "revert": "إستعادة",
+      "revertConfirmation": {
+        "title": "إستعادة إلى هذه الحالة؟",
+        "description": "سيؤدي هذا إلى استعادة التكوين كما كان في {date}.\n\nستحتاج إلى نشر التغييرات لجعلها مباشرة.",
+        "confirmButton": "نعم، إستعادة",
+        "cancelButton": "إلغاء"
+      }
+    },
+    "fileUpload": {
+      "uploading": "جاري الرفع...",
+      "failed": "فشل",
+      "complete": "مكتمل",
+      "clickToUpload": "انقر للرفع",
+      "dragAndDrop": "أو اسحب وأفلت هنا",
+      "fileFormats": "JPEG أو PNG أو WebP (الحد الأقصى: 5 ميجابايت)",
+      "imagePreviewAlt": "معاينة",
+      "uploadedImage": "صورة محملة",
+      "replaceImage": "استبدال الصورة"
+    },
+    "carouselSection": {
+      "iconSlotsDescription": "هناك 6 خانات أيقونات افتراضياً. يمكنك إضافة المزيد، لكن لا يمكن تقليل عدد الخانات إلى أقل من 6.",
+      "addIconSlot": "إضافة خانة أيقونة"
+    },
+    "mediaItemHeader": {
+      "imageUploaded": "تم تحميل الصورة"
+    },
+    "livePreview": {
+      "title": "معاينة مباشرة",
+      "description": "شاهد كيف ستظهر تغييراتك في تطبيق الجوال",
+      "shop": "المتجر",
+      "discover": "اكتشف"
+    },
+    "tabs": {
+      "promoBanners": "لافتات ترويجية",
+      "carouselIcons": "أيقونات العرض الدوار"
+    },
+    "banners": {
+      "header": "لافتة ترويجية رأسية",
+      "vertical": "لافتة ترويجية عمودية",
+      "horizontal1": "لافتة ترويجية أفقية 1",
+      "horizontal2": "لافتة ترويجية أفقية 2"
+    },
+    "icons": {
+      "icon1": "أيقونة 1",
+      "icon2": "أيقونة 2",
+      "icon3": "أيقونة 3",
+      "icon4": "أيقونة 4",
+      "icon5": "أيقونة 5",
+      "icon6": "أيقونة 6"
+    },
+    "deepLink": {
+      "label": "رابط الوجهة العميق",
+      "placeholder": "أدخل الرابط",
+      "hint": "اختياري. اتركه فارغاً للافتة ثابتة (غير قابلة للنقر)."
+    },
+    "iconLabel": {
+      "label": "تسمية الأيقونة",
+      "placeholder": "أدخل تسمية الأيقونة",
+      "hint": "الحد الأقصى 20 حرفاً"
+    }
+  },
+  "onboardingText": "الإعداد الأولي",
+  "dashboard": "لوحة التحكم",
+  "dashboardPage": {
+    "goodMorning": "صباح الخير، {name}"
+  },
+  "client-dashboard": "لوحة التحكم للعميل",
+  "tenant-management-text": "إدارة المستأجرين",
+  "logout": "تسجيل الخروج",
+  "logoutError": "فشل تسجيل الخروج. يرجى المحاولة مرة أخرى.",
+  "welcome": "مرحبا بك في منصة المستخدمين",
+  "login": {
+    "login": "تسجيل الدخول",
+    "welcome": "مرحباً!",
+    "subtitle": "أدخل بريدك الإلكتروني وكلمة المرور لتسجيل الدخول",
+    "fields": {
+      "email": {
+        "label": "البريد الإلكتروني",
+        "placeholder": "أدخل البريد الإلكتروني"
+      },
+      "password": {
+        "label": "كلمة المرور",
+        "placeholder": "أدخل كلمة المرور"
+      }
+    },
+    "validation": {
+      "email": "يرجى إدخال بريد إلكتروني صحيح",
+      "password": "كلمة المرور مطلوبة"
+    },
+    "button": {
+      "submit": "تسجيل الدخول",
+      "loading": "جاري تسجيل الدخول..."
+    },
+    "invalidCredentials": "البريد الإلكتروني أو كلمة المرور غير صحيحة. يرجى المحاولة مرة أخرى."
+  },
+  "tenant-management": {
+    "title": "إدارة المستأجرين",
+    "tabs": {
+      "invited": "المستأجرون المدعوون",
+      "onboarded": "المستأجرون المُفعّلون"
+    },
+    "addTenant": "إضافة مستأجر",
+    "inviteSuccess": "تمت إضافة المستأجر بنجاح!",
+    "inviteSuccessDescription": "تمت إضافة مستأجر جديد.",
+    "inviteError": "فشل في إرسال الدعوة",
+    "inviteErrorDescription": "تعذر إرسال الدعوة. يرجى المحاولة مرة أخرى.",
+    "resendInviteSuccess": "تمت إعادة إرسال الدعوة",
+    "resendInviteSuccessDescription": "تم إرسال بريد الدعوة مرة أخرى.",
+    "resendInviteError": "فشل في إعادة إرسال الدعوة",
+    "resendInviteErrorDescription": "تعذر إعادة إرسال الدعوة. يرجى المحاولة مرة أخرى.",
+    "search": "بحث",
+    "searchByBusinessName": "بحث باسم الشركة",
+    "status": "الحالة",
+    "allStatuses": "الكل",
+    "inviteStatuses": {
+      "pending": "دعوة قيد الانتظار",
+      "accepted": "مقبولة"
+    },
+    "tenantIdentityStatus": {
+      "active": "نشط",
+      "inactive": "غير نشط"
+    },
+    "clearFilters": "مسح الفلاتر",
+    "noClientsAlert": "لا يوجد مستأجرين",
+    "loadingClients": "جاري تحميل المستأجرين...",
+    "errorLoadingClients": "خطأ في تحميل المستأجرين",
+    "errorLoadingTenants": "خطأ في تحميل المستأجرين",
+    "noClientsFound": "لا يوجد مستأجرين",
+    "noTenantsFound": "لا يوجد مستأجرين",
+    "noClientsDescription": "لا يوجد مستأجرين لمراجعة في الوقت الحالي.",
+    "retry": "إعادة المحاولة",
+    "updating": "جاري التحديث...",
+    "selectStatus": "اختر الحالة",
+    "table": {
+      "fullName": "الاسم الكامل",
+      "email": "البريد الإلكتروني",
+      "businessName": "اسم الشركة",
+      "tenantBusiness": "المستأجر/الشركة",
+      "status": "الحالة",
+      "activeProducts": "المنتجات",
+      "businessOwner": "مالك الشركة",
+      "country": "البلد",
+      "accountManager": "مدير الحساب",
+      "actions": "الإجراءات",
+      "viewDetails": "عرض التفاصيل",
+      "resendInvite": "إعادة إرسال الدعوة",
+      "requestRevision": "طلب المراجعة",
+      "approve": "موافقة",
+      "reject": "رفض"
+    },
+    "pagination": {
+      "previous": "السابق",
+      "next": "التالي"
+    },
+    "InviteSentPopup": {
+      "title": "تمت إضافة المستأجر",
+      "description": "تم إرسال بريد إلكتروني للدعوة إلى المستأجر",
+      "continue": "متابعة"
+    }
+  },
+  "tenant-details": {
+    "title": "تفاصيل المستأجر",
+    "editTenant": "تعديل المستأجر",
+    "summary": {
+      "tenantId": "معرف المستأجر",
+      "tenantBusiness": "المستأجر/الشركة",
+      "email": "البريد الإلكتروني",
+      "businessOwner": "صاحب العمل",
+      "accountManager": "مدير الحساب",
+      "country": "البلد",
+      "accountStatus": "حالة الحساب",
+      "active": "نشط",
+      "inactive": "غير نشط",
+      "pendingReview": "في انتظار المراجعة",
+      "reviewInProgress": "المراجعة قيد التنفيذ",
+      "revisionRequested": "تم طلب المراجعة",
+      "approved": "موافق عليه",
+      "rejected": "مرفوض",
+      "onboarding": "قيد التسجيل"
+    },
+    "tabs": {
+      "overviewKyb": "نظرة عامة وKYB",
+      "subscriptions": "الاشتراكات",
+      "storefront": "واجهة المتجر",
+      "userManagement": "إدارة المستخدمين",
+      "wallet": "المحفظة",
+      "comingSoon": "قريباً."
+    },
+    "walletTopUp": {
+      "today": "اليوم",
+      "loading": "جاري تحميل المحافظ…",
+      "loadError": "تعذر تحميل بيانات المحفظة. يرجى المحاولة مرة أخرى.",
+      "retry": "إعادة المحاولة",
+      "toast": {
+        "approveSuccess": "تمت الموافقة على الشحن.",
+        "approveError": "تعذرت الموافقة على الشحن. يرجى المحاولة مرة أخرى.",
+        "rejectSuccess": "تم رفض الشحن.",
+        "rejectError": "تعذر رفض الشحن. يرجى المحاولة مرة أخرى.",
+        "freezeSuccess": "تم تجميد المحفظة.",
+        "freezeError": "تعذر تجميد المحفظة. يرجى المحاولة مرة أخرى.",
+        "unfreezeSuccess": "تم إلغاء تجميد المحفظة.",
+        "unfreezeError": "تعذر إلغاء تجميد المحفظة. يرجى المحاولة مرة أخرى."
+      },
+      "totalBalance": {
+        "label": "الرصيد الإجمالي",
+        "currencyLabel": "العملة الأساسية",
+        "noPrimary": "لا توجد عملة MASTER أساسية"
+      },
+      "freezeActions": {
+        "freezeMaster": "تجميد المحفظة الرئيسية",
+        "unfreezeMaster": "إلغاء تجميد المحفظة الرئيسية",
+        "freezeProduct": "تجميد محفظة المنتج",
+        "unfreezeProduct": "إلغاء تجميد محفظة المنتج",
+        "freeze": "تجميد",
+        "unfreeze": "إلغاء التجميد",
+        "masterFrozenCalloutTitle": "ما الذي يحدث بعد ذلك:",
+        "masterFrozenCalloutBody": "تم تجميد جميع محافظ المنتجات والمستأجرين الفرعيين تحت هذا المستأجر نتيجة لذلك."
+      },
+      "freezeModals": {
+        "actions": {
+          "no": "لا",
+          "yes": "نعم"
+        },
+        "defaultFreezeNotes": "تم تجميد المحفظة بانتظار مراجعة الامتثال.",
+        "defaultUnfreezeNotes": "تم إلغاء تجميد المحفظة بعد مراجعة الامتثال.",
+        "freezeMaster": {
+          "title": "تجميد المحفظة الرئيسية؟",
+          "description": "سيؤدي هذا إلى تجميد المستأجر بالكامل. لن تتمكن جميع محافظ المنتجات والمستأجرين الفرعيين من إجراء معاملات.",
+          "typePromptPrefix": "اكتب",
+          "typePromptSuffix": "للتأكيد."
+        },
+        "unfreezeMaster": {
+          "title": "إلغاء تجميد المحفظة الرئيسية؟",
+          "description": "تصبح المحفظة الرئيسية نشطة مرة أخرى.",
+          "callout": "أي محفظة منتج أو مستأجر فرعي تم تجميدها بمفردها ستبقى مجمّدة."
+        },
+        "freezeProduct": {
+          "title": "تجميد محفظة {productName}؟",
+          "description": "سيؤدي هذا أيضًا إلى تجميد جميع محافظ المستأجرين الفرعيين البالغ عددها {count} تحت {productName}. لن يتمكنوا من إجراء معاملات حتى تلغي تجميد {productName} مرة أخرى.",
+          "callout": "تبقى المحفظة الرئيسية ومحافظ المنتجات الأخرى نشطة.",
+          "acknowledge": "أفهم أن هذا يجمد {productName} وجميع محافظ المستأجرين الفرعيين التابعة لها."
+        },
+        "unfreezeProduct": {
+          "title": "إلغاء تجميد محفظة {productName}؟",
+          "description": "تصبح {productName} نشطة مرة أخرى.",
+          "callout": "أي محفظة مستأجر فرعي تم تجميدها بمفردها ستبقى مجمّدة."
+        },
+        "freezeSubTenant": {
+          "title": "تجميد {walletName}؟",
+          "description": "لن تتمكن هذه المحفظة من إجراء معاملات حتى تلغي تجميدها."
+        },
+        "unfreezeSubTenant": {
+          "title": "إلغاء تجميد {walletName}؟",
+          "description": "تصبح هذه المحفظة نشطة مرة أخرى."
+        }
+      },
+      "currency": {
+        "disabled": "معطّلة"
+      },
+      "display": {
+        "unknownAmount": "غير متاح",
+        "unknownBalance": "غير متاح",
+        "noReference": "لا يوجد مرجع"
+      },
+      "walletBalance": {
+        "title": "رصيد المحفظة",
+        "default": "افتراضي",
+        "empty": "لا توجد محافظ MASTER لهذا المستأجر."
+      },
+      "productWallets": {
+        "title": "محافظ المنتجات",
+        "empty": "لا توجد محافظ منتجات لهذا المستأجر."
+      },
+      "products": {
+        "rewards_portal": "بوابة المكافآت",
+        "lms": "LMS",
+        "innovation": "الابتكار",
+        "points_exchange": "تبادل النقاط",
+        "storefront": "واجهة المتجر",
+        "travelx": "TravelX"
+      },
+      "walletTypes": {
+        "MASTER": "محفظة رئيسية",
+        "PRODUCT": "محفظة منتج",
+        "SUB_TENANT": "محفظة مستأجر فرعي",
+        "unknown": "المحفظة المستهدفة"
+      },
+      "tenantFloatWallets": {
+        "title": "محافظ مستأجري {tenantName}",
+        "walletLabel": "{walletType} · {product}",
+        "searchPlaceholder": "بحث",
+        "empty": "لا توجد محافظ مستأجر",
+        "showingResults": "عرض {count} من {total} نتيجة",
+        "filters": {
+          "allStatuses": "كل الحالات"
+        },
+        "statuses": {
+          "ACTIVE": "نشط",
+          "FROZEN": "مجمّد"
+        },
+        "table": {
+          "wallet": "المحفظة",
+          "currentFloatBalance": "الرصيد الحالي",
+          "status": "الحالة",
+          "actions": "الإجراءات"
+        }
+      },
+      "pendingReview": {
+        "title": "{count} تحويل بنكي في انتظار المراجعة",
+        "badge": "في انتظار المراجعة",
+        "reviewRequest": "مراجعة الطلب",
+        "nextInQueue": "تتم مراجعة الطلب التالي في قائمة الانتظار."
+      },
+      "reviewModals": {
+        "actions": {
+          "cancel": "إلغاء",
+          "approve": "موافقة",
+          "reject": "رفض"
+        },
+        "fields": {
+          "tenant": "المستأجر",
+          "product": "المنتج",
+          "targetWallet": "المحفظة المستهدفة",
+          "amount": "المبلغ",
+          "currency": "العملة",
+          "reference": "المرجع",
+          "currentBalance": "الرصيد الحالي",
+          "balanceAfterApproval": "الرصيد بعد الموافقة"
+        },
+        "whatHappensNext": {
+          "title": "ما الذي سيحدث بعد ذلك:"
+        },
+        "detail": {
+          "loading": "جارٍ تحميل أحدث تفاصيل العملية…",
+          "error": "تعذر تحميل أحدث تفاصيل العملية. لا تتوفر الموافقة حتى ينجح التحميل.",
+          "incomplete": "لا تتوفر الموافقة لأن الرصيد بعد الموافقة غير موجود."
+        },
+        "review": {
+          "title": "مراجعة شحن الرصيد",
+          "description": "أنت تراجع المبلغ التالي لرصيد المستأجر:",
+          "subtitle": "اختر الموافقة أو الرفض لهذا الطلب"
+        },
+        "approve": {
+          "title": "الموافقة على شحن الرصيد",
+          "description": "أنت تقوم بإضافة المبلغ التالي إلى رصيد المستأجر:",
+          "subtitle": "راجع التفاصيل قبل التأكيد",
+          "confirm": "تأكيد الموافقة",
+          "whatHappensNext": {
+            "credit": "تتم إضافة {amount} {currencyCode} إلى رصيد {product} للمستأجر عند نجاح الموافقة"
+          }
+        },
+        "reject": {
+          "title": "رفض شحن الرصيد",
+          "description": "أنت ترفض المبلغ التالي لرصيد المستأجر:",
+          "reasonLabel": "سبب الرفض",
+          "reasonPlaceholder": "اختر سببًا",
+          "notesLabel": "ملاحظات (اختياري)",
+          "notesPlaceholder": "أضف سياقًا لهذا الرفض",
+          "confirm": "تأكيد الرفض",
+          "reasons": {
+            "transfer_not_received": "لم يتم استلام التحويل",
+            "amount_does_not_match": "المبلغ غير مطابق",
+            "invalid_proof_of_payment": "إثبات دفع غير صالح",
+            "reference_number_mismatch": "رقم المرجع غير مطابق",
+            "compliance_hold": "تعليق امتثال"
+          },
+          "whatHappensNext": {
+            "balanceUnchanged": "يبقى رصيد الرصيد دون تغيير",
+            "recordReason": "يتم وضع علامة مرفوض على الطلب مع السبب المحدد"
+          }
+        }
+      },
+      "methods": {
+        "BANK_TRANSFER": "بنك",
+        "PAYMENT_SERVICE": "دفع",
+        "TENANT_CONFIRMED": "تأكيد المستأجر",
+        "WALLET_TRANSFER": "تحويل المحفظة",
+        "MANUAL": "يدوي"
+      },
+      "statuses": {
+        "approved": "موافق عليه",
+        "completed": "مكتمل",
+        "rejected": "مرفوض",
+        "failed": "فشل",
+        "cancelled": "ملغى",
+        "expired": "منتهي",
+        "pending_review": "في انتظار المراجعة",
+        "unknown": "غير معروف"
+      },
+      "history": {
+        "title": "سجل الشحن",
+        "noProduct": "-",
+        "searchPlaceholder": "بحث",
+        "empty": "لا يوجد سجل شحن",
+        "showingResults": "عرض {count} من {total} نتيجة",
+        "filters": {
+          "allMethods": "كل الطرق",
+          "allCurrencies": "كل العملات",
+          "allStatuses": "كل الحالات",
+          "dateRange": "نطاق التاريخ",
+          "sort": "تبديل الترتيب"
+        },
+        "table": {
+          "type": "النوع",
+          "product": "المنتج",
+          "method": "الطريقة",
+          "amount": "المبلغ",
+          "currency": "العملة",
+          "submitted": "تاريخ الإرسال",
+          "status": "الحالة"
+        },
+        "actions": {
+          "view": "عرض التفاصيل",
+          "detailSummary": "{status} · {amount} · الرصيد بعد الموافقة {balanceAfter}",
+          "detailError": "تعذر تحميل تفاصيل الشحن."
+        }
+      },
+      "detailsModal": {
+        "title": "تفاصيل الشحن",
+        "sectionTitle": "تفاصيل الشحن",
+        "proofTitle": "إثبات الدفع",
+        "download": "تنزيل إثبات الدفع",
+        "downloadError": "تعذر تنزيل إثبات الدفع.",
+        "fields": {
+          "method": "الطريقة",
+          "status": "الحالة",
+          "product": "المنتج",
+          "requestedAmount": "المبلغ المطلوب",
+          "currency": "العملة",
+          "transactionReference": "مرجع المعاملة",
+          "floatBeforeApproval": "الرصيد قبل الموافقة",
+          "floatAfterApproval": "الرصيد بعد الموافقة",
+          "submittedOn": "تاريخ الإرسال",
+          "approvedOn": "تاريخ الموافقة"
+        }
+      }
+    },
+    "storefront": {
+      "pageTitle": "واجهة المتجر",
+      "viewModal": {
+        "title": "واجهات المتجر",
+        "searchPlaceholder": "البحث باسم واجهة المتجر",
+        "noSearchResults": "لا توجد واجهات متجر تطابق بحثك.",
+        "close": "إغلاق"
+      },
+      "createStorefront": "إنشاء واجهة متجر",
+      "loading": "جارٍ تحميل واجهات المتجر...",
+      "loadError": "تعذر تحميل واجهات المتجر.",
+      "retry": "إعادة المحاولة",
+      "emptyTitle": "لم يتم العثور على واجهات متجر!",
+      "emptyDescription": "أنشئ واجهة متجر للمستأجر.",
+      "card": {
+        "statusDraft": "مسودة",
+        "statusActive": "نشط",
+        "statusSuspended": "معلق",
+        "goToStorefront": "الانتقال إلى واجهة المتجر",
+        "floatBalance": "رصيد الاحتياطي",
+        "totalOrders": "إجمالي الطلبات",
+        "ordersFulfilled": "الطلبات المكتملة",
+        "setupChecklist": "خطوات الإعداد المطلوبة",
+        "setupChecklistProgress": "{completed} من {required} مكتملة"
+      },
+      "create": {
+        "pageTitle": "إنشاء واجهة متجر",
+        "loadCategoriesError": "تعذر تحميل حزم الفئات. يرجى المحاولة مرة أخرى.",
+        "loadProductsError": "تعذر تحميل المنتجات. يرجى المحاولة مرة أخرى.",
+        "submitError": "تعذر إنشاء واجهة المتجر. يرجى المحاولة مرة أخرى.",
+        "actions": {
+          "back": "رجوع",
+          "continue": "متابعة",
+          "createStorefront": "إنشاء واجهة متجر",
+          "creating": "جارٍ إنشاء واجهة المتجر..."
+        },
+        "errors": {
+          "required": "هذا الحقل مطلوب.",
+          "requiredSelect": "يرجى اختيار خيار.",
+          "noStorefrontSubscription": "لم يتم العثور على اشتراك واجهة متجر لهذا المستأجر."
+        },
+        "steps": {
+          "stepNumber": "الخطوة {number}",
+          "details": {
+            "label": "تفاصيل واجهة المتجر",
+            "sectionTitle": "تفاصيل واجهة المتجر",
+            "sectionSubtitle": "اختر المستأجر وأدخل تفاصيل واجهة المتجر.",
+            "sectionSubtitleTenantScoped": "أدخل تفاصيل واجهة المتجر.",
+            "tenant": "المستأجر",
+            "selectTenant": "اختر المستأجر",
+            "searchTenantPlaceholder": "بحث",
+            "loadMoreTenants": "المزيد",
+            "loadingTenants": "جارٍ تحميل المستأجرين...",
+            "noTenantsFound": "لم يتم العثور على مستأجرين",
+            "storefrontName": "اسم واجهة المتجر",
+            "storefrontNamePlaceholder": "أدخل اسم واجهة المتجر",
+            "urlSlug": "الرابط المختصر",
+            "urlSlugPlaceholder": "store-name",
+            "urlSlugHint": "{slug}.{hostSuffix}",
+            "region": "المنطقة",
+            "selectRegion": "اختر المنطقة",
+            "currency": "العملة",
+            "floatBalance": "رصيد الاحتياطي",
+            "lowFloatThreshold": "حد تنبيه انخفاض الرصيد",
+            "lowFloatHint": "يتم إرسال تنبيه عندما ينخفض الرصيد عن هذا المبلغ"
+          },
+          "categoryBundles": {
+            "label": "حزم الفئات",
+            "sectionTitle": "حزم الفئات",
+            "sectionSubtitle": "اختر حزم الفئات لتعيينها لواجهة المتجر",
+            "selectAll": "تحديد الكل",
+            "searchPlaceholder": "البحث في الفئات",
+            "searchEmpty": "لا توجد فئات مطابقة لبحثك.",
+            "empty": "لا توجد حزم فئات متاحة لهذا التبويب.",
+            "productCount": "المنتجات: {count}",
+            "productCountPrefix": "المنتجات:",
+            "tabs": {
+              "merchandise": "البضائع",
+              "giftCards": "بطاقات الهدايا"
+            }
+          },
+          "selectProducts": {
+            "label": "اختيار المنتجات",
+            "sectionTitle": "اختيار المنتجات",
+            "sectionSubtitle": "راجع واختر المنتجات لعرضها في واجهة المتجر",
+            "totalProducts": "إجمالي المنتجات: {selected}/{total}",
+            "allCategories": "جميع الفئات",
+            "searchPlaceholder": "البحث باسم المنتج",
+            "empty": "لم يتم العثور على منتجات.",
+            "showingResults": "عرض {from} من {total} نتيجة",
+            "tabs": {
+              "merchandise": "البضائع",
+              "giftCards": "بطاقات الهدايا"
+            },
+            "table": {
+              "product": "المنتج",
+              "category": "الفئة",
+              "lowestPrice": "أقل سعر"
+            }
+          }
+        },
+        "success": {
+          "title": "تم إنشاء واجهة المتجر بنجاح!",
+          "storefrontDetails": "تفاصيل واجهة المتجر",
+          "storefrontName": "اسم واجهة المتجر",
+          "subdomain": "النطاق الفرعي",
+          "tenant": "المستأجر",
+          "totalProducts": "إجمالي المنتجات",
+          "goToManagement": "الانتقال إلى إدارة واجهات المتجر"
+        }
+      }
+    },
+    "subscriptions": {
+      "pageTitle": "المنتجات المشترك بها",
+      "newSubscription": "اشتراك جديد",
+      "newSubscriptionToast": "إنشاء اشتراك جديد غير متاح بعد.",
+      "subTabs": {
+        "products": "المنتجات",
+        "uploadContracts": "رفع العقود"
+      },
+      "subTabListAria": "أقسام تفاصيل الاشتراك",
+      "statusActive": "نشط",
+      "statusInactive": "غير نشط",
+      "agreedPrice": "السعر المتفق عليه",
+      "trialLabel": "التجربة",
+      "freeTrialPrice": "تجربة مجانية ({days} يوم)",
+      "billingFrequency": "دورة الفوترة",
+      "subscriptionPeriodLabel": "فترة الاشتراك",
+      "noSubscribedProducts": "لا توجد منتجات مشترك بها بعد.",
+      "storefrontMenu": {
+        "viewStorefronts": "عرض واجهات المتجر",
+        "createStorefront": "إنشاء واجهة متجر"
+      },
+      "loading": "جارٍ تحميل الاشتراكات…",
+      "loadError": "تعذّر تحميل الاشتراكات. يرجى المحاولة مرة أخرى.",
+      "retry": "إعادة المحاولة",
+      "addPaidSubscription": {
+        "title": "إضافة اشتراك مدفوع",
+        "success": "تمت إضافة الاشتراك بنجاح.",
+        "errors": {
+          "missingTenant": "المستأجر غير متوفر. أعد تحميل الصفحة وحاول مرة أخرى.",
+          "missingTenantEmail": "البريد الإلكتروني للمستأجر مطلوب لإنشاء اشتراك. افتح هذا المستأجر من قائمة المستأجرين أو تأكد من وجود بريد اتصال في الملف.",
+          "missingTenantUserId": "معرّف مستخدم المستأجر مطلوب لإنشاء اشتراك. أعد تحميل ملف العميل أو افتح هذا المستأجر من قائمة المستأجرين.",
+          "productNotConfigured": "هذا المنتج غير متاح في كتالوج الدفع.",
+          "subscribableProductsUnavailable": "تعذّر تحميل المنتجات من admin-be (GET /subscribable-products). تأكد من تسجيل الدخول وتشغيل admin-be وإعداد PAYMENT_GATEWAY_SERVICE_BASE_URL.",
+          "countryRequired": "بلد المستأجر مطلوب لإنشاء اشتراك."
+        },
+        "validationSummaryTitle": "يرجى تصحيح ما يلي:",
+        "actions": {
+          "cancel": "إلغاء",
+          "continue": "متابعة",
+          "save": "حفظ وإضافة المنتج"
+        },
+        "fields": {
+          "product": "المنتج",
+          "productPlaceholder": "اختر المنتج",
+          "startDate": "تاريخ البدء",
+          "startDatePlaceholder": "اختر تاريخ البدء",
+          "endDate": "تاريخ الانتهاء",
+          "endDatePlaceholder": "اختر تاريخ الانتهاء",
+          "gracePeriod": "فترة السماح",
+          "gracePeriodHint": "آخر أيام الاشتراك قبل تاريخ الانتهاء. يبقى الوصول نشطاً خلال هذه الفترة، ثم ينتهي في تاريخ انتهاء الاشتراك.",
+          "daysSuffix": "أيام",
+          "enableFreeTrial": "تضمين تجربة مجانية",
+          "enableFreeTrialHint": "لن يُنشأ تحويل بنكي حتى تضيف اشتراكاً مدفوعاً لاحقاً. يبدأ الوصول فوراً خلال فترة التجربة.",
+          "trialDays": "مدة التجربة (أيام)",
+          "trialDaysHint": "وصول مجاني من تاريخ البدء. التجارب المؤسسية محدودة بـ {maxDays} يوماً.",
+          "billingTrialNote": "تم اختيار تجربة مجانية — لن تُنشأ فاتورة تحويل بنكي أولية. يمكنك اختيارياً إدخال سعر متفق عليه للمرجع.",
+          "agreedPriceTrialOptionalHint": "اختياري. عند التعيين، يُسجَّل كسعر متفق عليه. لا تُنشأ فاتورة خلال فترة التجربة.",
+          "priceCurrencyPrefix": "ر.س",
+          "agreedPrice": "السعر المتفق عليه",
+          "agreedPricePlaceholder": "أدخل السعر المتفق عليه",
+          "billingFrequency": "دورة الفوترة",
+          "billingYearly": "سنوي",
+          "billingMonths": "أشهر",
+          "billingMonthsCount": "دورة الفوترة (أشهر)"
+        },
+        "validation": {
+          "productRequired": "يرجى اختيار منتج.",
+          "startDateRequired": "تاريخ البدء مطلوب.",
+          "endDateRequired": "تاريخ الانتهاء مطلوب.",
+          "endDateAfterStart": "يجب أن يكون تاريخ الانتهاء في أو بعد تاريخ البدء.",
+          "gracePeriodInteger": "يجب أن تكون فترة السماح رقماً صحيحاً.",
+          "gracePeriodMin": "يجب أن تكون فترة السماح يوماً واحداً على الأقل.",
+          "gracePeriodMax": "لا يمكن أن تتجاوز فترة السماح 365 يوماً.",
+          "agreedPriceRequired": "السعر المتفق عليه مطلوب.",
+          "agreedPricePositive": "يجب أن يكون السعر المتفق عليه أكبر من صفر.",
+          "trialDaysInvalid": "يجب أن تكون مدة التجربة بين 1 و {maxDays} يوماً.",
+          "trialDaysExceedsMax": "لا يمكن أن تتجاوز مدة التجربة {maxDays} يوماً للاشتراكات المؤسسية.",
+          "trialDaysExceedsMaxWarning": "أدخلت {trialDays} يوماً، وهذا يتجاوز حد التجربة المؤسسية البالغ {maxDays} يوماً. قلّل مدة التجربة للمتابعة.",
+          "trialExceedsPeriod": "يجب أن تكون مدة التجربة ({trialDays} يوماً) أقصر من فترة الاشتراك ({periodDays} يوماً بين البداية والنهاية). يجب أن تنتهي التجربة قبل تاريخ انتهاء الاشتراك.",
+          "trialEndsAfterSubscriptionEnd": "تنتهي التجربة في {trialEndsAt}، أي بعد تاريخ انتهاء الاشتراك ({endDate}). مدّد تاريخ الانتهاء أو قصّر التجربة.",
+          "startDateNotInPast": "لا يمكن أن يكون تاريخ البدء في الماضي.",
+          "subscriptionPeriodTooShort": "يجب أن تكون فترة الاشتراك {minDays} يوماً على الأقل (حالياً {periodDays} يوماً بين البداية والنهاية).",
+          "graceExceedsPeriod": "لا يمكن أن تتجاوز فترة السماح ({graceDays} يوماً) فترة الاشتراك ({periodDays} يوماً).",
+          "postTrialPeriodTooShort": "مطلوب {minDays} يوماً على الأقل بين نهاية التجربة ونهاية الاشتراك (حالياً {postTrialDays} يوماً).",
+          "paidPeriodBeforeGraceTooShort": "مطلوب {minDays} يوماً مدفوعاً على الأقل بين نهاية التجربة وبداية فترة السماح (حالياً {paidDays} يوماً).",
+          "trialOverlapsGrace": "تنتهي التجربة في {trialEndsAt} داخل فترة السماح (آخر {graceDays} يوماً، تبدأ {graceStartsAt}). قصّر التجربة أو قلّل السماح أو مدّد الاشتراك.",
+          "graceExceedsPeriodWarning": "فترة السماح ({graceDays} يوماً) أطول من فترة الاشتراك ({periodDays} يوماً).",
+          "trialOverlapsGraceWarning": "تنتهي التجربة في {trialEndsAt} داخل فترة السماح التي تبدأ {graceStartsAt}.",
+          "trialGraceSpanPeriodWarning": "التجربة ({trialDays} يوماً) وفترة السماح ({graceDays} يوماً) معاً تتجاوز فترة الاشتراك ({periodDays} يوماً) وقد تتداخل.",
+          "trialDominatesPeriodWarning": "التجربة تمثل {percent}% من فترة الاشتراك ({trialDays} من {periodDays} يوماً). فكّر في عقد أطول أو تجربة أقصر.",
+          "subscriptionPeriodExceedsMaxWarning": "فترة الاشتراك {periodDays} يوماً (حد المراجعة: {maxDays} يوماً).",
+          "billingMonthsPositive": "يجب أن تكون دورة الفوترة شهراً واحداً على الأقل."
+        },
+        "review": {
+          "subscriptionDetailsTitle": "تفاصيل الاشتراك",
+          "billingTitle": "الفوترة والفاتورة",
+          "editDetails": "تعديل تفاصيل الاشتراك",
+          "editBilling": "تعديل تفاصيل الفوترة",
+          "subscriptionType": "نوع الاشتراك",
+          "paidSubscription": "اشتراك مدفوع",
+          "freeTrialSubscription": "تجربة مجانية",
+          "trialDays": "مدة التجربة",
+          "trialDaysValue": "{days} يوم",
+          "initialPayment": "الدفعة الأولية",
+          "noInitialPayment": "لا يوجد (تجربة مجانية)",
+          "product": "المنتج",
+          "subscriptionPeriod": "فترة الاشتراك",
+          "gracePeriod": "فترة السماح",
+          "gracePeriodValue": "{days} يوم",
+          "accessTimelineTitle": "الجدول الزمني للوصول",
+          "trialEndsAt": "انتهاء التجربة",
+          "graceStartsAt": "بداية فترة السماح",
+          "subscriptionEndsAt": "انتهاء الاشتراك",
+          "invoiceType": "نوع الفاتورة",
+          "invoiceTypeValue": "فاتورة متوافقة مع المملكة",
+          "agreedPrice": "السعر المتفق عليه",
+          "agreedPriceNotSet": "غير محدد",
+          "billingFrequency": "دورة الفوترة",
+          "billingFrequencyYearly": "سنوي",
+          "billingFrequencyMonths": "كل {count} أشهر"
+        }
+      }
+    },
+    "contracts": {
+      "documentsTitle": "مستندات العقد",
+      "documentsDescription": "الاتفاقيات الموقعة والعقود التجارية الخاصة بهذا المستأجر.",
+      "uploadButton": "رفع عقد",
+      "noContracts": "لا توجد عقود مرفوعة بعد.",
+      "uploadSuccess": "تم رفع العقود بنجاح.",
+      "uploadError": "فشل رفع العقود.",
+      "maxFilesExceeded": "يمكنك رفع {max} ملفات كحد أقصى في الطلب الواحد.",
+      "invalidFileType": "نوع الملف غير مدعوم. الأنواع المدعومة: PDF وJPG وJPEG وPNG.",
+      "fileTooLarge": "يجب ألا يتجاوز حجم كل ملف عقد 5 ميجابايت.",
+      "uploadRequirements": "الأنواع المدعومة: PDF وJPG وJPEG وPNG. الحد الأقصى لحجم كل ملف: 5 ميجابايت.",
+      "viewError": "فشل فتح العقد.",
+      "downloadError": "فشل تنزيل العقد.",
+      "view": "عرض",
+      "download": "تنزيل"
+    },
+    "userManagement": {
+      "cancel": "إلغاء",
+      "stats": {
+        "totalTeamMembers": "إجمالي أعضاء الفريق",
+        "activeMembers": "الأعضاء النشطون",
+        "inactiveMembers": "الأعضاء غير النشطين"
+      },
+      "teamMembersTitle": "أعضاء الفريق",
+      "searchPlaceholder": "بحث",
+      "addUser": "إضافة مستخدم",
+      "emptyText": "لم يتم العثور على أعضاء الفريق",
+      "filters": {
+        "role": "الدور",
+        "status": "الحالة",
+        "dateJoined": "تاريخ الانضمام",
+        "allRoles": "الدور",
+        "allStatuses": "الحالة",
+        "allDates": "تاريخ الانضمام"
+      },
+      "table": {
+        "memberName": "اسم العضو",
+        "email": "البريد الإلكتروني",
+        "role": "الدور",
+        "status": "الحالة",
+        "dateJoined": "تاريخ الانضمام"
+      },
+      "status": {
+        "active": "نشط",
+        "inactive": "غير نشط"
+      },
+      "actions": {
+        "edit": "تعديل",
+        "delete": "حذف",
+        "resendInvite": "إعادة إرسال الدعوة"
+      },
+      "inviteSuccess": "تم دعوة المستخدم بنجاح.",
+      "inviteError": "فشل في دعوة المستخدم.",
+      "updateSuccess": "تم تحديث المستخدم بنجاح.",
+      "updateError": "فشل في تحديث المستخدم.",
+      "deleteSuccess": "تم إزالة المستخدم بنجاح.",
+      "deleteError": "فشل في إزالة المستخدم.",
+      "resendInviteNotAvailable": "إعادة إرسال الدعوة غير متاحة حالياً؛ نقطة نهاية الخلفية غير مُنفذة."
+    },
+    "notProvided": "—",
+    "editDialog": {
+      "title": "تعديل المستأجر",
+      "save": "حفظ التغييرات",
+      "cancel": "إلغاء",
+      "loading": "جاري تحميل المستأجر…",
+      "loadError": "تعذر تحميل المستأجر من خدمة الهوية. تحقق من الاتصال وحاول مرة أخرى.",
+      "retry": "إعادة المحاولة",
+      "fields": {
+        "businessName": "اسم النشاط التجاري",
+        "businessOwnerEmail": "البريد الإلكتروني لصاحب العمل",
+        "accountManager": "مدير الحساب",
+        "selectAccountManager": "اختر مدير الحساب",
+        "country": "البلد",
+        "selectCountry": "اختر البلد"
+      },
+      "validation": {
+        "businessNameRequired": "اسم النشاط التجاري مطلوب",
+        "emailInvalid": "أدخل بريداً إلكترونياً صالحاً"
+      },
+      "toast": {
+        "success": "تم تحديث المستأجر بنجاح.",
+        "error": "فشل تحديث المستأجر. حاول مرة أخرى."
+      }
+    }
+  },
+  "user-review-page": {
+    "title": "نظرة عامة على المستخدم",
+    "loading": "جاري تحميل بيانات المستأجر...",
+    "userNotFound": "المستأجر غير موجود",
+    "backToTenantManagement": "العودة إلى إدارة المستأجرين",
+    "sending": "جاري الإرسال...",
+    "actions": {
+      "requestRevision": "طلب مراجعة",
+      "approve": "موافقة",
+      "reject": "رفض",
+      "cancel": "إلغاء",
+      "sendRevisionRequest": "إرسال طلب المراجعة"
+    },
+    "stateUpdateFailed": "تعذر تأكيد تغيير الحالة. راجع قائمة المستأجرين — ربما تم التحديث بالفعل.",
+    "RevisionRequestSentPopup": {
+      "title": "تم إرسال طلب المراجعة",
+      "description": "تم إرسال بريد إلكتروني إلى المستخدم يطلب المراجعة",
+      "continue": "متابعة"
+    }
+  },
+  "business-details-review": {
+    "title": "تفاصيل الشركة",
+    "listOfDirectors": "قائمة المديرين",
+    "beneficialOwners": "الملاك المستفيدون",
+    "fields": {
+      "fullName": "الاسم الكامل",
+      "name": "الاسم",
+      "email": "البريد الإلكتروني",
+      "businessName": "اسم الشركة",
+      "accountManager": "مدير الحساب",
+      "registrationId": "رقم تسجيل الشركة",
+      "taxNumber": "الرقم الضريبي",
+      "businessUrl": "رابط الشركة",
+      "businessAddress": "عنوان الشركة",
+      "country": "البلد",
+      "state": "الولاية",
+      "city": "المدينة",
+      "zipCode": "الرمز البريدي",
+      "position": "المنصب",
+      "nationality": "الجنسية",
+      "passportNoNationalId": "رقم جواز السفر أو الهوية الوطنية"
+    }
+  },
+  "attached-documents-review": {
+    "title": "المستندات المرفقة",
+    "documents": {
+      "businessRegistration": "شهادة السجل التجاري",
+      "nationalAddress": "شهادة العنوان الوطني",
+      "vatRegistration": "شهادة تسجيل ضريبة القيمة المضافة",
+      "ultimateBeneficialOwner": "المالك المنتفع النهائي"
+    }
+  },
+  "compliance-declarations-review": {
+    "title": "إقرارات الامتثال",
+    "fields": {
+      "countryOfOrigin": "بلد منشأ الأموال المحولة (إن وجد):",
+      "sanctionsQuestion": "هل أنت أو كيانك أو أي أفراد مرتبطين خاضعون للعقوبات في أي دولة أو اختصاص قضائي؟ ",
+      "sanctionsNote": "إذا كانت الإجابة بنعم، يرجى تقديم تفاصيل العقوبات، بما في ذلك الاختصاص القضائي وطبيعة العقوبة.",
+      "amlQuestion": "هل تؤكد أن كيانك يمتثل لجميع اللوائح المعمول بها لمكافحة غسل الأموال ومكافحة تمويل الإرهاب في اختصاصك القضائي؟ إذا كانت الإجابة بلا، يرجى تقديم توضيح"
+    },
+    "values": {
+      "yes": "نعم",
+      "no": "لا",
+      "uae": "الإمارات العربية المتحدة"
+    }
+  },
+  "document-review-card": {
+    "requestRevision": "طلب مراجعة",
+    "placeholder": "بعض المشاكل المذكورة هنا",
+    "viewFile": "عرض الملف",
+    "downloadFile": "تنزيل الملف",
+    "downloadFailed": "فشل تنزيل الملف. يرجى المحاولة مرة أخرى.",
+    "viewOpenFailed": "تعذر فتح الملف. تحقق من النوافذ المنبثقة أو حاول مرة أخرى."
+  },
+  "review-field": {
+    "requestRevision": "طلب مراجعة",
+    "reasonPlaceholder": "السبب"
+  },
+  "requiredInfoDialog": {
+    "mainname": {
+      "title": "المعلومات المطلوبة لعملية التسجيل",
+      "description": "لإعداد الحساب بسرعة، يرجى تجهيز المعلومات والوثائق التالية. سيساعدك ذلك على إكمال العملية بكفاءة.",
+      "coreBusiness": {
+        "title": "تفاصيل العمل الأساسية",
+        "description": "سيُطلب منك تقديم التفاصيل التالية حول عملك:",
+        "businessName": "اسم العمل",
+        "registrationId": "رقم تسجيل العمل",
+        "registrationIdDescription": "(مثل معرف تسجيل الأعمال)",
+        "taxNumber": "الرقم الضريبي",
+        "taxNumberDescription": "(مثل رقم ضريبة القيمة المضافة)",
+        "businessUrl": "رابط العمل",
+        "businessUrlDescription": "(اختياري)",
+        "address": "العنوان الكامل للعمل",
+        "addressDescription": "(الشارع، الدولة، المنطقة/المحافظة، المدينة، الرمز البريدي)"
+      },
+      "ownership": {
+        "title": "تفاصيل الملكية",
+        "description": "سيُطلب منك تقديم تفاصيل حول ملكية العمل:",
+        "directors": {
+          "title": "المديرون:",
+          "details": " الاسم الكامل، المنصب، الجنسية، ورقم جواز السفر أو الهوية الوطنية لكل مدير"
+        },
+        "beneficialOwners": {
+          "title": "الملاك المستفيدون:",
+          "details": " الاسم الكامل، المنصب، الجنسية، ورقم جواز السفر أو الهوية الوطنية لكل فرد يملك 25٪ أو أكثر من الأسهم/السيطرة"
+        }
+      },
+      "documents": {
+        "title": "الوثائق التي ستحتاج إلى رفعها",
+        "description": "يرجى تجهيز نسخ رقمية (PDF، PNG، JPG) من هذه الوثائق للرفع:",
+        "businessRegistration": {
+          "title": "شهادة تسجيل العمل:",
+          "details": " وثيقة رسمية تؤكد التسجيل القانوني للعمل."
+        },
+        "nationalAddress": {
+          "title": "شهادة العنوان الوطني:",
+          "details": " إثبات العنوان الفعلي المسجل للعمل."
+        },
+        "vatRegistration": {
+          "title": "شهادة تسجيل ضريبة القيمة المضافة:",
+          "details": " وثيقة تؤكد حالة تسجيل ضريبة القيمة المضافة."
+        }
+      },
+      "loading": "جاري التسجيل...",
+      "continue": "متابعة"
+    }
+  },
+  "attachedDocumentsReview": {
+    "title": "المستندات المرفقة",
+    "fileFormat": "صيغة PDF أو PNG أو JPG",
+    "actions": {
+      "preview": "معاينة",
+      "download": "تحميل",
+      "upload": "رفع المستند"
+    },
+    "documents": {
+      "businessRegistration": "شهادة تسجيل العمل الرسمية (CR)",
+      "nationalAddress": "شهادة العنوان الوطني",
+      "vatRegistration": "شهادة تسجيل ضريبة القيمة المضافة"
+    }
+  },
+  "businessDetailsReview": {
+    "title": "تفاصيل العمل",
+    "listOfDirectors": "قائمة المديرين",
+    "beneficialOwners": "الملاك المستفيدون",
+    "fields": {
+      "fullName": "الاسم الكامل",
+      "email": "البريد الإلكتروني",
+      "businessName": "اسم العمل",
+      "registrationId": "رقم تسجيل العمل",
+      "taxNumber": "الرقم الضريبي",
+      "businessUrl": "رابط العمل",
+      "businessAddress": "عنوان العمل",
+      "country": "الدولة",
+      "state": "المنطقة",
+      "city": "المدينة",
+      "zipCode": "الرمز البريدي",
+      "position": "المنصب",
+      "nationality": "الجنسية",
+      "passportNoNationalId": "رقم جواز السفر أو الهوية الوطنية"
+    }
+  },
+  "complianceDeclarationsReview": {
+    "title": "إقرارات الامتثال",
+    "fields": {
+      "countryOfOrigin": "دولة منشأ الأموال المحولة (إن وجد):",
+      "defaultCountry": "الإمارات العربية المتحدة",
+      "sanctionsQuestion": "هل أنت أو كيانك أو أي أفراد مرتبطين بك خاضعون لعقوبات في أي دولة أو ولاية قضائية؟",
+      "sanctionsDetails": "إذا كانت الإجابة نعم، يرجى تقديم تفاصيل العقوبات، بما في ذلك الولاية القضائية وطبيعة العقوبة.",
+      "amlQuestion": "هل تؤكد أن كيانك يلتزم بجميع أنظمة مكافحة غسل الأموال وتمويل الإرهاب المعمول بها في ولايتك القضائية؟ إذا كانت الإجابة لا، يرجى تقديم شرح",
+      "yes": "نعم",
+      "no": "لا"
+    }
+  },
+  "applicationStatusCard": {
+    "status": {
+      "pending-approval": "بانتظار الموافقة",
+      "revision-requested": "تم طلب تعديل",
+      "approved": "تمت الموافقة",
+      "rejected": "مرفوض"
+    },
+    "actions": {
+      "reviewEdit": "مراجعة وتعديل التفاصيل",
+      "reviewSubmission": "مراجعة الطلب الخاص بك",
+      "viewDetails": "عرض التفاصيل"
+    }
+  },
+  "clientSubmissionView": {
+    "title": "التفاصيل المقدمة",
+    "actions": {
+      "submit": "إرسال"
+    },
+    "statusLabel": {
+      "pending-approval": "بانتظار الموافقة",
+      "revision-requested": "تم طلب تعديل",
+      "approved": "تمت الموافقة",
+      "rejected": "مرفوض"
+    },
+    "status": {
+      "pendingApproval": "يتم مراجعة معلوماتك. سيتم إعلامك بمجرد الموافقة عليها.",
+      "revisionRequested": "طلب المسؤول تعديل بعض العناصر. يرجى إعادة إرسال تلك العناصر.",
+      "approved": "تمت الموافقة على معلوماتك. يمكنك الآن الوصول إلى منتجات Merit."
+    }
+  },
+  "inviteTenantDialog": {
+    "title": "إضافة مستأجر",
+    "description": "سيتم دعوة البريد الإلكتروني الذي أدخلته بصلاحية المالك. تُضاف اشتراكات المنتجات بعد إتمام التسجيل.",
+    "fields": {
+      "email": "البريد الإلكتروني لصاحب العمل",
+      "emailPlaceholder": "أدخل عنوان البريد الإلكتروني",
+      "businessName": "المستأجر/الشركة",
+      "businessNamePlaceholder": "أدخل اسم المستأجر/الشركة",
+      "country": "البلد",
+      "selectCountry": "اختر البلد",
+      "accountManager": "مدير الحساب",
+      "selectAccountManager": "اختر مدير الحساب",
+      "uploadBusinessContract": "تحميل عقد العمل",
+      "clickToUpload": "انقر للرفع",
+      "dragAndDrop": "أو اسحب وأفلت هنا",
+      "contractRequirements": "PDF، DOCx (الحد الأقصى: 5 ميجابايت)",
+      "fileComplete": "مكتمل",
+      "products": "المنتج/المنتجات",
+      "selectProducts": "اختر المنتج/المنتجات",
+      "tenant": "اختر المستأجر",
+      "selectTenant": "اختر مستأجر"
+    },
+    "products": {
+      "lms": "نظام إدارة الولاء (LMS)",
+      "lmsShort": "LMS",
+      "innovation": "الابتكار",
+      "innovationShort": "الابتكار",
+      "pointsExchange": "مبادلة النقاط",
+      "pointsExchangeShort": "مبادلة النقاط",
+      "sellerPortal": "بوابة البائعين",
+      "sellerPortalShort": "بوابة البائعين",
+      "travelShop": "TravelShop"
+    },
+    "validation": {
+      "emailRequired": "البريد الإلكتروني مطلوب",
+      "emailInvalid": "يرجى إدخال بريد إلكتروني صحيح",
+      "businessNameRequired": "اسم الشركة مطلوب",
+      "countryRequired": "البلد مطلوب",
+      "accountManagerRequired": "مدير الحساب مطلوب",
+      "products": "يرجى اختيار منتج واحد على الأقل",
+      "tenantRequired": "يرجى اختيار مستأجر"
+    },
+    "actions": {
+      "sendInvite": "إرسال الدعوة",
+      "save": "حفظ",
+      "saveAndInvite": "حفظ وإرسال الدعوة",
+      "cancel": "إلغاء"
+    }
+  },
+  "inviteSellerDialog": {
+    "title": "دعوة بائع",
+    "description": "سيتم دعوة البريد الإلكتروني الذي تدخله إلى بوابة البائع.",
+    "fields": {
+      "email": "البريد الإلكتروني",
+      "emailPlaceholder": "seller@example.com",
+      "companyName": "اسم الشركة",
+      "companyNamePlaceholder": "أدخل اسم الشركة",
+      "supplierId": "معرف المورد",
+      "supplierIdPlaceholder": "أدخل معرف المورد",
+      "shippingProvider": "تنفيذ الشحن (افتراضي)",
+      "shippingProviderPlaceholder": "اختر طريقة الشحن",
+      "businessId": "معرف تسجيل الأعمال",
+      "businessIdPlaceholder": "معرف تسجيل الأعمال",
+      "uploadBusinessCertificate": "تحميل شهادة تسجيل الأعمال",
+      "clickToUpload": "انقر للرفع",
+      "dragAndDrop": "أو اسحب وأفلت هنا",
+      "fileRequirements": "PDF أو صورة (الحد الأقصى: 5 ميجابايت)",
+      "fileComplete": "مكتمل"
+    },
+    "validation": {
+      "emailRequired": "البريد الإلكتروني مطلوب",
+      "emailInvalid": "يرجى إدخال بريد إلكتروني صحيح",
+      "companyNameRequired": "اسم الشركة مطلوب",
+      "supplierIdRequired": "معرف المورد مطلوب",
+      "shippingProviderRequired": "مزود الشحن مطلوب",
+      "businessIdRequired": "معرف تسجيل الأعمال مطلوب",
+      "businessCertificateRequired": "ملف شهادة تسجيل الأعمال مطلوب",
+      "fileSizeError": "يجب أن يكون حجم الملف أقل من 5 ميجابايت",
+      "fileTypeError": "يجب أن يكون الملف بصيغة PDF أو صورة"
+    },
+    "actions": {
+      "sendInvite": "إرسال الدعوة",
+      "continue": "متابعة"
+    }
+  },
+  "sellers-dashboard": {
+    "title": "نظرة عامة على البائعين",
+    "tabs": {
+      "onboarded": "البائعون المُفعّلون",
+      "invited": "البائعون المدعوون"
+    },
+    "inviteSeller": "دعوة بائع",
+    "search": "بحث",
+    "searchByBusinessName": "البحث باسم الشركة",
+    "status": "الحالة",
+    "selectStatus": "اختر الحالة",
+    "allStatuses": "الكل",
+    "tenantRowStatus": {
+      "active": "نشط",
+      "inactive": "غير نشط",
+      "suspended": "معلق"
+    },
+    "noClientsAlert": "لا يوجد بائعون",
+    "loadingClients": "جاري تحميل البائعين...",
+    "loadingSellers": "جاري تحميل البائعين...",
+    "errorLoadingClients": "خطأ في تحميل البائعين",
+    "errorLoadingSellers": "خطأ في تحميل البائعين",
+    "noSellersFound": "لا يوجد بائعون",
+    "noSellersDescription": "لا يوجد بائعون لمراجعة في الوقت الحالي.",
+    "retry": "إعادة المحاولة",
+    "table": {
+      "fullName": "الاسم الكامل",
+      "email": "البريد الإلكتروني",
+      "businessName": "اسم الشركة",
+      "status": "الحالة",
+      "actions": "الإجراءات",
+      "viewDetails": "عرض التفاصيل",
+      "resendInvite": "إعادة إرسال الدعوة"
+    },
+    "pagination": {
+      "previous": "السابق",
+      "next": "التالي"
+    },
+    "inviteSuccess": {
+      "title": "تم إرسال الدعوة!",
+      "message": "تم إرسال بريد إلكتروني للدعوة إلى {email}.",
+      "confirmText": "متابعة"
+    },
+    "inviteError": {
+      "title": "الدعوة موجودة بالفعل",
+      "messagePrefix": "توجد دعوة لـ",
+      "messageSuffix": "بالفعل. يرجى استخدام خيار إعادة الإرسال إذا كنت بحاجة إلى إرسالها مرة أخرى.",
+      "confirmText": "حسناً"
+    }
+  },
+  "seller-details": {
+    "title": "تفاصيل البائع",
+    "retry": "إعادة المحاولة",
+    "deactivateSeller": "إلغاء تفعيل البائع",
+    "deactivateSellerUnavailable": "إلغاء تفعيل البائع غير متاح بعد. اتبع إجراءات العمليات أو تواصل مع الفريق التقني عند الحاجة.",
+    "errors": {
+      "loadSellerDetails": "تعذّر تحميل تفاصيل البائع",
+      "loadOrders": "تعذّر تحميل الطلبات",
+      "loadOrdersOverview": "تعذّر تحميل ملخص الطلبات",
+      "updateShippingFailed": "تعذّر تحديث إعدادات الشحن. يُرجى المحاولة مرة أخرى.",
+      "loadCarriersFailed": "تعذّر تحميل قائمة الناقلين. قد تكون خيارات الناقل غير مكتملة."
+    },
+    "sections": {
+      "sellerInformation": "معلومات البائع",
+      "shippingSettings": "الشحن والتنفيذ",
+      "orderOverview": "نظرة عامة على الطلبات"
+    },
+    "info": {
+      "sellerId": "معرف البائع",
+      "fullName": "الاسم الكامل",
+      "email": "البريد الإلكتروني",
+      "phone": "رقم الهاتف",
+      "accountType": "نوع الحساب",
+      "accountStatus": "حالة الحساب",
+      "legalBusinessName": "الاسم القانوني للنشاط (الاسم التجاري)",
+      "shopName": "اسم المتجر",
+      "companyName": "اسم الشركة",
+      "accountTypeBusiness": "شركة / شركة مساهمة",
+      "accountTypeIndividual": "فردي / مستقل",
+      "businessRegistrationId": "رقم السجل التجاري",
+      "logistics": "الخدمات اللوجستية",
+      "logisticsMerit": "ميريت سبل",
+      "logisticsSelfManaged": "إدارة ذاتية",
+      "status": "الحالة",
+      "statusInviteAccepted": "تم قبول الدعوة",
+      "statusInvitePending": "الدعوة معلقة",
+      "statusActive": "نشط",
+      "statusInactive": "غير نشط",
+      "notProvided": "غير مقدم",
+      "notSpecified": "غير محدد",
+      "registrationCertificate": "شهادة التسجيل",
+      "shippingFulfillment": "تنفيذ الشحن",
+      "shippingProviderLabel": "موفر الشحن",
+      "shippingProviderPlaceholder": "اختر موفر الشحن",
+      "defaultCarrierLabel": "شركة التوصيل لآخر ميل (افتراضيًا)",
+      "defaultCarrierPlaceholder": "اختر شركة التوصيل"
+    },
+    "orderStatus": {
+      "new": "جديد",
+      "accepted": "مقبول",
+      "shippedToMerit": "تم الشحن إلى ميريت",
+      "readyToShip": "جاهز للشحن",
+      "shipped": "تم الشحن",
+      "delivered": "تم التسليم",
+      "canceled": "ملغي",
+      "arrivalPending": "في انتظار الوصول",
+      "receivedByMerit": "تم الاستلام",
+      "qcFailed": "فشل الجودة",
+      "unknown": "غير معروف"
+    },
+    "tabs": {
+      "orders": "الطلبات",
+      "kybDetails": "تفاصيل اعرف شركتك",
+      "storeDetails": "تفاصيل المتجر",
+      "storePlaceholder": "ستظهر تفاصيل المتجر هنا عند ربط واجهة البرمجة.",
+      "slaCompliance": "الامتثال لاتفاقية مستوى الخدمة"
+    },
+    "kyb": {
+      "loading": "جاري تحميل ملف اعرف شركتك…",
+      "loadError": "تعذر تحميل تفاصيل اعرف شركتك لهذا البائع.",
+      "retry": "حاول مرة أخرى",
+      "missingTenant": "معرّف المستأجر للبائع غير متوفر، لا يمكن تحميل اعرف شركتك.",
+      "noSubmittedData": "لا تتوفر بيانات ملف اعرف شركتك لهذا البائع بعد.",
+      "sections": {
+        "business": "تفاصيل النشاط التجاري",
+        "role": "الدور والهوية",
+        "financials": "البيانات المالية",
+        "documents": "المستندات المرفقة"
+      },
+      "fields": {
+        "crn": "السجل التجاري (CRN)",
+        "vatNumber": "الرقم الضريبي",
+        "state": "المنطقة / المحافظة",
+        "legalNameEn": "الاسم القانوني للنشاط (إنجليزي)",
+        "legalNameAr": "الاسم القانوني للنشاط (عربي)",
+        "businessAddress": "عنوان النشاط",
+        "city": "المدينة",
+        "country": "الدولة",
+        "zipPostal": "الرمز البريدي",
+        "role": "الدور",
+        "nationalId": "الهوية الوطنية / الإقامة",
+        "dateOfBirth": "تاريخ الميلاد",
+        "fullNameEn": "الاسم الكامل (إنجليزي)",
+        "fullNameAr": "الاسم الكامل (عربي)",
+        "iban": "الآيبان",
+        "bankName": "اسم البنك",
+        "currency": "العملة"
+      },
+      "documents": {
+        "noneAttached": "لم يتم إرجاع مستندات لهذا الملف."
+      }
+    },
+    "store": {
+      "storeAndLogistics": "المتجر والخدمات اللوجستية",
+      "storeDisplayName": "اسم عرض المتجر",
+      "shippingFulfilmentDefault": "تنفيذ الشحن (افتراضي)",
+      "attachedDocuments": "المستندات المرفقة",
+      "logo": "الشعار",
+      "banner": "اللافتة",
+      "noDocumentUploaded": "لا يوجد ملف مرفوع",
+      "viewFile": "عرض الملف",
+      "downloadFile": "تنزيل الملف",
+      "downloadFailed": "فشل التنزيل. يرجى المحاولة مرة أخرى.",
+      "viewOpenFailed": "تعذر فتح الملف. تحقق من النوافذ المنبثقة أو حاول مرة أخرى.",
+      "emailThrottlingTitle": "تقييد البريد الإلكتروني",
+      "emailThrottlingDescription": "(افتراضي 30) الحد الأدنى للدقائق بين إشعارات الطلب الجديد وجاهزية بوليصة الشحن (AWB Ready) لهذا البائع.",
+      "newOrderThrottleMinutes": "طلب جديد",
+      "awbReadyThrottleMinutes": "جاهزية بوليصة الشحن",
+      "saveThrottleAria": "حفظ تقييد الإشعارات",
+      "notificationThrottleSaved": "تم تحديث تقييد الإشعارات."
+    },
+    "orders": {
+      "sectionTitle": "الطلبات",
+      "ordersOverview": "نظرة عامة على الطلبات",
+      "recentOrders": "أحدث الطلبات",
+      "orderId": "معرف الطلب",
+      "tenant": "المستأجر",
+      "customer": "العميل",
+      "items": "العناصر",
+      "shipping": "الشحن",
+      "sla": "اتفاقية مستوى الخدمة",
+      "status": "الحالة",
+      "actions": "الإجراءات",
+      "noOrders": "لا توجد طلبات",
+      "statusCompleted": "مكتمل",
+      "statusPending": "قيد الانتظار",
+      "statusProcessing": "قيد المعالجة",
+      "view": "عرض",
+      "download": "تحميل",
+      "shippingSpl": "SPL",
+      "shippingSelf": "ذاتي",
+      "shippingShipToMerit": "الشحن إلى ميريت",
+      "slaNotAvailable": "—",
+      "filterShipping": "الشحن",
+      "filterShippingDefault": "الشحن",
+      "filterStatus": "الحالة",
+      "filterDateRange": "نطاق التاريخ",
+      "filterAllStatusesDefault": "كل الحالات",
+      "filterDateRangeDefault": "نطاق التاريخ",
+      "filterAll": "الكل",
+      "filterAllStatuses": "كل الحالات",
+      "dateRangeAll": "كل التواريخ",
+      "dateRangeLast7Days": "آخر 7 أيام",
+      "dateRangeLast30Days": "آخر 30 يومًا",
+      "total": "الإجمالي",
+      "dateTime": "التاريخ والوقت",
+      "carrierTracking": "الناقل والتتبع",
+      "carrierTrackingPending": "قيد الانتظار",
+      "carrierTrackingPendingTooltip": "لم يُشحن بعد",
+      "carrierTrackingOpenLink": "فتح رابط التتبع",
+      "copyTrackingId": "نسخ رقم التتبع",
+      "orderItems": "عناصر الطلب",
+      "qty": "الكمية",
+      "noItems": "لا توجد عناصر",
+      "close": "إغلاق"
+    },
+    "table": {
+      "carrierTrackingPending": "قيد الانتظار",
+      "carrierTrackingPendingTooltip": "لم يُشحن بعد"
+    },
+    "sla": {
+      "metric": "المقياس",
+      "target": "الهدف",
+      "actual": "الفعلي",
+      "status": "الحالة",
+      "complianceRate": "معدل الامتثال",
+      "noData": "لا توجد بيانات لاتفاقية مستوى الخدمة",
+      "statusCompliant": "ملتزم",
+      "statusNonCompliant": "غير ملتزم"
+    }
+  },
+  "order-details": {
+    "back": "رجوع",
+    "placedOn": "تم الطلب في",
+    "acceptOrder": "قبول الطلب",
+    "orderItems": "عناصر الطلب",
+    "printItems": "طباعة العناصر",
+    "printOrderItemsTitle": "عناصر الطلب",
+    "itemName": "الاسم",
+    "skuId": "رمز المنتج",
+    "sku": "رمز المنتج",
+    "orderId": "رقم الطلب",
+    "no": "رقم:",
+    "qty": "الكمية",
+    "shippingInformation": "معلومات الشحن",
+    "nationalAddressShort": "العنوان المختصر",
+    "trackingDetails": "تفاصيل التتبع",
+    "carrier": "الناقل",
+    "trackingId": "رقم التتبع",
+    "trackPackage": "تتبع الشحنة على موقع الناقل",
+    "awbNumberOrTrackingId": "رقم بوليصة الشحن / رقم التتبع",
+    "trackPackageSpl": "تتبع الشحنة على موقع Merit SPL",
+    "address": "العنوان",
+    "city": "المدينة",
+    "state": "الولاية",
+    "country": "الدولة",
+    "postalCode": "الرمز البريدي",
+    "shippingPartner": "شريك الشحن",
+    "specialInstructions": "تعليمات خاصة",
+    "noSpecialInstructions": "لا توجد تعليمات خاصة",
+    "customerDetails": "تفاصيل العميل",
+    "firstName": "الاسم الأول",
+    "lastName": "اسم العائلة",
+    "email": "البريد الإلكتروني",
+    "phoneNumber": "رقم الهاتف",
+    "orderTimeline": "الجدول الزمني للطلب",
+    "actions": {
+      "uploadAwb": "تحميل بوليصة الشحن",
+      "downloadAwb": "تنزيل بوليصة الشحن",
+      "awbReady": "بوليصة الشحن جاهزة للتنزيل",
+      "awbReadyButton": "بوليصة الشحن جاهزة",
+      "markAsShipped": "وضع علامة كمشحون",
+      "readyToShip": "طلب بوليصة الشحن والشحن",
+      "viewAwbStatus": "عرض حالة بوليصة الشحن",
+      "cancelOrder": "إلغاء الطلب",
+      "viewSellerProof": "عرض الإثبات",
+      "markAsReceived": "تحديد كمستلم",
+      "rejectQc": "رفض الجودة",
+      "requestAwbAndShip": "طلب بوليصة الشحن والشحن",
+      "viewQcProof": "عرض الإثبات",
+      "viewRejectedProof": "عرض إثبات الرفض"
+    },
+    "toasts": {
+      "acceptSuccess": "تم قبول الطلب بنجاح",
+      "acceptError": "فشل في قبول الطلب",
+      "readyToShipSuccess": "تم تحديث الطلب إلى جاهز للشحن",
+      "readyToShipError": "فشل في تحديث الطلب إلى جاهز للشحن",
+      "fileRequired": "ملف بوليصة الشحن (PDF أو صورة) مطلوب للطلبات المدارة ذاتيًا",
+      "downloadAwbError": "فشل في تنزيل بوليصة الشحن",
+      "markShippedSuccess": "تم وضع علامة كمشحون",
+      "markShippedError": "فشل في وضع علامة كمشحون",
+      "markReceivedSuccess": "تم تحديد الطلب كمستلم في المنشأة",
+      "markReceivedError": "فشل في تحديد الطلب كمستلم",
+      "rejectQcSuccess": "تم رفض الطلب وبدء عملية الإرجاع",
+      "rejectQcError": "فشل في رفض الجودة",
+      "requestAwbShipSuccess": "تم طلب بوليصة الشحن وشحن الطلب",
+      "requestAwbShipError": "فشل في طلب بوليصة الشحن والشحن",
+      "qcProofRequired": "ملف إثبات (صورة أو فيديو) مطلوب لرفض الجودة",
+      "proofDownloadError": "فشل في تنزيل الإثبات"
+    },
+    "stmPendingHelper": "إذا كان كل شيء متضمنًا وفي حالة جيدة، حدده كمستلم. إذا كان أي عنصر تالفًا أو مفقودًا، حدده كرفض الجودة.",
+    "stmCompleteHelper": "قم بتعبئة الطلب وانقر على \"طلب بوليصة الشحن\" عندما يكون جاهزًا لاستلام SPL.",
+    "rejectQcPopup": {
+      "title": "رفض الجودة",
+      "description": "قم بتحميل إثبات الضرر أو العنصر المفقود، يمكن أن يكون صورة أو فيديو",
+      "formatsHint": "jpg أو png أو mp4 (الحد الأقصى للحجم: 5MB)",
+      "cancel": "إلغاء",
+      "confirm": "إرجاع إلى البائع"
+    },
+    "requestAwbPopup": {
+      "title": "طلب بوليصة الشحن - جاهز للشحن",
+      "description": "طلب بوليصة الشحن يعني أن طردك معبأ وجاهز لاستلام SPL.",
+      "bullet1": "ستصلك بوليصة الشحن خلال ساعة واحدة",
+      "bullet2": "ستصلك إشعار عند جاهزية بوليصة الشحن",
+      "important": "مهم",
+      "infoText": "تابع فقط إذا كان طردك معبأ بالكامل وجاهزًا للاستلام من Merit SPL. سيتم جدولة الاستلام وإنشاء بوليصة الشحن.",
+      "cancel": "إلغاء",
+      "confirm": "تأكيد - جاهز للشحن"
+    },
+    "timeline": {
+      "orderPlaced": "تم الطلب",
+      "awaitingAcceptance": "في انتظار القبول",
+      "accepted": "تم القبول",
+      "shippedToMerit": "تم الشحن إلى ميريت",
+      "arrivedAtFacility": "تم الشحن إلى ميريت",
+      "returned": "فشل الجودة - في انتظار الاستبدال",
+      "returnReceived": "تم استلام الإرجاع",
+      "readyToShip": "جاهز للشحن",
+      "shipped": "تم الشحن",
+      "delivered": "تم التوصيل"
+    },
+    "timelineStatus": {
+      "in_process": "تم تقديم الطلب",
+      "new": "تم تقديم الطلب",
+      "confirmed": "تم قبول الطلب",
+      "accepted": "تم قبول الطلب",
+      "shipped_to_merit_pending": "تم الشحن إلى ميريت (قيد الانتظار)",
+      "shipped_to_merit_complete": "تم الشحن إلى ميريت (تم الاستلام)",
+      "ready_to_ship": "جاهز للشحن",
+      "return_pending": "تم الإرجاع",
+      "return_complete": "تم استلام الإرجاع",
+      "shipped": "تم الشحن",
+      "delivered": "تم التوصيل",
+      "cancelled": "ملغى",
+      "canceled": "ملغى"
+    },
+    "awbUploaded": "تم تحميل بوليصة الشحن"
+  },
+  "unauthorized": {
+    "title": "تم رفض الوصول",
+    "message": "ليس لديك صلاحية للوصول إلى هذا المنتج. يرجى الاتصال بالمسؤول إذا كنت تعتقد أن هذا خطأ.",
+    "info": "ربما انتهت صلاحية جلستك أو تم إلغاء وصولك.",
+    "signOutButton": "تسجيل الخروج",
+    "signingOut": "جاري تسجيل الخروج...",
+    "helpText": "هل تحتاج إلى مساعدة؟ اتصل بمسؤول النظام."
+  },
+  "access-management": {
+    "title": "إدارة الصلاحيات",
+    "inviteNewUser": "دعوة مستخدم جديد",
+    "viewPermissionList": "عرض قائمة الصلاحيات",
+    "search": "بحث",
+    "role": "الدور",
+    "domain": "المجال",
+    "status": "الحالة",
+    "selectRole": "اختر الدور",
+    "selectDomain": "اختر المجال",
+    "selectStatus": "اختر الحالة",
+    "inviteSuccess": "تم إرسال الدعوة بنجاح",
+    "inviteSuccessMessage": "تم إرسال دعوة إلى {email}",
+    "inviteError": {
+      "title": "المستخدم موجود بالفعل",
+      "messagePrefix": "يوجد مستخدم بالبريد الإلكتروني",
+      "messageSuffix": "موجود بالفعل في إدارة الصلاحيات. إذا كانت الدعوة لا تزال معلقة، استخدم إعادة إرسال الدعوة من الجدول.",
+      "messageSuffixOtherPlatform": "مسجّل بالفعل في بوابة أو تطبيق Merit آخر. استخدم بريداً إلكترونياً مختلفاً، أو اطلب منه تسجيل الدخول بالحساب الحالي.",
+      "confirmText": "موافق"
+    },
+    "resendInviteSuccess": "تم إرسال الدعوة!",
+    "resendInviteSuccessDescription": "تم إرسال دعوتك بنجاح.",
+    "resendInviteError": "فشل إعادة إرسال الدعوة",
+    "resendInviteErrorDescription": "حدث خطأ أثناء إعادة إرسال الدعوة. يرجى المحاولة مرة أخرى.",
+    "userUpdateSuccess": "تم تحديث المستخدم",
+    "userUpdateSuccessDescription": "تم تحديث تفاصيل المستخدم بنجاح.",
+    "userUpdateError": "فشل تحديث المستخدم",
+    "userUpdateErrorDescription": "حدث خطأ أثناء تحديث المستخدم. يرجى المحاولة مرة أخرى.",
+    "ok": "حسناً",
+    "noUsersFound": "لم يتم العثور على مستخدمين",
+    "deleteUser": "حذف المستخدم",
+    "deleteUserConfirmation": "هل أنت متأكد من حذف {name} ({email})؟ لا يمكن التراجع عن هذا الإجراء.",
+    "deleteUserConfirmationGeneric": "هل أنت متأكد من حذف هذا المستخدم؟ لا يمكن التراجع عن هذا الإجراء.",
+    "delete": "حذف",
+    "cancel": "إلغاء",
+    "table": {
+      "fullName": "الاسم الكامل",
+      "email": "البريد الإلكتروني",
+      "domain": "المجال",
+      "role": "الأدوار",
+      "domainRole": "المجال والدور",
+      "status": "الحالة",
+      "lastLogin": "آخر تسجيل دخول",
+      "actions": "الإجراءات",
+      "edit": "تعديل المستخدم",
+      "resendInvite": "إعادة إرسال الدعوة",
+      "deactivate": "إلغاء التفعيل",
+      "deleteUser": "حذف المستخدم"
+    }
+  },
+  "inviteUserDialog": {
+    "title": "دعوة مستخدم جديد",
+    "description": "إرسال دعوة لمستخدم جديد للانضمام إلى المنصة",
+    "fullName": "الاسم الكامل",
+    "fullNamePlaceholder": "أدخل الاسم الكامل",
+    "email": "البريد الإلكتروني",
+    "emailPlaceholder": "أدخل البريد الإلكتروني",
+    "domain": "المجال",
+    "selectDomain": "اختر المجال",
+    "role": "الدور",
+    "selectRole": "اختر الدور",
+    "submit": "إرسال الدعوة",
+    "validation": {
+      "fullNameRequired": "الاسم الكامل مطلوب",
+      "emailInvalid": "يرجى إدخال بريد إلكتروني صحيح",
+      "domainRequired": "يرجى اختيار المجال",
+      "roleRequired": "يرجى اختيار الدور"
+    }
+  },
+  "editUserDialog": {
+    "title": "تعديل المستخدم",
+    "description": "تحديث معلومات المستخدم والصلاحيات",
+    "fullName": "الاسم الكامل",
+    "fullNamePlaceholder": "أدخل الاسم الكامل",
+    "email": "البريد الإلكتروني",
+    "emailPlaceholder": "أدخل البريد الإلكتروني",
+    "domain": "المجال",
+    "selectDomain": "اختر المجال",
+    "role": "الدور",
+    "selectRole": "اختر الدور",
+    "accountStatus": "تحديث حالة الحساب",
+    "accountStatusLabel": "حالة الحساب",
+    "accountStatusDescription": "إلغاء تنشيط هذا الحساب سيؤدي إلى إلغاء وصول المستخدم.",
+    "selectStatus": "اختر الحالة",
+    "statusActive": "نشط",
+    "statusInactive": "غير نشط",
+    "submit": "حفظ التغييرات",
+    "cancel": "إلغاء",
+    "validation": {
+      "fullNameRequired": "الاسم الكامل مطلوب",
+      "emailInvalid": "يرجى إدخال بريد إلكتروني صحيح",
+      "domainRequired": "يرجى اختيار المجال",
+      "roleRequired": "يرجى اختيار الدور",
+      "statusRequired": "يرجى اختيار الحالة"
+    }
+  },
+  "permissionsDialog": {
+    "title": "قائمة الصلاحيات",
+    "description": "يمكنك مراجعة جميع صلاحيات الوصول لكل مستخدم هنا. لكن لا يمكن تغييرها.",
+    "featureArea": "مجال الميزة",
+    "admin": "مشرف",
+    "lead": "قائد",
+    "staff": "موظف",
+    "permissions": {
+      "memberSearchView": "بحث / عرض الأعضاء",
+      "pointsAdjustment": "تعديل النقاط",
+      "campaignCreation": "إنشاء الحملات",
+      "voucherUploadGeneration": "رفع / إنشاء القسائم",
+      "viewInsights": "عرض الإحصائيات",
+      "configureTiersSegments": "تكوين المستويات / الشرائح",
+      "apiKeyManagement": "إدارة مفاتيح API",
+      "userRoleManagement": "إدارة أدوار المستخدمين"
+    }
+  },
+  "shippingStatusPopup": {
+    "documentTypes": {
+      "awb": "بوليصة الشحن الجوي",
+      "awbLong": "بوليصة الشحن الجوي (AWB)",
+      "document": "المستند",
+      "order": "الطلب"
+    },
+    "delay": {
+      "title": "عذرًا! يوجد تأخير في إنشاء {docType}.",
+      "description": "{docTypeLong} الخاص بك لا يزال قيد المعالجة من قبل خدمة البضائع، سيستغرق وقتًا أطول من المتوقع.",
+      "bullet1": "ستتلقى إشعارًا وبريدًا إلكترونيًا عند إنشاء {docType}",
+      "bullet2": "سيتم تحديث صفحة الطلب بمجرد أن تصبح {docType} جاهزة",
+      "bullet3": "يمكنك المغادرة والعودة للتحقق لاحقًا"
+    },
+    "readyToShip": {
+      "title": "طلب {docType} - جاهز للشحن",
+      "description": "طلب {docType} يشير إلى أن طردك معبأ وجاهز لاستلام SPL.",
+      "bullet1": "ستتلقى {docType} في غضون ساعة واحدة",
+      "bullet2": "ستتلقى إشعارًا عندما تكون {docType} جاهزة",
+      "infoText": "تابع فقط إذا كان طردك معبأً بالكامل وجاهزًا للاستلام من قبل Merit SPL. سيؤدي هذا إلى جدولة الاستلام وإنشاء {docType}."
+    },
+    "generating": {
+      "title": "جارٍ إنشاء {docType}",
+      "description": "{docTypeLong} الخاص بك قيد المعالجة من قبل خدمة البضائع.",
+      "bullet1": "ستتلقى {docType} في غضون ساعة واحدة",
+      "bullet2": "سيتم تحديث صفحة الطلب بمجرد أن تصبح {docType} جاهزة",
+      "bullet3": "يمكنك المغادرة والعودة للتحقق لاحقًا",
+      "bullet4": "ستتلقى إشعارًا عندما تكون {docType} جاهزة"
+    },
+    "accept": {
+      "title": "قبول الطلب",
+      "description": "هل أنت متأكد أنك تريد قبول هذا الطلب؟ بعد القبول، قم بتعبئة الطلب وانقر على \"طلب {docType}\" لطلب ملصق الشحن وجدولة استلام SPL."
+    },
+    "acceptUpload": {
+      "title": "قبول الطلب",
+      "description": "هل أنت متأكد أنك تريد قبول هذا الطلب؟ ستحتاج إلى تحميل بوليصة الشحن قبل الشحن."
+    },
+    "readyDownload": {
+      "title": "{docType} جاهزة للتنزيل",
+      "description": "تم إنشاء {docTypeLong} بنجاح وهي جاهزة للتنزيل."
+    },
+    "default": {
+      "title": "تحديث الحالة",
+      "description": "جارٍ معالجة طلبك..."
+    },
+    "remainingTime": "الوقت المتبقي",
+    "important": "مهم",
+    "orderId": "رقم الطلب",
+    "awbNumber": "رقم بوليصة الشحن",
+    "downloadAndPrint": "تنزيل وطباعة بوليصة الشحن",
+    "buttons": {
+      "cancel": "إلغاء",
+      "confirmReadyToShip": "تأكيد - جاهز للشحن",
+      "continueReadyToShip": "متابعة - جاهز للشحن",
+      "continueShipToMerit": "متابعة - الشحن إلى Merit",
+      "continueProof": "متابعة",
+      "acceptOrder": "قبول الطلب",
+      "checkBackLater": "العودة للتحقق لاحقًا",
+      "close": "إغلاق",
+      "uploadAwb": "تحميل بوليصة الشحن",
+      "markAsShipped": "وضع علامة كمشحون"
+    }
+  },
+  "rewards-portal": {
+    "title": "بوابة المكافآت",
+    "tenantNotFound": "المستأجر غير موجود",
+    "backToRewardsPortal": "العودة إلى بوابة المكافآت",
+    "tabs": {
+      "commercialTransactions": "التجاري والمعاملات",
+      "activationRequests": "طلبات التفعيل ({count})",
+      "developerApi": "واجهة برمجة التطبيقات للمطورين",
+      "ipWhitelist": "القائمة البيضاء لعناوين IP",
+      "gcEmail": "بريد بطاقة الهدايا"
+    },
+    "commercialTransactions": {
+      "commercialSettings": {
+        "title": "الإعدادات التجارية",
+        "edit": "تعديل الإعدادات",
+        "transactionFeeLabel": "رسوم المعاملة",
+        "transactionFeeHint": "تُطبق لكل طلب، وتظهر عند الدفع",
+        "transactionFeeSuffix": "%"
+      },
+      "topUpHistory": {
+        "loading": "جارٍ تحميل سجل التعبئة…",
+        "loadError": "تعذر تحميل سجل التعبئة. يرجى المحاولة مرة أخرى.",
+        "retry": "إعادة المحاولة"
+      }
+    },
+    "activationRequests": {
+      "title": "طلبات التفعيل ({count})",
+      "pendingTitle": "طلبات التفعيل المعلقة ({count})",
+      "searchPlaceholder": "بحث",
+      "empty": "لا توجد طلبات تفعيل.",
+      "emptyPending": "لا توجد طلبات تفعيل معلقة.",
+      "loadError": "تعذر تحميل طلبات التفعيل.",
+      "retry": "إعادة المحاولة",
+      "menuView": "عرض الطلب",
+      "allStatuses": "جميع الحالات",
+      "table": {
+        "requestId": "معرف الطلب",
+        "cards": "البطاقات",
+        "submitted": "تاريخ الإرسال",
+        "status": "الحالة"
+      },
+      "status": {
+        "PENDING": "قيد الانتظار",
+        "PROCESSING": "قيد المعالجة",
+        "PARTIALLY_APPROVED": "موافق عليه جزئيًا",
+        "APPROVED": "موافق عليه",
+        "REJECTED": "مرفوض"
+      }
+    },
+    "ipWhitelist": {
+      "pending": {
+        "title": "الطلبات المعلقة",
+        "empty": "لا توجد طلبات قائمة بيضاء لعناوين IP معلقة.",
+        "loadError": "تعذر تحميل طلبات القائمة البيضاء لعناوين IP المعلقة.",
+        "retry": "إعادة المحاولة",
+        "defaultRejectionReason": "مرفوض من LiveOps",
+        "table": {
+          "ipAddress": "عنوان IP",
+          "environment": "البيئة",
+          "reason": "السبب",
+          "requestedOn": "تاريخ الطلب",
+          "status": "الحالة",
+          "actions": "الإجراءات"
+        },
+        "status": {
+          "pending": "قيد الانتظار"
+        },
+        "actions": {
+          "reject": "رفض",
+          "approve": "موافقة"
+        },
+        "toast": {
+          "approveSuccess": "تمت الموافقة على طلب القائمة البيضاء لعنوان IP.",
+          "approveError": "تعذرت الموافقة على طلب القائمة البيضاء لعنوان IP. يرجى المحاولة مرة أخرى.",
+          "rejectSuccess": "تم رفض طلب القائمة البيضاء لعنوان IP.",
+          "rejectError": "تعذر رفض طلب القائمة البيضاء لعنوان IP. يرجى المحاولة مرة أخرى."
+        },
+        "approve": {
+          "title": "هل أنت متأكد؟",
+          "descriptionPrefix": "أنت على وشك إضافة عنوان IP",
+          "descriptionSuffix": " إلى القائمة البيضاء. هل تريد المتابعة؟",
+          "no": "لا",
+          "yes": "نعم"
+        },
+        "reject": {
+          "title": "رفض عنوان IP {ipAddress}؟",
+          "description": "لن تتم إضافة عنوان IP. سيتم إشعار المستأجر بسببك.",
+          "callout": "الرفض يمنع {ipAddress} من الوصول إلى الإنتاج. قدّم للمستأجر سببًا واضحًا ليتمكن من التصحيح وإعادة الإرسال.",
+          "fields": {
+            "ip": "عنوان IP",
+            "environment": "البيئة",
+            "reason": "السبب"
+          },
+          "reasonLabel": "سبب الرفض",
+          "reasonPlaceholder": "اكتب هنا...",
+          "cancel": "إلغاء",
+          "confirm": "تأكيد الرفض"
+        }
+      },
+      "safelist": {
+        "title": "القائمة الآمنة للإنتاج",
+        "empty": "لا توجد عناوين IP في القائمة الآمنة للإنتاج.",
+        "loadError": "تعذر تحميل القائمة الآمنة للإنتاج.",
+        "retry": "إعادة المحاولة",
+        "table": {
+          "ipAddress": "عنوان IP",
+          "environment": "البيئة",
+          "addedOn": "تاريخ الإضافة",
+          "status": "الحالة"
+        },
+        "status": {
+          "whitelisted": "في القائمة البيضاء"
+        }
+      }
+    },
+    "developerApi": {
+      "title": "واجهة برمجة التطبيقات للمطورين",
+      "empty": "لا توجد مفاتيح API.",
+      "created": "تم الإنشاء في {date}",
+      "table": {
+        "key": "المفتاح",
+        "environment": "البيئة",
+        "keyValue": "قيمة المفتاح",
+        "lastUsed": "آخر استخدام",
+        "status": "الحالة",
+        "actions": "الإجراءات"
+      },
+      "status": {
+        "active": "نشط",
+        "suspended": "موقوف"
+      },
+      "actions": {
+        "suspend": "إيقاف",
+        "restore": "استعادة"
+      },
+      "confirm": {
+        "cancel": "إلغاء",
+        "suspendTitle": "إيقاف مفتاح API؟",
+        "suspendDescription": "أي تكامل يستخدم هذا المفتاح سيتوقف عن العمل فورًا.",
+        "suspendConfirm": "إيقاف المفتاح",
+        "restoreTitle": "استعادة مفتاح API؟",
+        "restoreDescription": "سيبدأ هذا المفتاح بقبول الطلبات مرة أخرى فورًا.",
+        "restoreConfirm": "استعادة المفتاح"
+      }
+    },
+    "gcEmail": {
+      "title": "قالب بريد بطاقة الهدايا",
+      "fields": {
+        "templateName": "اسم القالب",
+        "submittedOn": "تاريخ الإرسال",
+        "submittedBy": "أُرسل بواسطة",
+        "status": "الحالة",
+        "emailTemplate": "قالب البريد",
+        "previewLink": "رابط معاينة بطاقة الهدايا"
+      },
+      "status": {
+        "pending": "قيد الانتظار",
+        "approved": "موافق عليه",
+        "rejected": "مرفوض"
+      },
+      "actions": {
+        "reject": "رفض",
+        "approve": "موافقة",
+        "download": "تنزيل القالب",
+        "preview": "معاينة القالب",
+        "openLink": "فتح رابط المعاينة"
+      },
+      "approve": {
+        "title": "الموافقة على قالب البريد؟",
+        "description": "سيتم تعليم بوابة الاعتماد هذه كمكتملة للمستأجر.",
+        "cancel": "إلغاء",
+        "confirm": "موافقة"
+      },
+      "reject": {
+        "title": "رفض قالب البريد",
+        "description": "يجب على المستأجر التصحيح وإعادة الإرسال. السبب مطلوب.",
+        "callout": "أخبر المستأجر بما يجب إصلاحه. يمكنه إعادة الإرسال بعد التصحيح.",
+        "reasonLabel": "سبب الرفض",
+        "reasonPlaceholder": "اكتب هنا...",
+        "cancel": "إلغاء",
+        "confirm": "تأكيد الرفض"
+      },
+      "preview": {
+        "title": "معاينة القالب",
+        "back": "رجوع",
+        "download": "تنزيل",
+        "heroLabel": "ذكرى عمل سعيدة",
+        "rewardBadge": "مكافأة من Merit",
+        "cardImage": "صورة البطاقة",
+        "giftCardLabel": "بطاقة هدية",
+        "revealCta": "إظهار رمز بطاقة الهدايا ←",
+        "termsTitle": "الشروط والأحكام",
+        "termsBody": "بطاقات الهدايا تخضع لشروط التاجر. كيفية الاستخدام: 1) أظهر الرمز، 2) قدّمه عند الدفع، 3) احتفظ بهذا البريد لسجلاتك.",
+        "supportNote": "لأي استفسار خدمة عملاء، يرجى ذكر رقم مرجع الطلب.",
+        "cardReference": "رقم مرجع البطاقة:",
+        "orderReference": "رقم مرجع الطلب:",
+        "notForRedemption": "غير مخصص للاستبدال",
+        "copyright": "حقوق النشر © 2024. مدعوم من Merit Incentives. جميع الحقوق محفوظة."
+      }
+    }
+  }
+}

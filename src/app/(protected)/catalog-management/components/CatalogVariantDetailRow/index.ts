@@ -1,0 +1,1 @@
+export { CatalogVariantDetailRow } from './CatalogVariantDetailRow';

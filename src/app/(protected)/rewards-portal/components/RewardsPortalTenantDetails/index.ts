@@ -1,0 +1,1 @@
+export { RewardsPortalTenantDetails } from './RewardsPortalTenantDetails';

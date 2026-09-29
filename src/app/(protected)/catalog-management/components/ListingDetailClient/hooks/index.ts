@@ -1,0 +1,1 @@
+export { useListingDetail } from './useListingDetail';

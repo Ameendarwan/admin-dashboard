@@ -1,0 +1,1 @@
+export { TenantDetailsTabs } from './TenantDetailsTabs';

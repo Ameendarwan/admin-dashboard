@@ -1,0 +1,1 @@
+export { ListingDetailProductCard } from './ListingDetailProductCard';

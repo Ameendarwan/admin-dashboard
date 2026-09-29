@@ -1,0 +1,1 @@
+export { ProductWalletsSection } from './ProductWalletsSection';

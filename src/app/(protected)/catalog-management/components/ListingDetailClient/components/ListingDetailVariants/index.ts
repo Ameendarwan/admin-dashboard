@@ -1,0 +1,1 @@
+export { ListingDetailVariants } from './ListingDetailVariants';

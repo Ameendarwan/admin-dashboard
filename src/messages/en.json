@@ -1,0 +1,2624 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "search": "Search",
+    "back": "Back",
+    "showHideColumns": "Show/Hide Columns"
+  },
+  "auth": {
+    "sessionExpired": {
+      "title": "Session expired",
+      "description": "Logging you out. Please sign in again."
+    }
+  },
+  "calendar": {
+    "today": "Today",
+    "last3days": "Last 3 days",
+    "thisweek": "This week",
+    "thismonth": "This month",
+    "lastweek": "Last week",
+    "lastmonth": "Last month",
+    "custom": "Custom Range",
+    "startDate": "Start Date",
+    "endDate": "End Date",
+    "cancel": "Cancel",
+    "apply": "Apply",
+    "selectDateRange": "Select Date Range",
+    "selectDate": "Select Date"
+  },
+  "sidebar": {
+    "dashboard": "Dashboard",
+    "sellers": "Sellers",
+    "saasTenants": "SaaS Tenants",
+    "catalogManagement": "Catalog Management",
+    "categoryManagement": "Category Management",
+    "giftCardManagement": "Gift Card Management",
+    "listingsAndOffers": "Listings & Offers",
+    "tenantManagement": "Tenant Management",
+    "accessManagement": "Access Management",
+    "superApp": "SuperApp",
+    "bannersConfiguration": "Banners Configuration",
+    "rewardsPortal": "Rewards Portal",
+    "storefronts": "Storefronts"
+  },
+  "storefronts": {
+    "pageTitle": "Storefront Management",
+    "createStorefront": "Create Storefront",
+    "searchPlaceholder": "Search by Storefront Name or Admin Name",
+    "allTiers": "All Tiers",
+    "allStatuses": "All Statuses",
+    "noResults": "No storefronts found",
+    "loading": "Loading storefronts...",
+    "loadError": "Unable to load storefronts.",
+    "retry": "Retry",
+    "showingResults": "Showing {from} to {to} of {total} results",
+    "table": {
+      "storefront": "Storefront",
+      "tenantBusiness": "Tenant/Business",
+      "tier": "Tier",
+      "status": "Status",
+      "setupChecklist": "Required setup steps",
+      "storeAdmin": "Store Admin",
+      "floatBalance": "Float Balance",
+      "actions": "Actions"
+    },
+    "tier": {
+      "small": "Small",
+      "medium": "Medium",
+      "large": "Large",
+      "enterprise": "Enterprise"
+    },
+    "status": {
+      "live": "Live",
+      "draft": "Draft",
+      "suspended": "Suspended"
+    },
+    "setupChecklist": {
+      "completedOfRequired": "{completed} of {required} complete"
+    },
+    "actions": {
+      "openStorefront": "Open storefront"
+    },
+    "statusActions": {
+      "menuAria": "Storefront status actions",
+      "updating": "Updating storefront status",
+      "suspend": "Suspend storefront",
+      "restoreDraft": "Restore to draft",
+      "makeLive": "Publish & make live",
+      "takeDownToDraft": "Take down (to draft)",
+      "success": "Storefront status updated.",
+      "error": "Could not update storefront status."
+    }
+  },
+  "catalog": {
+    "eyebrow": "Catalog Management",
+    "categoryManagement": {
+      "eyebrow": "Catalog Management",
+      "pageTitle": "Category Management",
+      "newCategory": "New Category",
+      "emptyTitle": "No Categories Yet!",
+      "emptyDescription": "Categories organise your catalog and group how products are matched. Start by creating one.",
+      "emptySubcategories": "No sub-categories yet.",
+      "dialog": {
+        "title": "New Category",
+        "categoryNameLabel": "Category Name",
+        "categoryNamePlaceholder": "Enter Category Name",
+        "cancel": "Cancel",
+        "create": "Create",
+        "createSuccessToast": "Category created successfully."
+      },
+      "subCategoriesLine": "{count} sub-categories",
+      "row": {
+        "expandAria": "Expand category",
+        "collapseAria": "Collapse category",
+        "deleteAria": "Delete category",
+        "editAria": "Edit category",
+        "subDeleteAria": "Delete subcategory",
+        "subEditAria": "Edit subcategory",
+        "addSubcategory": "Add Subcategory"
+      },
+      "confirmDeleteCategory": {
+        "title": "Delete Category?",
+        "bodyPart1": "Deleting",
+        "bodyPart2": "will also remove all its sub-categories. This can't be undone.",
+        "deleteButton": "Delete",
+        "deleteSuccessToast": "Category deleted successfully."
+      },
+      "confirmDeleteSubcategory": {
+        "title": "Delete Subcategory?",
+        "afterBold": "will be permanently removed from {parentName}. This can't be undone.",
+        "deleteButton": "Delete",
+        "deleteSuccessToast": "Subcategory deleted successfully."
+      },
+      "editCategoryDialog": {
+        "title": "Edit Category",
+        "save": "Save",
+        "saveSuccessToast": "Category updated successfully."
+      },
+      "editSubcategoryDialog": {
+        "title": "Edit Subcategory",
+        "save": "Save",
+        "saveSuccessToast": "Subcategory updated successfully."
+      },
+      "subcategoryDialog": {
+        "title": "Add Subcategory",
+        "subcategoryNameLabel": "Subcategory Name",
+        "subcategoryNamePlaceholder": "Enter Subcategory Name",
+        "cancel": "Cancel",
+        "create": "Create",
+        "createSuccessToast": "Subcategory created successfully."
+      }
+    },
+    "giftCardManagement": {
+      "pageTitle": "Gift Card Management",
+      "addGiftCard": "Add Gift Card",
+      "giftCardsEmpty": "No gift cards found.",
+      "giftCardsLoadError": "Could not load gift cards. Please try again.",
+      "giftCardsRetry": "Retry",
+      "searchPlaceholder": "Search",
+      "menuView": "View request",
+      "tabs": {
+        "giftCards": "Gift Cards",
+        "activationRequests": "Activation Requests ({count})"
+      },
+      "filters": {
+        "denominationType": "Denomination Type",
+        "allTenants": "All Tenants"
+      },
+      "denominationType": {
+        "open": "Open",
+        "fixed": "Fixed"
+      },
+      "table": {
+        "card": "Card",
+        "category": "Category",
+        "denominationType": "Denomination Type",
+        "salesChannels": "Sales Channels",
+        "activations": "Activations",
+        "country": "Country",
+        "status": "Status"
+      },
+      "status": {
+        "giftCard": {
+          "active": "Active",
+          "inactive": "In-active"
+        },
+        "product": {
+          "published": "Active",
+          "draft": "Draft",
+          "proposed": "Proposed",
+          "rejected": "Rejected"
+        },
+        "request": {
+          "PENDING": "Pending",
+          "PROCESSING": "Processing",
+          "PARTIALLY_APPROVED": "Partially Approved",
+          "APPROVED": "Approved",
+          "REJECTED": "Rejected"
+        },
+        "item": {
+          "PENDING": "Pending",
+          "APPROVED": "Approved",
+          "REJECTED": "Rejected"
+        }
+      },
+      "activationRequests": {
+        "stats": {
+          "pending": "Pending",
+          "approved": "Approved",
+          "rejected": "Rejected"
+        },
+        "searchPlaceholder": "Search",
+        "empty": "No activation requests found.",
+        "loadError": "Could not load activation requests.",
+        "retry": "Retry",
+        "cardCount": "{count, plural, one {# Card} other {# Cards}}",
+        "table": {
+          "tenant": "Tenant/Business",
+          "owner": "Business Owner",
+          "cards": "Cards",
+          "submitted": "Submitted"
+        }
+      },
+      "detail": {
+        "pageTitle": "Card Activation Request",
+        "loading": "Loading activation request…",
+        "notFound": "Activation request not found.",
+        "backToList": "Back to list",
+        "closeRequest": "Close Request",
+        "requestedCardsEmptyTitle": "No cards in this request",
+        "requestedCardsEmptyBody": "This activation request has no card items to review.",
+        "tenantDetails": "Tenant Details",
+        "tenantId": "Tenant ID",
+        "business": "Business",
+        "businessOwner": "Business Owner",
+        "accountStatus": "Account Status",
+        "kybStatus": "KYB Status",
+        "complianceFlag": "Compliance Flag",
+        "activeCards": "Active Cards",
+        "orders30Days": "Orders (30 days)",
+        "floatBalance": "Float Balance",
+        "requestedCards": "Requested Cards",
+        "expectedSpend": "Expected Spend (Per Month)",
+        "preferredDenominations": "Preferred Denominations",
+        "cardId": "Card ID",
+        "copyCardId": "Copy Card ID",
+        "copied": "Copied!",
+        "category": "Category",
+        "minDenomination": "Min Denomination",
+        "maxDenomination": "Max Denomination",
+        "denominationType": "Denomination Type",
+        "validity": "Validity",
+        "deliveryMode": "Delivery Mode",
+        "redemption": "Redemption",
+        "country": "Country",
+        "usageLimitation": "Usage Limitation",
+        "rejectRequest": "Reject Request",
+        "sendForBrandApproval": "Send for Brand Approval",
+        "approveRequest": "Approve Request",
+        "accountStatusValue": {
+          "active": "Active",
+          "inactive": "Inactive"
+        },
+        "kybStatusValue": {
+          "verified": "Verified",
+          "pending": "Pending",
+          "rejected": "Rejected"
+        },
+        "activeCardsValue": "{count} cards",
+        "ordersValue": "{count} orders"
+      },
+      "giftCardDetail": {
+        "pageTitle": "Card Details",
+        "loading": "Loading gift card…",
+        "notFound": "Gift card not found.",
+        "backToList": "Back to list",
+        "editBrand": "Edit Brand",
+        "activateBrand": "Activate Brand",
+        "thirdParty": "Third Party",
+        "cardId": "Card ID",
+        "copyCardId": "Copy Card ID",
+        "copied": "Copied!",
+        "category": "Category",
+        "denominationType": "Denomination Type",
+        "preferredDenomination": "Preferred Domination",
+        "validity": "Validity",
+        "usageLimitations": "Usage Limitations",
+        "deliveryMode": "Delivery Mode",
+        "country": "Country",
+        "redemption": "Redemption",
+        "redemptionOnline": "Online",
+        "termsAndConditions": "Terms & Conditions",
+        "view": "View",
+        "termsModal": {
+          "title": "Terms & Conditions",
+          "generalTerm1": "The Gift Cards shall be in the form of electronic vouchers and not physical cards.",
+          "generalTerm2": "The Credit may be used to purchase all products across all categories on the Platform(s), including sale items.",
+          "generalTerm3": "The Gift Cards cannot be returned or refunded once the Credit has been redeemed on any of the Platform.",
+          "redemptionProcessTitle": "Redemption Process",
+          "redemptionStep1": "Login or create an account on www.noon.com",
+          "redemptionStep2": "Go to 'My Accounts' and select 'Gift Card'",
+          "redemptionStep3": "Tap on 'Redeem Gift Card'. Enter the 16 digit Gift Card number and the 4 digit PIN. Tap on 'Proceed', the amount will be added to your noon pay cashback balance visible at the payment page.",
+          "redemptionStep4": "Once redeemed, the amount will be added to the applicable customer's noon credits wallet.",
+          "redemptionStep5": "Noon Credits can be used on the following digital platforms - noon.com, noon Daily, noon Food (coming soon), Kul.com, and/or SIVVI.com",
+          "redemptionStep6": "Noon Credits is an alphanumeric code which has an expiry of one-year from the date of issuance.",
+          "redemptionStep7": "However, once the code has been redeemed, the credits in the customer's wallet have no expiry.",
+          "redemptionStep8": "If the customer has made a transaction on the noon platform or on the platform of any of its affiliates, and has returned the product, then the qualified refund will be credited to the customers noon credits wallet."
+        },
+        "tabs": {
+          "salesChannel": "Sales Channel",
+          "activationLog": "Activation Log"
+        },
+        "salesChannel": {
+          "product": "Product",
+          "status": "Status",
+          "active": "Active",
+          "loading": "Loading sales channels…",
+          "errorTitle": "Could not load sales channels.",
+          "retry": "Retry",
+          "updateError": "Could not update sales channel. Try again.",
+          "noEligibleOffers": "This gift card has no active offers in the sales channel currency. Add or activate offers before enabling.",
+          "offersNotReady": "The gift card could not be fully enabled on this channel. Try toggling off and on again.",
+          "missingCategoryId": "This gift card has no category id. Cannot enable on a sales channel.",
+          "toggleAria": "Toggle {channel} channel",
+          "emptyTitle": "No sales channels configured"
+        },
+        "activationLog": {
+          "action": "Action",
+          "actor": "Actor",
+          "timestamp": "Timestamp",
+          "emptyTitle": "No activation history yet",
+          "emptyBody": "Cross-tenant activation logs per gift card are not exposed in admin-be yet. A proxy to Rewards Portal activations would be needed."
+        }
+      },
+      "approveDialog": {
+        "title": "Approve Card Activation",
+        "subtitle": "Review details before confirming",
+        "card": "Card",
+        "brand": "Brand",
+        "productId": "Product ID",
+        "tenant": "Tenant",
+        "businessOwner": "Business Owner",
+        "whatHappensNext": "What happens next:",
+        "nextItem1": "The item is marked approved but stays pending until you close the request",
+        "nextItem2": "Product activations are created when you close the request",
+        "cancel": "Cancel",
+        "confirm": "Confirm Approval"
+      },
+      "brandApprovalDialog": {
+        "title": "Send For Brand Approval",
+        "emailLabel": "Brand Contact Email",
+        "emailPlaceholder": "e.g. walter.h@noon.com",
+        "messageLabel": "Message To Brand",
+        "messagePlaceholder": "Describe the tenant request and volume estimate…",
+        "cancel": "Cancel",
+        "confirm": "Send to Brand"
+      },
+      "rejectDialog": {
+        "title": "Reject Card Activation",
+        "subtitle": "Review details before rejecting",
+        "card": "Card",
+        "brand": "Brand",
+        "productId": "Product ID",
+        "tenant": "Tenant",
+        "businessOwner": "Business Owner",
+        "reasonLabel": "Reason for Rejection",
+        "reasonPlaceholder": "Select a reason",
+        "notesLabel": "Additional Notes (Optional)",
+        "notesPlaceholder": "Add context for the tenant...",
+        "whatHappensNext": "What happens next:",
+        "nextItem1": "Request marked Rejected",
+        "nextItem2": "Tenant notified with reason",
+        "nextItem3": "Tenant can resubmit",
+        "cancel": "Cancel",
+        "confirm": "Confirm Rejection",
+        "reasons": {
+          "notAvailableInRegion": "Card not available in the region",
+          "complianceNotMet": "Compliance requirements not met",
+          "commercialTermsNotAgreed": "Commercial terms not agreed",
+          "duplicateRequest": "Duplicate request"
+        }
+      },
+      "toast": {
+        "approveSuccess": "Card item approved.",
+        "approveError": "Could not approve card item. Try again.",
+        "rejectSuccess": "Card item rejected.",
+        "rejectError": "Could not reject card item. Try again.",
+        "brandApprovalSuccess": "Request sent for brand approval.",
+        "closeSuccess": "Activation request closed.",
+        "closeError": "Could not close activation request. Try again."
+      },
+      "closeDialog": {
+        "title": "Close Activation Request",
+        "subtitle": "Finalize pending items and create activations",
+        "requestId": "Request ID: {id}",
+        "actionLabel": "Close action",
+        "actionPlaceholder": "Select an action",
+        "actions": {
+          "approveAllPending": "Approve all pending items",
+          "rejectAllPending": "Reject all pending items"
+        },
+        "notesLabel": "Notes (optional)",
+        "notesPlaceholder": "Add internal notes for this resolution…",
+        "whatHappensNext": "What happens next:",
+        "nextItem1": "Any remaining pending card items are approved or rejected in bulk based on your chosen action.",
+        "nextItem2": "Approved items become active product activations for the tenant when the request closes.",
+        "nextItem3": "The request is marked final (approved, rejected, or partially approved) and cannot be reopened.",
+        "nextItem4": "The business owner who submitted the request is notified by email.",
+        "cancel": "Cancel",
+        "confirm": "Close Request"
+      }
+    },
+    "pageTitle": "Listings & Offers",
+    "listingsTab": "Listings",
+    "offersTab": "Offers",
+    "offersTabTooltip": "Seller offers aggregate view.",
+    "sectionTitle": "Listings",
+    "sectionSubtitle": "Manage your catalog listings and view seller offers.",
+    "subTabActive": "Active Listings",
+    "subTabRequests": "Listing Requests",
+    "createNewListing": "Create New Listing",
+    "createNewListingToast": "Listing creation will be available when the catalog API is ready.",
+    "newListing": {
+      "pageTitle": "New Listing",
+      "back": "Back",
+      "loadTaxonomyError": "We could not load categories. Please try again.",
+      "loadCategoryFieldsError": "We could not load category attributes and variant fields. Please try again.",
+      "loadingCategoryFields": "Loading category attributes…",
+      "submitSuccess": "Listing saved successfully.",
+      "updateSuccess": "Listing updated successfully.",
+      "loadEditError": "We could not load this listing for editing. Please try again.",
+      "submitError": "Something went wrong while saving. Please try again.",
+      "steps": {
+        "details": "Details",
+        "attributes": "Attributes",
+        "images": "Images",
+        "variants": "Variants",
+        "review": "Review & Submit"
+      },
+      "actions": {
+        "continue": "Continue",
+        "back": "Back",
+        "submit": "Submit"
+      },
+      "taxonomy": {
+        "categories": {
+          "electronics": "Electronics",
+          "fashion": "Fashion"
+        },
+        "subcategories": {
+          "smartPhones": "Smart Phones",
+          "laptops": "Laptops",
+          "wearables": "Wearables",
+          "apparel": "Apparel"
+        }
+      },
+      "attributeLabels": {
+        "screenSize": "Screen Size",
+        "screenType": "Screen Type",
+        "displayResolution": "Display Resolution",
+        "refreshRate": "Refresh Rate",
+        "processor": "Processor / Chipset",
+        "ram": "RAM",
+        "internalStorage": "Internal Storage",
+        "rearCamera": "Rear Camera",
+        "frontCamera": "Front Camera",
+        "batteryCapacity": "Battery Capacity",
+        "fastCharging": "Fast Charging",
+        "operatingSystem": "Operating System",
+        "fiveGSupport": "5G Support",
+        "simType": "SIM Type",
+        "biometricSecurity": "Biometric Security",
+        "weight": "Weight",
+        "dimensions": "Dimensions",
+        "expandableStorage": "Expandable Storage",
+        "wirelessCharging": "Wireless Charging",
+        "waterResistance": "Water Resistance",
+        "laptopCpu": "Processor",
+        "laptopGpu": "Graphics",
+        "laptopStorage": "Storage"
+      },
+      "attributeSuffixes": {
+        "inches": "Inches",
+        "mah": "mAh",
+        "grams": "grams"
+      },
+      "details": {
+        "sectionTitle": "Product Details",
+        "sectionSubtitle": "Enter product details to create a listing.",
+        "category": "Category",
+        "subcategory": "Subcategory",
+        "selectCategory": "Select Category",
+        "selectSubcategory": "Select Subcategory",
+        "productTitle": "Product Title",
+        "productTitlePlaceholder": "Enter Product Title",
+        "brand": "Brand",
+        "brandPlaceholder": "Enter Brand Name",
+        "description": "Product Description",
+        "descriptionPlaceholder": "Enter Description",
+        "descriptionHint": "Minimum {min} characters recommended.",
+        "featuresLabel": "Key Features (Bullet Points)",
+        "featurePlaceholder": "Feature {n}",
+        "addFeature": "Add Feature",
+        "removeFeature": "Remove feature"
+      },
+      "attributes": {
+        "productSection": "Product attributes",
+        "subtitle": "Fill in product attributes for this subcategory. Required fields are marked with *.",
+        "noExtraFields": "No category-specific fields are configured for this subcategory.",
+        "selectPlaceholder": "Select",
+        "textPlaceholder": "Enter value",
+        "dynamicTitle": "{name} Attributes",
+        "fallbackName": "Product"
+      },
+      "variants": {
+        "sectionTitle": "Product variants",
+        "subtitle": "Each row is one sellable variant (for example a different color). Every row uses the same option fields from this category. Use “Add another variant” for more SKUs.",
+        "variantRowHeading": "Variant {n}",
+        "addVariant": "Add another variant",
+        "removeVariant": "Remove variant",
+        "variantImages": "Variant images",
+        "variantImagesHint": "Add up to 5 PNG or JPEG images for this variant (optional).",
+        "variantImageSelect": "Add variant image",
+        "variantImageRemove": "Remove variant image",
+        "noVariantFields": "This category does not require variant options. Continue to review your listing.",
+        "selectPlaceholder": "Select",
+        "textPlaceholder": "Enter value"
+      },
+      "images": {
+        "sectionTitle": "Product Images",
+        "sectionSubtitle": "Add high-quality images of your product. Minimum 3–5 images recommended for better visibility.",
+        "dropHint": "SVG, PNG or JPEG (Max size: 5MB)",
+        "mainBadge": "• Main Image",
+        "errorType": "Please upload an SVG, PNG, or JPEG image.",
+        "errorSize": "Each image must be {maxMb}MB or smaller."
+      },
+      "review": {
+        "sectionTitle": "Review & Submit",
+        "sectionSubtitle": "Please review all information before submitting.",
+        "productDetails": "Product Details",
+        "attributes": "Attributes",
+        "productAttributes": "Product attributes",
+        "productVariants": "Product variants",
+        "images": "Images",
+        "labels": {
+          "category": "Category",
+          "title": "Product Title",
+          "brand": "Brand",
+          "description": "Product Description",
+          "features": "Key Features"
+        }
+      },
+      "errors": {
+        "required": "This field is required.",
+        "requiredSelect": "Please make a selection.",
+        "atLeastOneFeature": "Add at least one key feature.",
+        "imagesMin": "Add at least one product image.",
+        "variantsMinOne": "Add at least one variant and fill all option fields (for example color).",
+        "variantRowEmpty": "Fill all option fields for this variant or remove it.",
+        "duplicateVariantRow": "This variant matches another row. Use unique option values for each variant.",
+        "submitVariantsInvalid": "Fix variant options on the Variants step before submitting."
+      }
+    },
+    "allCategories": "All Categories",
+    "allStatuses": "All Statuses",
+    "filters": {
+      "allSellers": "All Sellers",
+      "sellerSearchPlaceholder": "Search Sellers",
+      "allSubcategories": "All Subcategories",
+      "allMatchResults": "All Match Results",
+      "sellersLoading": "Loading Sellers...",
+      "noSellerResults": "No Sellers Found",
+      "allBrands": "All Brands",
+      "brandSearchPlaceholder": "Search Brands",
+      "brandsLoading": "Loading Brands...",
+      "noBrandResults": "No Brands Found",
+      "allTypes": "All Types",
+      "merchandise": "Merchandise",
+      "giftcard": "Gift Card",
+      "clearFilters": "Clear Filters",
+      "toggleFilters": "Show/Hide Filters",
+      "sortByCreatedAt": "Sort by Created Date"
+    },
+    "matchResult": {
+      "matchFound": "Match Found",
+      "possibleMatch": "Possible Match",
+      "noMatchFound": "No Match Found"
+    },
+    "dateFilter": "Date",
+    "dateAll": "All Dates",
+    "date2024": "2024",
+    "date2023": "2023",
+    "noResults": "No results match your filters.",
+    "showingResults": "Showing {from} to {to} of {total} results",
+    "notFound": "We could not find that item.",
+    "notFoundHint": "Return to the catalog list to pick another listing.",
+    "backToList": "Back to list",
+    "menuView": "View",
+    "menuEdit": "Edit",
+    "menuDelete": "Delete",
+    "menuViewRequest": "View request",
+    "placeholders": {
+      "editListing": "Edit flow is not connected yet.",
+      "deleteListing": "Delete is not available in UI-only mode.",
+      "rowAction": "This action is not available in UI-only mode.",
+      "offerRow": "Offer detail view will connect when the API is ready.",
+      "editOffer": "Offer edit flow will connect when the API is ready."
+    },
+    "offersView": {
+      "sectionTitle": "Offers",
+      "sectionSubtitle": "Browse and manage seller offers from the catalog API.",
+      "subTabActive": "Active Offers",
+      "searchPlaceholder": "Search by Product Name or Seller SKU",
+      "table": {
+        "sku": "SKU",
+        "seller": "Seller",
+        "product": "Product",
+        "category": "Category",
+        "subCategory": "Sub-category",
+        "condition": "Condition",
+        "price": "Price",
+        "stockQty": "Stock",
+        "location": "Location",
+        "salesChannel": "Sales Channel",
+        "status": "Status",
+        "submittedOn": "Submitted on"
+      }
+    },
+    "listings": {
+      "searchPlaceholder": "Search by Product Name",
+      "table": {
+        "product": "Product",
+        "brand": "Brand",
+        "category": "Category",
+        "subCategory": "Sub-category",
+        "offers": "Variants",
+        "status": "Status",
+        "createdOn": "Created On",
+        "actions": "Actions"
+      }
+    },
+    "requests": {
+      "searchPlaceholder": "Search by Product Name",
+      "table": {
+        "product": "Product",
+        "brand": "Brand",
+        "seller": "Seller",
+        "matchResult": "Match result",
+        "category": "Category",
+        "subCategory": "Sub-category",
+        "status": "Status",
+        "submittedOn": "Submitted On",
+        "actions": "Actions"
+      }
+    },
+    "status": {
+      "active": "Active",
+      "draft": "Draft",
+      "archived": "Archived",
+      "pendingReview": "Pending Review",
+      "approved": "Approved",
+      "rejected": "Rejected"
+    },
+    "offersStatus": {
+      "pending": "Pending",
+      "inactive": "Inactive"
+    },
+    "offerLifecycle": {
+      "active": "Active",
+      "inactive": "Inactive",
+      "expired": "Expired"
+    },
+    "listingDetails": {
+      "title": "Listing Details",
+      "sellerOffers": "Seller Offers",
+      "sellerOffersSubtitle": "All offers submitted by sellers for this listing.",
+      "searchPlaceholder": "Search by Product Name, Seller Name or SKU",
+      "productSection": "Product",
+      "productDetails": "Product Details",
+      "createdOn": "Created On",
+      "updatedOn": "Updated On",
+      "handle": "Handle",
+      "subtitle": "Summary",
+      "tags": "Tags",
+      "selectThumbnail": "Select product image {n}",
+      "showDetails": "Show Details",
+      "hideDetails": "Hide Details",
+      "keyFeatures": "Key Features",
+      "description": "Product Description",
+      "attributes": "Attributes",
+      "variants": "Variants",
+      "variant": "Variant {n}",
+      "variantImageAlt": "Variant {n} image",
+      "catalogSku": "Catalog SKU",
+      "sellerSku": "Seller SKU",
+      "listingStatus": "Listing Status",
+      "edit": "Edit Listing",
+      "delete": "Delete Listing",
+      "statusUpdated": "Listing status updated.",
+      "deleteConfirm": "Delete this listing? This cannot be undone.",
+      "deleteSuccess": "Listing deleted."
+    },
+    "offerDetail": {
+      "title": "Offer Details",
+      "offerStatusLabel": "Offer Status",
+      "sellerOfferHeading": "Seller's Offer",
+      "sellerOfferHeadingNamed": "{sellerName}'s Offer",
+      "productDetailsHeading": "Product Details",
+      "salesChannelsHeading": "Sales Channel Management",
+      "readMore": "Read more",
+      "readLess": "Read less",
+      "channels": {
+        "b2c": "B2C App",
+        "marketplace": "Marketplace",
+        "rewards": "Rewards Portal"
+      },
+      "labels": {
+        "category": "Category",
+        "subCategory": "Sub-category",
+        "sku": "Seller SKU",
+        "productSku": "Catalog SKU",
+        "productId": "Product ID",
+        "productVariantId": "Variant ID",
+        "sellerId": "Seller ID",
+        "currency": "Currency",
+        "priceAmount": "Price (amount)",
+        "conditionDisplay": "Condition",
+        "totalStock": "Total stock",
+        "offerPeriod": "Offer window",
+        "offerMetadata": "Offer metadata",
+        "inventoryMetadata": "Inventory metadata",
+        "seller": "Seller",
+        "submittedOn": "Submitted on"
+      },
+      "edit": "Edit Offer",
+      "statusUpdated": "Offer status updated.",
+      "offerPeriodNoEnd": "No end date"
+    },
+    "offerEdit": {
+      "title": "Edit Offer",
+      "sectionImages": "Images",
+      "mainImage": "Main Image",
+      "otherImages": "Other Images",
+      "sectionProductVariant": "Product & Variant",
+      "product": "Product",
+      "brand": "Brand",
+      "variant": "Variant",
+      "selectVariant": "Select variant",
+      "sectionOffer": "Offer",
+      "sku": "SKU",
+      "itemCondition": "Product condition",
+      "itemConditionNew": "New",
+      "itemConditionUsed": "Used",
+      "itemConditionRefurbished": "Refurbished",
+      "location": "Location",
+      "stock": "Stock Quantity",
+      "price": "Price",
+      "currencySar": "SAR",
+      "cancel": "Cancel",
+      "update": "Update",
+      "savedToast": "Offer updated.",
+      "offerStatus": "Offer status",
+      "currencyCode": "Currency",
+      "startsAt": "Starts (UTC)",
+      "endsAt": "Ends (UTC)",
+      "validation": "Check price and stock.",
+      "badEndDate": "Invalid end date.",
+      "saving": "Saving…",
+      "endsHint": "Leave end date empty for an open-ended offer.",
+      "editableFieldsCaption": "Only offer status (active / inactive), price, and stock can be edited here.",
+      "expiredLifecycleHint": "Offer status is expired — change schedule or create a new offer via other workflows if needed.",
+      "readOnlyHeading": "Product & catalogue",
+      "readOnlyCaption": "These fields cannot be edited from this dialog. Adjust product data in catalogue workflows if needed.",
+      "removeImage": "Remove image",
+      "addImage": "Add image",
+      "dragReorderHint": "Drag thumbnails to reorder. The first image is the main listing image.",
+      "dragHandle": "Drag to reorder"
+    },
+    "listingRequest": {
+      "title": "Listing Request",
+      "reject": "Reject",
+      "approve": "Approve & Create Listing",
+      "rejectModal": {
+        "title": "Reject listing request",
+        "description": "Tell the seller why this listing request was rejected. This reason is emailed to them and shown on their upload results.",
+        "reasonLabel": "Rejection reason",
+        "reasonPlaceholder": "Enter a reason",
+        "confirm": "Reject",
+        "cancel": "Cancel"
+      },
+      "requestedBy": "Requested by",
+      "sellerName": "Seller Name",
+      "email": "Email Address",
+      "submittedOn": "Submitted On",
+      "matchResult": "Match Result",
+      "rejectionReason": "Rejection Reason",
+      "productDetails": "Product details",
+      "sellersOffer": "Seller’s offer",
+      "variant": "Variant {n}",
+      "variantImageAlt": "Variant {n} image",
+      "condition": "Condition",
+      "sku": "SKU",
+      "location": "Location",
+      "stock": "Stock Quantity",
+      "price": "Price"
+    },
+    "offersTable": {
+      "sku": "SKU",
+      "seller": "Seller",
+      "product": "Product",
+      "category": "Category",
+      "subCategory": "Sub-category",
+      "condition": "Condition",
+      "salesChannel": "Sales Channel",
+      "variants": "Variants",
+      "location": "Location",
+      "stock": "Stock",
+      "price": "Price",
+      "status": "Status",
+      "submittedOn": "Submitted on"
+    }
+  },
+  "media-management": {
+    "title": "SuperApp Configuration",
+    "publishChanges": "Publish Changes",
+    "publishing": "Publishing...",
+    "auditLog": "Audit Log",
+    "publishConfirmation": {
+      "title": "Publish Changes?",
+      "description": "Your changes will affect all users of the mobile app. Are you sure you want to publish these changes?",
+      "confirmButton": "Yes, Publish",
+      "cancelButton": "Cancel"
+    },
+    "auditLogsDrawer": {
+      "title": "Audit Logs",
+      "noLogsFound": "No audit logs found",
+      "updatedBy": "Updated by:",
+      "updatedOn": "Updated on:",
+      "revert": "Revert",
+      "revertConfirmation": {
+        "title": "Revert to this state?",
+        "description": "This will restore the configuration to how it was on {date}.\n\nYou'll need to publish the changes to make them live.",
+        "confirmButton": "Yes, Revert",
+        "cancelButton": "Cancel"
+      }
+    },
+    "fileUpload": {
+      "uploading": "Uploading...",
+      "failed": "Failed",
+      "complete": "Complete",
+      "clickToUpload": "Click to upload",
+      "dragAndDrop": "or drag & drop it here",
+      "fileFormats": "JPEG, PNG or WebP (Max size: 5MB)",
+      "imagePreviewAlt": "Preview",
+      "uploadedImage": "Uploaded Image",
+      "replaceImage": "Replace Image"
+    },
+    "carouselSection": {
+      "iconSlotsDescription": "There are 6 icon slots by default. You can add more, but the number of slots cannot be reduced below 6.",
+      "addIconSlot": "Add Icon Slot"
+    },
+    "mediaItemHeader": {
+      "imageUploaded": "Image Uploaded",
+      "published": "Published"
+    },
+    "livePreview": {
+      "title": "Live Preview",
+      "description": "See how your changes will appear in the mobile app",
+      "shop": "Shop",
+      "discover": "Discover"
+    },
+    "tabs": {
+      "promoBanners": "Promo Banners",
+      "carouselIcons": "Carousel Icons"
+    },
+    "banners": {
+      "header": "Header Promo Banner",
+      "vertical": "Vertical Promo Banner",
+      "horizontal1": "Horizontal Promo Banner 1",
+      "horizontal2": "Horizontal Promo Banner 2"
+    },
+    "icons": {
+      "icon1": "Icon 1",
+      "icon2": "Icon 2",
+      "icon3": "Icon 3",
+      "icon4": "Icon 4",
+      "icon5": "Icon 5",
+      "icon6": "Icon 6"
+    },
+    "deepLink": {
+      "label": "Destination Deep Link",
+      "placeholder": "Enter Link",
+      "hint": "Optional. Leave blank for a static (non-clickable) banner."
+    },
+    "iconLabel": {
+      "label": "Icon Label",
+      "placeholder": "Enter Icon Label",
+      "hint": "Max 20 characters"
+    }
+  },
+  "onboardingText": "Onboarding",
+  "dashboard": "Dashboard",
+  "dashboardPage": {
+    "goodMorning": "Good Morning, {name}"
+  },
+  "client-dashboard": "Client Dashboard",
+  "tenant-management-text": "Tenant Management",
+  "logout": "Logout",
+  "logoutError": "Failed to logout. Please try again.",
+  "welcome": "Welcome to Super-Platform Frontend Portal",
+  "login": {
+    "login": "Login",
+    "welcome": "Welcome!",
+    "subtitle": "Enter your email and password to log in",
+    "fields": {
+      "email": {
+        "label": "Email Address",
+        "placeholder": "Enter Email Address"
+      },
+      "password": {
+        "label": "Password",
+        "placeholder": "Enter Password"
+      }
+    },
+    "validation": {
+      "email": "Please enter a valid email address",
+      "password": "Password is required"
+    },
+    "button": {
+      "submit": "Log In",
+      "loading": "Logging in..."
+    },
+    "invalidCredentials": "Invalid email or password. Please try again."
+  },
+  "tenant-management": {
+    "title": "Tenant Management",
+    "tabs": {
+      "invited": "Invited Tenants",
+      "onboarded": "Onboarded Tenants"
+    },
+    "addTenant": "Add Tenant",
+    "inviteSuccess": "Tenant Added Successfully!",
+    "inviteSuccessDescription": "A new tenant has been added.",
+    "inviteError": "Failed to send invite",
+    "inviteErrorDescription": "Unable to send invite. Please try again.",
+    "resendInviteSuccess": "Invitation resent",
+    "resendInviteSuccessDescription": "The invitation email was sent again.",
+    "resendInviteError": "Failed to resend invite",
+    "resendInviteErrorDescription": "Unable to resend the invitation. Please try again.",
+    "search": "Search",
+    "searchByBusinessName": "Search by Business Name",
+    "status": "Status",
+    "allStatuses": "All",
+    "inviteStatuses": {
+      "pending": "Pending invite",
+      "accepted": "Accepted"
+    },
+    "tenantIdentityStatus": {
+      "active": "Active",
+      "inactive": "Inactive"
+    },
+    "clearFilters": "Clear Filters",
+    "noClientsAlert": "No tenants found",
+    "loadingClients": "Loading tenants...",
+    "errorLoadingClients": "Error Loading Tenants",
+    "errorLoadingTenants": "Error Loading Tenants",
+    "noClientsFound": "No Tenants Found",
+    "noTenantsFound": "No Tenants Found",
+    "noClientsDescription": "There are no tenants to review at the moment.",
+    "retry": "Retry",
+    "updating": "Updating...",
+    "selectStatus": "Select Status",
+    "table": {
+      "fullName": "Full Name",
+      "email": "Email",
+      "businessName": "Business Name",
+      "tenantBusiness": "Tenant/Business",
+      "status": "Status",
+      "activeProducts": "Products",
+      "businessOwner": "Business Owner",
+      "country": "Country",
+      "accountManager": "Account Manager",
+      "actions": "Actions",
+      "viewDetails": "View Details",
+      "resendInvite": "Resend Invite",
+      "requestRevision": "Request Revision",
+      "approve": "Approve",
+      "reject": "Reject"
+    },
+    "pagination": {
+      "previous": "Previous",
+      "next": "Next"
+    },
+    "InviteSentPopup": {
+      "title": "Tenant Added",
+      "description": "An invitation email has been dispatched to the tenant",
+      "continue": "Continue"
+    }
+  },
+  "tenant-details": {
+    "title": "Tenant Details",
+    "editTenant": "Edit Tenant",
+    "summary": {
+      "tenantId": "Tenant ID",
+      "tenantBusiness": "Tenant/Business",
+      "email": "Email",
+      "businessOwner": "Business Owner",
+      "accountManager": "Account Manager",
+      "country": "Country",
+      "accountStatus": "Account Status",
+      "active": "Active",
+      "inactive": "Inactive",
+      "pendingReview": "Pending Review",
+      "reviewInProgress": "Review In Progress",
+      "revisionRequested": "Revision Requested",
+      "approved": "Approved",
+      "rejected": "Rejected",
+      "onboarding": "Onboarding"
+    },
+    "tabs": {
+      "overviewKyb": "Overview & KYB",
+      "subscriptions": "Subscriptions",
+      "storefront": "Storefront",
+      "userManagement": "User Management",
+      "wallet": "Wallet",
+      "comingSoon": "Coming soon."
+    },
+    "walletTopUp": {
+      "today": "Today",
+      "loading": "Loading wallets…",
+      "loadError": "Could not load wallet data. Please try again.",
+      "retry": "Retry",
+      "toast": {
+        "approveSuccess": "Top-up approved.",
+        "approveError": "Could not approve top-up. Please try again.",
+        "rejectSuccess": "Top-up rejected.",
+        "rejectError": "Could not reject top-up. Please try again.",
+        "freezeSuccess": "Wallet frozen.",
+        "freezeError": "Could not freeze wallet. Please try again.",
+        "unfreezeSuccess": "Wallet unfrozen.",
+        "unfreezeError": "Could not unfreeze wallet. Please try again."
+      },
+      "totalBalance": {
+        "label": "Total Balance",
+        "currencyLabel": "Primary currency",
+        "noPrimary": "No primary MASTER currency"
+      },
+      "freezeActions": {
+        "freezeMaster": "Freeze Master Wallet",
+        "unfreezeMaster": "Unfreeze Master Wallet",
+        "freezeProduct": "Freeze Product Wallet",
+        "unfreezeProduct": "Unfreeze Product Wallet",
+        "freeze": "Freeze",
+        "unfreeze": "Unfreeze",
+        "masterFrozenCalloutTitle": "What happens next:",
+        "masterFrozenCalloutBody": "All product and sub-tenant wallets under this tenant are frozen as a result."
+      },
+      "freezeModals": {
+        "actions": {
+          "no": "No",
+          "yes": "Yes"
+        },
+        "defaultFreezeNotes": "Wallet frozen pending compliance review.",
+        "defaultUnfreezeNotes": "Wallet unfrozen after compliance review.",
+        "freezeMaster": {
+          "title": "Freeze Master Wallet?",
+          "description": "This freezes the entire tenant. All product wallets and sub-tenant wallets will stop being able to transact.",
+          "typePromptPrefix": "Type",
+          "typePromptSuffix": "to confirm."
+        },
+        "unfreezeMaster": {
+          "title": "Unfreeze Master Wallet?",
+          "description": "Master Wallet becomes active again.",
+          "callout": "Any product or sub-tenant wallet frozen on its own will stay frozen."
+        },
+        "freezeProduct": {
+          "title": "Freeze {productName} Wallet?",
+          "description": "This will also freeze all {count} sub-tenant wallets under {productName}. They won't be able to transact until you unfreeze {productName} again.",
+          "callout": "Master Wallet and other product wallets stay active.",
+          "acknowledge": "I understand this freezes {productName} and all its sub-tenant wallets."
+        },
+        "unfreezeProduct": {
+          "title": "Unfreeze {productName} Wallet?",
+          "description": "{productName} becomes active again.",
+          "callout": "Any sub-tenant wallet frozen on its own will stay frozen."
+        },
+        "freezeSubTenant": {
+          "title": "Freeze {walletName}?",
+          "description": "This wallet won't be able to transact until you unfreeze it."
+        },
+        "unfreezeSubTenant": {
+          "title": "Unfreeze {walletName}?",
+          "description": "This wallet becomes active again."
+        }
+      },
+      "currency": {
+        "disabled": "Disabled"
+      },
+      "display": {
+        "unknownAmount": "Unavailable",
+        "unknownBalance": "Unavailable",
+        "noReference": "No reference provided"
+      },
+      "walletBalance": {
+        "title": "Wallet Balance",
+        "default": "Default",
+        "empty": "No MASTER wallets for this tenant."
+      },
+      "productWallets": {
+        "title": "Product Wallets",
+        "empty": "No product wallets for this tenant."
+      },
+      "products": {
+        "rewards_portal": "Rewards Portal",
+        "lms": "LMS",
+        "innovation": "Innovation",
+        "points_exchange": "Points Exchange",
+        "storefront": "Storefront",
+        "travelx": "TravelX"
+      },
+      "walletTypes": {
+        "MASTER": "Master wallet",
+        "PRODUCT": "Product wallet",
+        "SUB_TENANT": "Sub-tenant wallet",
+        "unknown": "Target wallet"
+      },
+      "tenantFloatWallets": {
+        "title": "{tenantName} Tenant Wallets",
+        "walletLabel": "{walletType} · {product}",
+        "searchPlaceholder": "Search",
+        "empty": "No tenant wallets found",
+        "showingResults": "Showing {count} of {total} results",
+        "filters": {
+          "allStatuses": "All Statuses"
+        },
+        "statuses": {
+          "ACTIVE": "Active",
+          "FROZEN": "Frozen"
+        },
+        "table": {
+          "wallet": "Wallet",
+          "currentFloatBalance": "Current Balance",
+          "status": "Status",
+          "actions": "Actions"
+        }
+      },
+      "pendingReview": {
+        "title": "{count} bank transfer pending review",
+        "badge": "Pending Review",
+        "reviewRequest": "Review Request",
+        "nextInQueue": "Reviewing the next request in the queue."
+      },
+      "reviewModals": {
+        "actions": {
+          "cancel": "Cancel",
+          "approve": "Approve",
+          "reject": "Reject"
+        },
+        "fields": {
+          "tenant": "Tenant",
+          "product": "Product",
+          "targetWallet": "Target wallet",
+          "amount": "Amount",
+          "currency": "Currency",
+          "reference": "Reference",
+          "currentBalance": "Current Balance",
+          "balanceAfterApproval": "Balance After Approval"
+        },
+        "whatHappensNext": {
+          "title": "What happens next:"
+        },
+        "detail": {
+          "loading": "Loading the latest operation details…",
+          "error": "Could not load the latest operation details. Approval is unavailable until this succeeds.",
+          "incomplete": "Approval is unavailable because the balance after approval is missing."
+        },
+        "review": {
+          "title": "Review Float Top-up",
+          "description": "You are reviewing the following amount for the tenant's float:",
+          "subtitle": "Choose to approve or reject this request"
+        },
+        "approve": {
+          "title": "Approve Float Top-up",
+          "description": "You are crediting the following amount to the tenant's float:",
+          "subtitle": "Review details before confirming",
+          "confirm": "Confirm Approval",
+          "whatHappensNext": {
+            "credit": "{currencyCode} {amount} is credited to the tenant's {product} float when approval succeeds"
+          }
+        },
+        "reject": {
+          "title": "Reject Float Top-up",
+          "description": "You are rejecting the following amount to the tenant's float:",
+          "reasonLabel": "Reason for Rejection",
+          "reasonPlaceholder": "Select a reason",
+          "notesLabel": "Notes (optional)",
+          "notesPlaceholder": "Add context for this rejection",
+          "confirm": "Confirm Rejection",
+          "reasons": {
+            "transfer_not_received": "Transfer not received",
+            "amount_does_not_match": "Amount does not match",
+            "invalid_proof_of_payment": "Invalid proof of payment",
+            "reference_number_mismatch": "Reference number mismatch",
+            "compliance_hold": "Compliance hold"
+          },
+          "whatHappensNext": {
+            "balanceUnchanged": "Float balance remains unchanged",
+            "recordReason": "The request is marked rejected with the selected reason"
+          }
+        }
+      },
+      "methods": {
+        "BANK_TRANSFER": "Bank",
+        "PAYMENT_SERVICE": "Payment",
+        "TENANT_CONFIRMED": "Tenant Confirmed",
+        "WALLET_TRANSFER": "Wallet Transfer",
+        "MANUAL": "Manual"
+      },
+      "statuses": {
+        "approved": "Approved",
+        "completed": "Completed",
+        "rejected": "Rejected",
+        "failed": "Failed",
+        "cancelled": "Cancelled",
+        "expired": "Expired",
+        "pending_review": "Pending Review",
+        "unknown": "Unknown"
+      },
+      "history": {
+        "title": "Top-up History",
+        "noProduct": "-",
+        "searchPlaceholder": "Search",
+        "empty": "No top-up history found",
+        "showingResults": "Showing {count} of {total} results",
+        "filters": {
+          "allMethods": "All Methods",
+          "allCurrencies": "All Currencies",
+          "allStatuses": "All Statuses",
+          "dateRange": "Date Range",
+          "sort": "Toggle sorting"
+        },
+        "table": {
+          "type": "Type",
+          "product": "Product",
+          "method": "Method",
+          "amount": "Amount",
+          "currency": "Currency",
+          "submitted": "Submitted",
+          "status": "Status"
+        },
+        "actions": {
+          "view": "View details",
+          "detailSummary": "{status} · {amount} · balance after approval {balanceAfter}",
+          "detailError": "Could not load top-up details."
+        }
+      },
+      "detailsModal": {
+        "title": "Top-up Details",
+        "sectionTitle": "Top-up Details",
+        "proofTitle": "Proof of Payment",
+        "download": "Download proof of payment",
+        "downloadError": "Could not download the proof of payment.",
+        "fields": {
+          "method": "Method",
+          "status": "Status",
+          "product": "Product",
+          "requestedAmount": "Requested Amount",
+          "currency": "Currency",
+          "transactionReference": "Transaction Reference",
+          "floatBeforeApproval": "Float Before Approval",
+          "floatAfterApproval": "Float After Approval",
+          "submittedOn": "Submitted On",
+          "approvedOn": "Approved On"
+        }
+      }
+    },
+    "storefront": {
+      "pageTitle": "Storefront",
+      "viewModal": {
+        "title": "Storefronts",
+        "searchPlaceholder": "Search by Storefront Name",
+        "noSearchResults": "No storefronts match your search.",
+        "close": "Close"
+      },
+      "createStorefront": "Create Storefront",
+      "loading": "Loading storefronts...",
+      "loadError": "Unable to load storefronts.",
+      "retry": "Retry",
+      "emptyTitle": "No Storefronts found!",
+      "emptyDescription": "Create a storefront for the tenant.",
+      "card": {
+        "statusDraft": "Draft",
+        "statusActive": "Active",
+        "statusSuspended": "Suspended",
+        "goToStorefront": "Go to Storefront",
+        "floatBalance": "Float Balance",
+        "totalOrders": "Total Orders",
+        "ordersFulfilled": "Orders Fulfilled",
+        "setupChecklist": "Required setup steps",
+        "setupChecklistProgress": "{completed} of {required} complete"
+      },
+      "create": {
+        "pageTitle": "Create Storefront",
+        "loadCategoriesError": "Could not load category bundles. Please try again.",
+        "loadProductsError": "Could not load products. Please try again.",
+        "submitError": "Could not create storefront. Please try again.",
+        "actions": {
+          "back": "Back",
+          "continue": "Continue",
+          "createStorefront": "Create Storefront",
+          "creating": "Creating storefront..."
+        },
+        "errors": {
+          "required": "This field is required.",
+          "requiredSelect": "Please select an option.",
+          "noStorefrontSubscription": "No Storefront subscription found for this tenant."
+        },
+        "steps": {
+          "stepNumber": "Step {number}",
+          "details": {
+            "label": "Storefront Details",
+            "sectionTitle": "Storefront Details",
+            "sectionSubtitle": "Select tenant and enter storefront details.",
+            "sectionSubtitleTenantScoped": "Enter storefront details.",
+            "tenant": "Tenant",
+            "selectTenant": "Select Tenant",
+            "searchTenantPlaceholder": "Search",
+            "loadMoreTenants": "More",
+            "loadingTenants": "Loading tenants...",
+            "noTenantsFound": "No tenants found",
+            "storefrontName": "Storefront Name",
+            "storefrontNamePlaceholder": "Enter Storefront Name",
+            "urlSlug": "URL Slug",
+            "urlSlugPlaceholder": "store-name",
+            "urlSlugHint": "{slug}.{hostSuffix}",
+            "region": "Region",
+            "selectRegion": "Select Region",
+            "currency": "Currency",
+            "floatBalance": "Float Balance",
+            "lowFloatThreshold": "Low Float Alert Threshold",
+            "lowFloatHint": "Alert triggers when float balance falls below this amount"
+          },
+          "categoryBundles": {
+            "label": "Category Bundles",
+            "sectionTitle": "Category Bundles",
+            "sectionSubtitle": "Select category bundles to assign to the storefront",
+            "selectAll": "Select All",
+            "searchPlaceholder": "Search categories",
+            "searchEmpty": "No categories match your search.",
+            "empty": "No category bundles available for this tab.",
+            "productCount": "Products: {count}",
+            "productCountPrefix": "Products:",
+            "tabs": {
+              "merchandise": "Merchandise",
+              "giftCards": "Gift Cards"
+            }
+          },
+          "selectProducts": {
+            "label": "Select Products",
+            "sectionTitle": "Select Products",
+            "sectionSubtitle": "Review and select products to display on the storefront",
+            "totalProducts": "Total Products: {selected}/{total}",
+            "allCategories": "All Categories",
+            "searchPlaceholder": "Search by Product Name",
+            "empty": "No products found.",
+            "showingResults": "Showing {from} of {total} results",
+            "tabs": {
+              "merchandise": "Merchandise",
+              "giftCards": "Gift Cards"
+            },
+            "table": {
+              "product": "Product",
+              "category": "Category",
+              "lowestPrice": "Lowest Price"
+            }
+          }
+        },
+        "success": {
+          "title": "Storefront Created Successfully!",
+          "storefrontDetails": "Storefront Details",
+          "storefrontName": "Storefront Name",
+          "subdomain": "Sub-domain",
+          "tenant": "Tenant",
+          "totalProducts": "Total Products",
+          "goToManagement": "Go to Storefront Management"
+        }
+      }
+    },
+    "subscriptions": {
+      "pageTitle": "Subscribed Products",
+      "newSubscription": "New Subscription",
+      "newSubscriptionToast": "New subscription creation is not available yet.",
+      "subTabs": {
+        "products": "Products",
+        "uploadContracts": "Upload Contracts"
+      },
+      "subTabListAria": "Subscription detail sections",
+      "statusActive": "Active",
+      "statusInactive": "Inactive",
+      "agreedPrice": "Agreed Price",
+      "trialLabel": "Trial",
+      "freeTrialPrice": "Free trial ({days} days)",
+      "billingFrequency": "Billing Frequency",
+      "subscriptionPeriodLabel": "Subscription Period",
+      "noSubscribedProducts": "No subscribed products yet.",
+      "storefrontMenu": {
+        "viewStorefronts": "View Storefronts",
+        "createStorefront": "Create Storefront"
+      },
+      "loading": "Loading subscriptions…",
+      "loadError": "Could not load subscriptions. Please try again.",
+      "retry": "Retry",
+      "addPaidSubscription": {
+        "title": "Add Paid Subscription",
+        "success": "Subscription added successfully.",
+        "errors": {
+          "missingTenant": "Tenant is missing. Reload the page and try again.",
+          "missingTenantEmail": "Tenant email is required to create a subscription. Open this tenant from the tenant list or ensure the profile has a contact email.",
+          "missingTenantUserId": "Tenant user id is required to create a subscription. Reload the customer profile or open this tenant from the tenant list.",
+          "productNotConfigured": "This product is not available in the payment catalog.",
+          "subscribableProductsUnavailable": "Could not load products from admin-be (GET /subscribable-products). Check that you are signed in, admin-be is running, and PAYMENT_GATEWAY_SERVICE_BASE_URL is configured.",
+          "countryRequired": "Tenant country is required to create a subscription."
+        },
+        "validationSummaryTitle": "Please fix the following:",
+        "actions": {
+          "cancel": "Cancel",
+          "continue": "Continue",
+          "save": "Save & Add Product"
+        },
+        "fields": {
+          "product": "Product",
+          "productPlaceholder": "Select Product",
+          "startDate": "Start Date",
+          "startDatePlaceholder": "Select Start Date",
+          "endDate": "End Date",
+          "endDatePlaceholder": "Select End Date",
+          "gracePeriod": "Grace Period",
+          "gracePeriodHint": "The last days of the subscription before the end date. Access stays active during this window, then ends on the subscription end date.",
+          "daysSuffix": "Days",
+          "enableFreeTrial": "Include a free trial",
+          "enableFreeTrialHint": "No wire-transfer invoice is created until you add a paid subscription later. Access starts immediately for the trial period.",
+          "trialDays": "Trial length (days)",
+          "trialDaysHint": "Free access from the start date. Enterprise trials are limited to {maxDays} days.",
+          "billingTrialNote": "Free trial selected — no initial wire-transfer invoice is created. You may optionally enter an agreed price for reference.",
+          "agreedPriceTrialOptionalHint": "Optional. If set, this is recorded as the agreed price. No invoice is created during the trial.",
+          "priceCurrencyPrefix": "SAR",
+          "agreedPrice": "Agreed Price",
+          "agreedPricePlaceholder": "Enter agreed price",
+          "billingFrequency": "Billing Frequency",
+          "billingYearly": "Yearly",
+          "billingMonths": "Months",
+          "billingMonthsCount": "Billing frequency (months)"
+        },
+        "validation": {
+          "productRequired": "Please select a product.",
+          "startDateRequired": "Start date is required.",
+          "endDateRequired": "End date is required.",
+          "endDateAfterStart": "End date must be on or after the start date.",
+          "gracePeriodInteger": "Grace period must be a whole number.",
+          "gracePeriodMin": "Grace period must be at least 1 day.",
+          "gracePeriodMax": "Grace period cannot exceed 365 days.",
+          "agreedPriceRequired": "Agreed price is required.",
+          "agreedPricePositive": "Agreed price must be greater than zero.",
+          "trialDaysInvalid": "Trial length must be between 1 and {maxDays} days.",
+          "trialDaysExceedsMax": "Trial length cannot exceed {maxDays} days for enterprise subscriptions.",
+          "trialDaysExceedsMaxWarning": "You entered {trialDays} days, which exceeds the {maxDays}-day enterprise trial limit. Reduce the trial length to continue.",
+          "trialExceedsPeriod": "Trial length ({trialDays} days) must be shorter than the subscription period ({periodDays} days between start and end). The trial must end before the subscription end date.",
+          "trialEndsAfterSubscriptionEnd": "Trial ends on {trialEndsAt}, which is after the subscription end date ({endDate}). Extend the end date or shorten the trial.",
+          "startDateNotInPast": "Start date cannot be in the past.",
+          "subscriptionPeriodTooShort": "Subscription period must be at least {minDays} days (currently {periodDays} days between start and end).",
+          "graceExceedsPeriod": "Grace period ({graceDays} days) cannot be longer than the subscription period ({periodDays} days).",
+          "postTrialPeriodTooShort": "At least {minDays} days are required between trial end and subscription end (currently {postTrialDays} days).",
+          "paidPeriodBeforeGraceTooShort": "At least {minDays} paid days are required between trial end and the grace window (currently {paidDays} days).",
+          "trialOverlapsGrace": "Trial ends on {trialEndsAt}, which falls inside the grace window (last {graceDays} days, starting {graceStartsAt}). Shorten the trial, reduce grace, or extend the subscription.",
+          "graceExceedsPeriodWarning": "Grace period ({graceDays} days) is longer than the subscription period ({periodDays} days).",
+          "trialOverlapsGraceWarning": "Trial ends on {trialEndsAt}, inside the grace window that starts {graceStartsAt}.",
+          "trialGraceSpanPeriodWarning": "Trial ({trialDays} days) and grace ({graceDays} days) together exceed the subscription period ({periodDays} days) and may overlap.",
+          "trialDominatesPeriodWarning": "Trial is {percent}% of the subscription period ({trialDays} of {periodDays} days). Consider a longer contract or shorter trial.",
+          "subscriptionPeriodExceedsMaxWarning": "Subscription period is {periodDays} days (review limit: {maxDays} days).",
+          "billingMonthsPositive": "Billing frequency must be at least 1 month."
+        },
+        "review": {
+          "subscriptionDetailsTitle": "Subscription Details",
+          "billingTitle": "Billing & Invoice",
+          "editDetails": "Edit subscription details",
+          "editBilling": "Edit billing details",
+          "subscriptionType": "Subscription Type",
+          "paidSubscription": "Paid Subscription",
+          "freeTrialSubscription": "Free Trial",
+          "trialDays": "Trial length",
+          "trialDaysValue": "{days} days",
+          "initialPayment": "Initial payment",
+          "noInitialPayment": "None (free trial)",
+          "product": "Product",
+          "subscriptionPeriod": "Subscription Period",
+          "gracePeriod": "Grace Period",
+          "gracePeriodValue": "{days} Days",
+          "accessTimelineTitle": "Access timeline",
+          "trialEndsAt": "Trial ends",
+          "graceStartsAt": "Grace period starts",
+          "subscriptionEndsAt": "Subscription ends",
+          "invoiceType": "Invoice Type",
+          "invoiceTypeValue": "KSA Compliant Invoice",
+          "agreedPrice": "Agreed Price",
+          "agreedPriceNotSet": "Not set",
+          "billingFrequency": "Billing Frequency",
+          "billingFrequencyYearly": "Yearly",
+          "billingFrequencyMonths": "Every {count} months"
+        }
+      }
+    },
+    "contracts": {
+      "documentsTitle": "Contract documents",
+      "documentsDescription": "Signed agreements and commercial contracts for this tenant.",
+      "uploadButton": "Upload contract",
+      "noContracts": "No contracts uploaded yet.",
+      "uploadSuccess": "Contracts uploaded successfully.",
+      "uploadError": "Failed to upload contracts.",
+      "maxFilesExceeded": "You can upload up to {max} files per request.",
+      "invalidFileType": "Unsupported file type. Allowed: PDF, JPG, JPEG, PNG.",
+      "fileTooLarge": "Each contract file must be 5MB or less.",
+      "uploadRequirements": "Supported types: PDF, JPG, JPEG, PNG. Maximum file size: 5MB each.",
+      "viewError": "Failed to open contract.",
+      "downloadError": "Failed to download contract.",
+      "view": "View",
+      "download": "Download"
+    },
+    "userManagement": {
+      "cancel": "Cancel",
+      "stats": {
+        "totalTeamMembers": "Total Team Members",
+        "activeMembers": "Active Members",
+        "inactiveMembers": "In-active Members"
+      },
+      "teamMembersTitle": "Team Members",
+      "searchPlaceholder": "Search",
+      "addUser": "Add User",
+      "emptyText": "No team members found",
+      "filters": {
+        "role": "Role",
+        "status": "Status",
+        "dateJoined": "Date Joined",
+        "allRoles": "Role",
+        "allStatuses": "Status",
+        "allDates": "Date Joined"
+      },
+      "table": {
+        "memberName": "Member Name",
+        "email": "Email",
+        "role": "Role",
+        "status": "Status",
+        "dateJoined": "Date Joined"
+      },
+      "status": {
+        "active": "Active",
+        "inactive": "In-active"
+      },
+      "actions": {
+        "edit": "Edit",
+        "delete": "Delete",
+        "resendInvite": "Resend Invite"
+      },
+      "toast": {
+        "inviteSuccess": "User invited successfully.",
+        "inviteError": "Failed to invite user.",
+        "updateSuccess": "User updated successfully.",
+        "updateError": "Failed to update user.",
+        "deleteSuccess": "User removed successfully.",
+        "deleteError": "Failed to remove user.",
+        "resendInviteNotAvailable": "Resend invite is not available yet; backend endpoint is not implemented."
+      }
+    },
+    "notProvided": "—",
+    "editDialog": {
+      "title": "Edit tenant",
+      "save": "Save changes",
+      "cancel": "Cancel",
+      "loading": "Loading tenant…",
+      "loadError": "Could not load tenant from Identity. Check your connection and try again.",
+      "retry": "Retry",
+      "fields": {
+        "businessName": "Business name",
+        "businessOwnerEmail": "Business owner email",
+        "accountManager": "Account manager",
+        "selectAccountManager": "Select account manager",
+        "country": "Country",
+        "selectCountry": "Select country"
+      },
+      "validation": {
+        "businessNameRequired": "Business name is required",
+        "emailInvalid": "Enter a valid email address"
+      },
+      "toast": {
+        "success": "Tenant updated successfully.",
+        "error": "Failed to update tenant. Please try again."
+      }
+    }
+  },
+  "user-review-page": {
+    "title": "User Overview",
+    "loading": "Loading tenant data...",
+    "userNotFound": "Tenant Not Found",
+    "backToTenantManagement": "Back to Tenant Management",
+    "sending": "Sending...",
+    "actions": {
+      "requestRevision": "Request Revision",
+      "approve": "Approve",
+      "reject": "Reject",
+      "cancel": "Cancel",
+      "sendRevisionRequest": "Send Revision Request"
+    },
+    "stateUpdateFailed": "Could not confirm the status change. Check the tenant list — it may already be updated.",
+    "RevisionRequestSentPopup": {
+      "title": "Revision Request Sent",
+      "description": "An email has been sent to the user requesting revision",
+      "continue": "Continue"
+    }
+  },
+  "business-details-review": {
+    "title": "Business Details",
+    "listOfDirectors": "List of Directors",
+    "beneficialOwners": "Beneficial Owner(s)",
+    "fields": {
+      "fullName": "Full Name",
+      "name": "Name",
+      "email": "Email",
+      "businessName": "Business Name",
+      "accountManager": "Account Manager",
+      "registrationId": "Business Registration ID",
+      "taxNumber": "Tax Number",
+      "businessUrl": "Business URL",
+      "businessAddress": "Business Address",
+      "country": "Country",
+      "state": "State",
+      "city": "City",
+      "zipCode": "Zip/Postal Code",
+      "position": "Position",
+      "nationality": "Nationality",
+      "passportNoNationalId": "Passport Number or National ID"
+    }
+  },
+  "attached-documents-review": {
+    "title": "Attached Documents",
+    "documents": {
+      "businessRegistration": "Business Registration Certificate (CR)",
+      "nationalAddress": "National Address Certificate",
+      "vatRegistration": "VAT Registration Certificate",
+      "ultimateBeneficialOwner": "Ultimate Beneficial Owner"
+    }
+  },
+  "compliance-declarations-review": {
+    "title": "Compliance Declarations",
+    "fields": {
+      "countryOfOrigin": "Country of Origin of the Funds Being Transferred (if applicable):",
+      "sanctionsQuestion": "Are you, your entity, or any associated individuals subject to sanctions in any country or jurisdiction?",
+      "sanctionsNote": "If Yes, please provide details of the sanctions, including the jurisdiction and nature of the sanction.",
+      "amlQuestion": "Do you confirm that your entity complies with all applicable Anti-Money Laundering (AML) and Countering the Financing of Terrorism(CFT) regulations in your jurisdiction? If No, please provide an explanation"
+    },
+    "values": {
+      "yes": "Yes",
+      "no": "No",
+      "uae": "UAE"
+    }
+  },
+  "document-review-card": {
+    "requestRevision": "Request Revision",
+    "placeholder": "Some issue stated here",
+    "viewFile": "View file",
+    "downloadFile": "Download file",
+    "downloadFailed": "Failed to download file. Please try again.",
+    "viewOpenFailed": "Could not open file. Check popups or try again."
+  },
+  "review-field": {
+    "requestRevision": "Request Revision",
+    "reasonPlaceholder": "Reason"
+  },
+  "requiredInfoDialog": {
+    "mainname": {
+      "title": "Required information for onboarding process",
+      "description": "For a quick account setup, please have the following information and documents ready. This will help you complete the process efficiently.",
+      "coreBusiness": {
+        "title": "Core Business Details",
+        "description": "You will be asked to provide the following details about your business:",
+        "businessName": "Business Name",
+        "registrationId": "Business Registration ID",
+        "registrationIdDescription": "(e.g., Business Registration ID)",
+        "taxNumber": "Tax Number",
+        "taxNumberDescription": "(e.g., VAT TIN)",
+        "businessUrl": "Business URL",
+        "businessUrlDescription": "(optional)",
+        "address": "Full Business Address",
+        "addressDescription": "(Street, Country, State/Province, City, Zip/Postal Code)"
+      },
+      "ownership": {
+        "title": "Ownership Details",
+        "description": "You will be asked to provide details about ownership of business:",
+        "directors": {
+          "title": "Directors:",
+          "details": " Full Name, Position, Nationality, and Passport Number or National ID for each director"
+        },
+        "beneficialOwners": {
+          "title": "Beneficial Owners:",
+          "details": " Full Name, Position, Nationality, and Passport Number or National ID for each individual holding 25% or more of shares/control"
+        }
+      },
+      "documents": {
+        "title": "Documents You'll Need to Upload",
+        "description": "Please have digital copies (PDF, PNG, JPG format) of these documents ready for upload:",
+        "businessRegistration": {
+          "title": "Business Registration Certificate:",
+          "details": " Official document confirming business legal registration."
+        },
+        "nationalAddress": {
+          "title": "National Address Certificate:",
+          "details": " Proof of your business's registered physical address."
+        },
+        "vatRegistration": {
+          "title": "VAT Registration Certificate:",
+          "details": " Your document confirming VAT registration status."
+        }
+      },
+      "loading": "Signing up...",
+      "continue": "Continue"
+    }
+  },
+  "attachedDocumentsReview": {
+    "title": "Attached Documents",
+    "fileFormat": "PDF, PNG, JPG format",
+    "actions": {
+      "preview": "Preview",
+      "download": "Download",
+      "upload": "Upload Document"
+    },
+    "documents": {
+      "businessRegistration": "Business Registration  Certificate (CR)",
+      "nationalAddress": "National Address Certificate",
+      "vatRegistration": "VAT Registration Certificate"
+    }
+  },
+  "businessDetailsReview": {
+    "title": "Business Details",
+    "listOfDirectors": "List of Directors",
+    "beneficialOwners": "Beneficial Owner(s)",
+    "fields": {
+      "fullName": "Full Name",
+      "email": "Email",
+      "businessName": "Business Name",
+      "registrationId": "Business registration ID",
+      "taxNumber": "Tax Number",
+      "businessUrl": "Business URL",
+      "businessAddress": "Business Address",
+      "country": "Country",
+      "state": "State",
+      "city": "City",
+      "zipCode": "Zip/Postal Code",
+      "position": "Position",
+      "nationality": "Nationality",
+      "passportNoNationalId": "Passport Number or National ID"
+    }
+  },
+  "complianceDeclarationsReview": {
+    "title": "Compliance Declarations",
+    "fields": {
+      "countryOfOrigin": "Country of Origin of the Funds Being Transferred (if applicable):",
+      "defaultCountry": "UAE",
+      "sanctionsQuestion": "Are you, your entity, or any associated individuals subject to sanctions in any country or jurisdiction?",
+      "sanctionsDetails": "If Yes, please provide details of the sanctions, including the jurisdiction and nature of the sanction.",
+      "amlQuestion": "Do you confirm that your entity complies with all applicable Anti-Money Laundering (AML) and Countering the Financing of Terrorism (CFT) regulations in your jurisdiction? If No, please provide an explanation",
+      "yes": "Yes",
+      "no": "No"
+    }
+  },
+  "applicationStatusCard": {
+    "status": {
+      "pending-approval": "Pending Approval",
+      "revision-requested": "Revision Requested",
+      "approved": "Approved",
+      "rejected": "Rejected"
+    },
+    "actions": {
+      "reviewEdit": "Review & Edit Details",
+      "reviewSubmission": "Review Your Submission",
+      "viewDetails": "View Details"
+    }
+  },
+  "clientSubmissionView": {
+    "title": "Submitted Details",
+    "actions": {
+      "submit": "Submit"
+    },
+    "statusLabel": {
+      "pending-approval": "Pending Approval",
+      "revision-requested": "Revision Requested",
+      "approved": "Approved",
+      "rejected": "Rejected"
+    },
+    "status": {
+      "pendingApproval": "Your information is being reviewed. You will be notified once they are approved.",
+      "revisionRequested": "The admin has requested a revision. Please resubmit those items.",
+      "approved": "Your information has been approved. You can now access Merit Products."
+    }
+  },
+  "inviteTenantDialog": {
+    "title": "Add Tenant",
+    "description": "The email you enter will be invited with Owner access. Product subscriptions are added after onboarding.",
+    "fields": {
+      "email": "Business Owner Email",
+      "emailPlaceholder": "Enter Email Address",
+      "businessName": "Tenant/Business",
+      "businessNamePlaceholder": "Enter Tenant/Business Name",
+      "country": "Country",
+      "selectCountry": "Select Country",
+      "accountManager": "Account Manager",
+      "selectAccountManager": "Select Account Manager",
+      "uploadBusinessContract": "Upload Business Contract",
+      "clickToUpload": "Click to upload",
+      "dragAndDrop": "or drag & drop it here",
+      "contractRequirements": "PDF, DOCx (Max size: 5MB)",
+      "fileComplete": "Complete",
+      "products": "Product(s)",
+      "selectProducts": "Select Product(s)",
+      "tenant": "Select Tenant",
+      "selectTenant": "Select a tenant"
+    },
+    "products": {
+      "lms": "Loyalty Management System (LMS)",
+      "lmsShort": "LMS",
+      "innovation": "Innovation",
+      "innovationShort": "Innovation",
+      "pointsExchange": "Points Exchange",
+      "pointsExchangeShort": "Points Exchange",
+      "sellerPortal": "Seller Portal",
+      "sellerPortalShort": "Seller Portal",
+      "travelShop": "TravelShop"
+    },
+    "validation": {
+      "emailRequired": "Email is required",
+      "emailInvalid": "Please enter a valid email address",
+      "businessNameRequired": "Business name is required",
+      "countryRequired": "Country is required",
+      "accountManagerRequired": "Account Manager is required",
+      "products": "Please select at least one product",
+      "tenantRequired": "Please select a tenant"
+    },
+    "actions": {
+      "sendInvite": "Send Invite",
+      "save": "Save",
+      "saveAndInvite": "Save & Invite",
+      "cancel": "Cancel"
+    }
+  },
+  "inviteSellerDialog": {
+    "title": "Invite Seller",
+    "description": "The email you enter will be invited to the Seller Portal.",
+    "fields": {
+      "email": "Email",
+      "emailPlaceholder": "seller@example.com",
+      "companyName": "Business Name",
+      "companyNamePlaceholder": "Enter Business Name",
+      "supplierId": "Supplier ID",
+      "supplierIdPlaceholder": "Enter Supplier ID",
+      "shippingProvider": "Shipping Fulfillment (Default)",
+      "shippingProviderPlaceholder": "Select shipping method",
+      "businessId": "Business Registration ID",
+      "businessIdPlaceholder": "Business Registration ID",
+      "uploadBusinessCertificate": "Upload Business Registration Certificate",
+      "clickToUpload": "Click to upload",
+      "dragAndDrop": "or drag & drop it here",
+      "fileRequirements": "PDF or Image (Max size: 5MB)",
+      "fileComplete": "Complete"
+    },
+    "validation": {
+      "emailRequired": "Email is required",
+      "emailInvalid": "Please enter a valid email address",
+      "companyNameRequired": "Business name is required",
+      "supplierIdRequired": "Supplier ID is required",
+      "shippingProviderRequired": "Shipping provider is required",
+      "businessIdRequired": "Business Registration ID is required",
+      "businessCertificateRequired": "Business Registration Certificate is required",
+      "fileSizeError": "File size must be less than 5MB",
+      "fileTypeError": "File must be a PDF or image"
+    },
+    "actions": {
+      "sendInvite": "Send Invite",
+      "continue": "Continue"
+    }
+  },
+  "sellers-dashboard": {
+    "title": "Sellers Overview",
+    "tabs": {
+      "onboarded": "Onboarded Sellers",
+      "invited": "Invited Sellers"
+    },
+    "inviteSeller": "Invite Seller",
+    "search": "Search",
+    "searchByBusinessName": "Search by Company Name",
+    "status": "Status",
+    "selectStatus": "Select Status",
+    "allStatuses": "All",
+    "tenantRowStatus": {
+      "active": "Active",
+      "inactive": "Inactive",
+      "suspended": "Suspended"
+    },
+    "noClientsAlert": "No sellers found",
+    "loadingClients": "Loading sellers...",
+    "loadingSellers": "Loading sellers...",
+    "errorLoadingClients": "Error Loading Sellers",
+    "errorLoadingSellers": "Error Loading Sellers",
+    "noSellersFound": "No Sellers Found",
+    "noSellersDescription": "There are no sellers to review at the moment.",
+    "retry": "Retry",
+    "table": {
+      "fullName": "Full Name",
+      "email": "Email",
+      "businessName": "Company Name",
+      "status": "Status",
+      "actions": "Actions",
+      "viewDetails": "View Details",
+      "resendInvite": "Resend Invite"
+    },
+    "pagination": {
+      "previous": "Previous",
+      "next": "Next"
+    },
+    "inviteSuccess": {
+      "title": "Invite Sent!",
+      "message": "An invitation email has been dispatched to {email}.",
+      "confirmText": "Continue"
+    },
+    "inviteError": {
+      "title": "Invitation Already Exists",
+      "messagePrefix": "An invitation for",
+      "messageSuffix": "already exists. Please use the resend option if you need to send it again.",
+      "confirmText": "OK"
+    }
+  },
+  "seller-details": {
+    "title": "Seller Details",
+    "retry": "Retry",
+    "deactivateSeller": "Deactivate Seller",
+    "deactivateSellerUnavailable": "Seller deactivation is not available yet. Use your operations workflow or contact engineering if you need this enabled.",
+    "errors": {
+      "loadSellerDetails": "Unable to load seller details",
+      "loadOrders": "Unable to load orders",
+      "loadOrdersOverview": "Unable to load order overview",
+      "updateShippingFailed": "Unable to update shipping settings. Please try again.",
+      "loadCarriersFailed": "Unable to load carriers. Carrier options may be incomplete."
+    },
+    "sections": {
+      "sellerInformation": "Seller information",
+      "shippingSettings": "Shipping & fulfillment",
+      "orderOverview": "Order overview"
+    },
+    "info": {
+      "sellerId": "Seller ID",
+      "fullName": "Full Name",
+      "email": "Email",
+      "phone": "Phone",
+      "accountType": "Account type",
+      "accountStatus": "Account status",
+      "legalBusinessName": "Legal Business Name (EN)",
+      "shopName": "Shop name",
+      "companyName": "Company Name",
+      "accountTypeBusiness": "Business/Corporate",
+      "accountTypeIndividual": "Individual/Freelancer",
+      "businessRegistrationId": "Business registration ID",
+      "logistics": "Logistics",
+      "logisticsMerit": "Merit Logistics (SPL)",
+      "logisticsSelfManaged": "Self Managed",
+      "status": "Status",
+      "statusInviteAccepted": "Invite Accepted",
+      "statusInvitePending": "Invite Pending",
+      "statusActive": "Active",
+      "statusInactive": "Inactive",
+      "notProvided": "Not provided",
+      "notSpecified": "Not specified",
+      "registrationCertificate": "Registration Certificate",
+      "shippingFulfillment": "Shipping Fulfillment",
+      "shippingProviderLabel": "Shipping provider",
+      "shippingProviderPlaceholder": "Select shipping provider",
+      "defaultCarrierLabel": "Last Mile Carrier (Default)",
+      "defaultCarrierPlaceholder": "Select default carrier"
+    },
+    "orderStatus": {
+      "new": "New",
+      "accepted": "Accepted",
+      "shippedToMerit": "Shipped to Merit",
+      "readyToShip": "Ready to Ship",
+      "shipped": "Shipped",
+      "delivered": "Delivered",
+      "canceled": "Canceled",
+      "arrivalPending": "Arrival Pending",
+      "receivedByMerit": "Received",
+      "qcFailed": "QC Failed",
+      "unknown": "Unknown"
+    },
+    "tabs": {
+      "orders": "Orders",
+      "kybDetails": "KYB Details",
+      "storeDetails": "Store Details",
+      "storePlaceholder": "Store details will appear here when the API is connected.",
+      "slaCompliance": "SLA Compliance"
+    },
+    "kyb": {
+      "loading": "Loading KYB profile…",
+      "loadError": "We couldn't load KYB details for this seller.",
+      "retry": "Try again",
+      "missingTenant": "Seller tenant is missing, so KYB cannot be loaded.",
+      "noSubmittedData": "No KYB profile data is available for this seller yet.",
+      "sections": {
+        "business": "Business Details",
+        "role": "Role and Identification",
+        "financials": "Financials",
+        "documents": "Attached Documents"
+      },
+      "fields": {
+        "crn": "Commercial Registration Number (CRN)",
+        "vatNumber": "VAT Number",
+        "state": "State",
+        "legalNameEn": "Legal Business Name (EN)",
+        "legalNameAr": "Legal Business Name (AR)",
+        "businessAddress": "Business Address",
+        "city": "City",
+        "country": "Country",
+        "zipPostal": "Zip / Postal",
+        "role": "Role",
+        "nationalId": "National ID / Iqama Number",
+        "dateOfBirth": "Date of Birth",
+        "fullNameEn": "Full Name (EN)",
+        "fullNameAr": "Full Name (AR)",
+        "iban": "IBAN",
+        "bankName": "Bank Name",
+        "currency": "Currency"
+      },
+      "documents": {
+        "noneAttached": "No documents were returned for this profile."
+      }
+    },
+    "store": {
+      "storeAndLogistics": "Store and Logistics",
+      "storeDisplayName": "Store Display Name",
+      "shippingFulfilmentDefault": "Shipping Fulfillment (Default)",
+      "attachedDocuments": "Attached Documents",
+      "logo": "Logo",
+      "banner": "Banner",
+      "noDocumentUploaded": "No file uploaded",
+      "viewFile": "View file",
+      "downloadFile": "Download file",
+      "downloadFailed": "Download failed. Please try again.",
+      "viewOpenFailed": "Could not open file. Check popups or try again.",
+      "emailThrottlingTitle": "Email Throttling",
+      "emailThrottlingDescription": "Minimum minutes between New Order and AWB Ready emails for this seller. (default 30)",
+      "newOrderThrottleMinutes": "New Order",
+      "awbReadyThrottleMinutes": "AWB Ready",
+      "saveThrottleAria": "Save notification throttle",
+      "notificationThrottleSaved": "Notification throttle updated."
+    },
+    "orders": {
+      "sectionTitle": "Orders",
+      "ordersOverview": "Orders Overview",
+      "recentOrders": "Recent Orders",
+      "orderId": "Order ID",
+      "tenant": "Tenant",
+      "customer": "Customer",
+      "items": "Items",
+      "total": "Total",
+      "shipping": "Shipping",
+      "sla": "SLA",
+      "status": "Status",
+      "carrierTracking": "Carrier & Tracking",
+      "carrierTrackingPending": "Pending",
+      "carrierTrackingPendingTooltip": "Not yet shipped",
+      "carrierTrackingOpenLink": "Open tracking link",
+      "copyTrackingId": "Copy tracking ID",
+      "dateTime": "Date & Time",
+      "orderItems": "Order Items",
+      "qty": "Qty",
+      "noItems": "No items",
+      "close": "Close",
+      "actions": "Actions",
+      "noOrders": "No orders found",
+      "statusCompleted": "Completed",
+      "statusPending": "Pending",
+      "statusProcessing": "Processing",
+      "view": "View",
+      "download": "Download",
+      "shippingSpl": "SPL",
+      "shippingSelf": "Self",
+      "shippingShipToMerit": "Ship to Merit",
+      "slaNotAvailable": "—",
+      "filterShipping": "Shipping",
+      "filterShippingDefault": "Shipping",
+      "filterStatus": "Status",
+      "filterDateRange": "Date range",
+      "filterAllStatusesDefault": "All Statuses",
+      "filterDateRangeDefault": "Date Range",
+      "filterAll": "All",
+      "filterAllStatuses": "All statuses",
+      "dateRangeAll": "All dates",
+      "dateRangeLast7Days": "Last 7 days",
+      "dateRangeLast30Days": "Last 30 days"
+    },
+    "table": {
+      "carrierTrackingPending": "Pending",
+      "carrierTrackingPendingTooltip": "Not yet shipped",
+      "referenceId": "Reference ID"
+    },
+    "sla": {
+      "metric": "Metric",
+      "target": "Target",
+      "actual": "Actual",
+      "status": "Status",
+      "complianceRate": "Compliance Rate",
+      "noData": "No SLA data found",
+      "statusCompliant": "Compliant",
+      "statusNonCompliant": "Non-Compliant"
+    }
+  },
+  "order-details": {
+    "back": "Back",
+    "placedOn": "Placed on",
+    "copyReferenceId": "Copy reference ID",
+    "copied": "Copied!",
+    "acceptOrder": "Accept Order",
+    "orderItems": "Order Items",
+    "printItems": "Print Items",
+    "printOrderItemsTitle": "Order Items",
+    "itemName": "Name",
+    "skuId": "SKU",
+    "sku": "SKU",
+    "orderId": "Order ID",
+    "no": "No:",
+    "qty": "Quantity",
+    "shippingInformation": "Shipping Information",
+    "nationalAddressShort": "Short Address",
+    "trackingDetails": "Tracking Details",
+    "carrier": "Carrier",
+    "trackingId": "Tracking ID",
+    "trackPackage": "Track Package on Carrier Website",
+    "awbNumberOrTrackingId": "AWB Number / Tracking ID",
+    "trackPackageSpl": "Track Package on Merit SPL Website",
+    "address": "Address",
+    "city": "City",
+    "state": "State",
+    "country": "Country",
+    "postalCode": "Postal Code",
+    "shippingPartner": "Shipping Partner",
+    "specialInstructions": "Special Instructions",
+    "noSpecialInstructions": "No special instructions",
+    "customerDetails": "Customer Details",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email",
+    "phoneNumber": "Phone Number",
+    "orderTimeline": "Order Timeline",
+    "actions": {
+      "uploadAwb": "Upload AWB",
+      "downloadAwb": "Download AWB",
+      "awbReady": "AWB Ready for Download",
+      "awbReadyButton": "AWB Ready",
+      "markAsShipped": "Mark as Shipped",
+      "readyToShip": "Request AWB and Ship",
+      "viewAwbStatus": "View AWB Status",
+      "cancelOrder": "Cancel Order",
+      "viewSellerProof": "View Proof",
+      "markAsReceived": "Mark as Received",
+      "rejectQc": "Reject QC",
+      "requestAwbAndShip": "Request AWB and Ship",
+      "viewQcProof": "View Proof",
+      "viewRejectedProof": "View Rejected Proof"
+    },
+    "toasts": {
+      "acceptSuccess": "Order accepted successfully",
+      "acceptError": "Failed to accept order",
+      "readyToShipSuccess": "Order marked as Ready to Ship",
+      "readyToShipError": "Failed to mark as Ready to Ship",
+      "fileRequired": "An AWB file (PDF or image) is required for self-managed orders",
+      "downloadAwbError": "Failed to download AWB",
+      "markShippedSuccess": "Order marked as shipped",
+      "markShippedError": "Failed to mark as shipped",
+      "markReceivedSuccess": "Order marked as received at facility",
+      "markReceivedError": "Failed to mark as received",
+      "rejectQcSuccess": "Order rejected and return initiated",
+      "rejectQcError": "Failed to reject QC",
+      "requestAwbShipSuccess": "AWB requested and order shipped",
+      "requestAwbShipError": "Failed to request AWB and ship",
+      "qcProofRequired": "A proof file (image or video) is required for QC rejection",
+      "proofDownloadError": "Failed to download proof"
+    },
+    "stmPendingHelper": "If everything is included and in good shape, mark them as Received. If any item is damaged or missing, mark it as Reject QC.",
+    "stmCompleteHelper": "Pack the order and click \"Request AWB\" when ready for SPL pickup.",
+    "rejectQcPopup": {
+      "title": "Reject QC",
+      "description": "Upload proof of damage or missing item, it can be an image or a video",
+      "formatsHint": "jpg, png or mp4 (Max size: 5MB)",
+      "cancel": "Cancel",
+      "confirm": "Return to Seller"
+    },
+    "requestAwbPopup": {
+      "title": "Request AWB - Ready to Ship",
+      "description": "Requesting an AWB signals that your package is packed and ready for SPL pickup.",
+      "bullet1": "You will receive the AWB within 1 hour",
+      "bullet2": "You'll receive a notification when the AWB is ready",
+      "important": "Important",
+      "infoText": "Only proceed if your package is completely packed and ready for pickup by Merit SPL. This will schedule a pickup and generate the AWB.",
+      "cancel": "Cancel",
+      "confirm": "Confirm - Ready to Ship"
+    },
+    "timeline": {
+      "orderPlaced": "Order Placed",
+      "awaitingAcceptance": "Awaiting Acceptance",
+      "accepted": "Accepted",
+      "shippedToMerit": "Shipped to Merit",
+      "arrivedAtFacility": "Shipped to Merit",
+      "returned": "QC Failed - Awaiting replacement",
+      "returnReceived": "Return Received",
+      "readyToShip": "Ready to Ship",
+      "shipped": "Shipped",
+      "delivered": "Delivered"
+    },
+    "timelineStatus": {
+      "in_process": "Order Placed",
+      "new": "Order Placed",
+      "confirmed": "Order Accepted",
+      "accepted": "Order Accepted",
+      "shipped_to_merit_pending": "Shipped to Merit (Pending)",
+      "shipped_to_merit_complete": "Shipped to Merit (Received)",
+      "ready_to_ship": "Ready to Ship",
+      "return_pending": "QC Failed - Awaiting replacement",
+      "return_complete": "Return Received",
+      "shipped": "Shipped",
+      "delivered": "Delivered",
+      "cancelled": "Cancelled",
+      "canceled": "Cancelled"
+    },
+    "awbUploaded": "AWB Uploaded"
+  },
+  "unauthorized": {
+    "title": "Access Denied",
+    "message": "You don't have access to this product. Please contact your administrator if you believe this is an error.",
+    "info": "Your session may have expired or your access has been revoked.",
+    "signOutButton": "Sign Out",
+    "signingOut": "Signing out...",
+    "helpText": "Need help? Contact your system administrator."
+  },
+  "access-management": {
+    "title": "Access Management",
+    "inviteNewUser": "Invite New User",
+    "viewPermissionList": "View Permission List",
+    "search": "Search",
+    "role": "Role",
+    "domain": "Domain",
+    "status": "Status",
+    "selectRole": "Select Role",
+    "selectDomain": "Select Domain",
+    "selectStatus": "Select Status",
+    "inviteSuccess": "Invitation Sent Successfully",
+    "inviteSuccessMessage": "An invitation has been sent to {email}",
+    "inviteError": {
+      "title": "User Already Exists",
+      "messagePrefix": "A user with the email",
+      "messageSuffix": "is already present in the list. Please resend invite if the invitation is still pending.",
+      "messageSuffixOtherPlatform": "is already registered in another Merit portal or app. Use a different email, or ask them to sign in with their existing account.",
+      "confirmText": "OK"
+    },
+    "resendInviteSuccess": "Invite sent!",
+    "resendInviteSuccessDescription": "Your invitation has been successfully sent.",
+    "resendInviteError": "Failed to resend invite",
+    "resendInviteErrorDescription": "An error occurred while resending the invitation. Please try again.",
+    "userUpdateSuccess": "User updated",
+    "userUpdateSuccessDescription": "User details have been updated successfully.",
+    "userUpdateError": "Failed to update user",
+    "userUpdateErrorDescription": "An error occurred while updating the user. Please try again.",
+    "ok": "OK",
+    "noUsersFound": "No users found",
+    "deleteUser": "Delete User",
+    "deleteUserConfirmation": "Are you sure you want to delete {name} ({email})? This action cannot be undone.",
+    "deleteUserConfirmationGeneric": "Are you sure you want to delete this user? This action cannot be undone.",
+    "delete": "Delete",
+    "cancel": "Cancel",
+    "table": {
+      "fullName": "Full Name",
+      "email": "Email",
+      "domain": "Domain",
+      "role": "Roles",
+      "domainRole": "Domain & Role",
+      "status": "Status",
+      "lastLogin": "Last Login",
+      "actions": "Actions",
+      "edit": "Edit User",
+      "resendInvite": "Resend Invite",
+      "deactivate": "Deactivate",
+      "deleteUser": "Delete User"
+    }
+  },
+  "inviteUserDialog": {
+    "title": "Invite New User",
+    "description": "Send an invitation to a new user to join the platform",
+    "fullName": "Full Name",
+    "fullNamePlaceholder": "Enter full name",
+    "email": "Email",
+    "emailPlaceholder": "Enter email address",
+    "domain": "Domain",
+    "selectDomain": "Select Domain",
+    "role": "Assign Role",
+    "selectRole": "Select Role",
+    "submit": "Send Invite",
+    "validation": {
+      "fullNameRequired": "Full name is required",
+      "emailInvalid": "Please enter a valid email address",
+      "domainRequired": "Please select a domain",
+      "roleRequired": "Please select a role"
+    }
+  },
+  "editUserDialog": {
+    "title": "Edit User",
+    "description": "Update user information and permissions",
+    "fullName": "Full Name",
+    "fullNamePlaceholder": "Enter full name",
+    "email": "Email",
+    "emailPlaceholder": "Enter email address",
+    "domain": "Domain",
+    "selectDomain": "Select Domain",
+    "role": "Assign Role",
+    "selectRole": "Select Role",
+    "accountStatus": "Update Account Status",
+    "accountStatusLabel": "Account Status",
+    "accountStatusDescription": "Deactivating this account will revoke the user's access.",
+    "selectStatus": "Select Status",
+    "statusActive": "Active",
+    "statusInactive": "Inactive",
+    "submit": "Save Changes",
+    "cancel": "Cancel",
+    "validation": {
+      "fullNameRequired": "Full name is required",
+      "emailInvalid": "Please enter a valid email address",
+      "domainRequired": "Please select a domain",
+      "roleRequired": "Please select a role",
+      "statusRequired": "Please select a status"
+    }
+  },
+  "permissionsDialog": {
+    "title": "Permissions List",
+    "description": "You can review all the permission access for each user here. But it cannot be changed.",
+    "featureArea": "Feature Area",
+    "admin": "Admin",
+    "lead": "Lead",
+    "staff": "Staff",
+    "permissions": {
+      "memberSearchView": "Member Search/View",
+      "pointsAdjustment": "Points Adjustment",
+      "campaignCreation": "Campaign Creation",
+      "voucherUploadGeneration": "Voucher Upload/Generation",
+      "viewInsights": "View Insights",
+      "configureTiersSegments": "Configure Tiers/Segments",
+      "apiKeyManagement": "API Key Management",
+      "userRoleManagement": "User Role Management"
+    }
+  },
+  "shippingStatusPopup": {
+    "documentTypes": {
+      "awb": "AWB",
+      "awbLong": "Air Waybill (AWB)",
+      "document": "Document",
+      "order": "Order"
+    },
+    "delay": {
+      "title": "Oops! There is a delay in generating the {docType}.",
+      "description": "Your {docTypeLong} is still being processed by the Merchandise Service, it will just take longer than expected.",
+      "bullet1": "You'll receive a notification and email when the {docType} is generated",
+      "bullet2": "The order page will be updated once the {docType} is ready",
+      "bullet3": "You can navigate away and check back later"
+    },
+    "readyToShip": {
+      "title": "Request {docType} - Ready to Ship",
+      "description": "Requesting a {docType} signals that your package is packed and ready for SPL pickup.",
+      "bullet1": "You will receive the {docType} within 1 hour",
+      "bullet2": "You'll receive a notification when the {docType} is ready",
+      "infoText": "Only proceed if your package is completely packed and ready for pickup by Merit SPL. This will schedule a pickup and generate the {docType}."
+    },
+    "generating": {
+      "title": "{docType} is Being Generated",
+      "description": "Your {docTypeLong} is being processed by the Merchandise Service.",
+      "bullet1": "You will receive the {docType} within 1 hour",
+      "bullet2": "The order page will be updated once the {docType} is ready",
+      "bullet3": "You can navigate away and check back later",
+      "bullet4": "You'll receive a notification when the {docType} is ready"
+    },
+    "accept": {
+      "title": "Accept Order",
+      "description": "Are you sure you want to accept this order? After accepting, pack the order and click \"Request {docType}\" to request shipping label and schedule SPL pickup."
+    },
+    "acceptUpload": {
+      "title": "Accept Order",
+      "description": "Are you sure you want to accept this order? You will need to upload the AWB before shipping."
+    },
+    "readyDownload": {
+      "title": "{docType} Ready for Download",
+      "description": "Your {docTypeLong} has been successfully generated and is ready for download."
+    },
+    "default": {
+      "title": "Status Update",
+      "description": "Processing your request..."
+    },
+    "remainingTime": "Remaining time",
+    "important": "Important",
+    "orderId": "Order ID",
+    "awbNumber": "AWB Number",
+    "downloadAndPrint": "Download and Print AWB",
+    "buttons": {
+      "cancel": "Cancel",
+      "confirmReadyToShip": "Confirm - Ready to Ship",
+      "continueReadyToShip": "Continue - Ready to ship",
+      "continueShipToMerit": "Continue - Ship to Merit",
+      "continueProof": "Continue",
+      "acceptOrder": "Accept Order",
+      "checkBackLater": "Check Back Later",
+      "close": "Close",
+      "uploadAwb": "Upload AWB",
+      "markAsShipped": "Mark as Shipped"
+    }
+  },
+  "rewards-portal": {
+    "title": "Rewards Portal",
+    "tenantNotFound": "Tenant not found",
+    "backToRewardsPortal": "Back to Rewards Portal",
+    "tabs": {
+      "commercialTransactions": "Commercial & Transactions",
+      "activationRequests": "Activation Requests ({count})",
+      "developerApi": "Developer API",
+      "ipWhitelist": "IP Whitelist",
+      "gcEmail": "GC Email"
+    },
+    "commercialTransactions": {
+      "commercialSettings": {
+        "title": "Commercial Settings",
+        "edit": "Edit Settings",
+        "transactionFeeLabel": "Transaction Fee",
+        "transactionFeeHint": "Applied per order, shown at checkout",
+        "transactionFeeSuffix": "%"
+      },
+      "topUpHistory": {
+        "loading": "Loading top-up history…",
+        "loadError": "Could not load top-up history. Please try again.",
+        "retry": "Retry"
+      }
+    },
+    "activationRequests": {
+      "title": "Activation Requests ({count})",
+      "pendingTitle": "Pending Activation Requests ({count})",
+      "searchPlaceholder": "Search",
+      "empty": "No activation requests found.",
+      "emptyPending": "No pending activation requests.",
+      "loadError": "Could not load activation requests.",
+      "retry": "Retry",
+      "menuView": "View request",
+      "allStatuses": "All Statuses",
+      "table": {
+        "requestId": "Request ID",
+        "cards": "Cards",
+        "submitted": "Submitted",
+        "status": "Status"
+      },
+      "status": {
+        "PENDING": "Pending",
+        "PROCESSING": "Processing",
+        "PARTIALLY_APPROVED": "Partially Approved",
+        "APPROVED": "Approved",
+        "REJECTED": "Rejected"
+      }
+    },
+    "ipWhitelist": {
+      "pending": {
+        "title": "Pending Requests",
+        "empty": "No pending IP whitelist requests.",
+        "loadError": "Could not load pending IP whitelist requests.",
+        "retry": "Retry",
+        "defaultRejectionReason": "Rejected by LiveOps",
+        "table": {
+          "ipAddress": "IP Address",
+          "environment": "Environment",
+          "reason": "Reason",
+          "requestedOn": "Requested On",
+          "status": "Status",
+          "actions": "Actions"
+        },
+        "status": {
+          "pending": "Pending"
+        },
+        "actions": {
+          "reject": "Reject",
+          "approve": "Approve"
+        },
+        "toast": {
+          "approveSuccess": "IP whitelist request approved.",
+          "approveError": "Could not approve IP whitelist request. Please try again.",
+          "rejectSuccess": "IP whitelist request rejected.",
+          "rejectError": "Could not reject IP whitelist request. Please try again."
+        },
+        "approve": {
+          "title": "Are You Sure?",
+          "descriptionPrefix": "You're about to whitelist the IP address",
+          "descriptionSuffix": ". Are you sure you want to proceed?",
+          "no": "No",
+          "yes": "Yes"
+        },
+        "reject": {
+          "title": "Reject IP {ipAddress}?",
+          "description": "The IP will not be added. The tenant is notified with your reason.",
+          "callout": "Rejecting blocks {ipAddress} from production access. Give the tenant a clear reason so they can correct and resubmit.",
+          "fields": {
+            "ip": "IP",
+            "environment": "Environment",
+            "reason": "Reason"
+          },
+          "reasonLabel": "Reason for Rejection",
+          "reasonPlaceholder": "Type here...",
+          "cancel": "Cancel",
+          "confirm": "Confirm Rejection"
+        }
+      },
+      "safelist": {
+        "title": "Production Safelist",
+        "empty": "No production safelist IPs.",
+        "loadError": "Could not load production safelist.",
+        "retry": "Retry",
+        "table": {
+          "ipAddress": "IP Address",
+          "environment": "Environment",
+          "addedOn": "Added on",
+          "status": "Status"
+        },
+        "status": {
+          "whitelisted": "Whitelisted"
+        }
+      }
+    },
+    "developerApi": {
+      "title": "Developer API",
+      "empty": "No API keys found.",
+      "created": "Created {date}",
+      "table": {
+        "key": "Key",
+        "environment": "Environment",
+        "keyValue": "Key Value",
+        "lastUsed": "Last Used",
+        "status": "Status",
+        "actions": "Actions"
+      },
+      "status": {
+        "active": "Active",
+        "suspended": "Suspended"
+      },
+      "actions": {
+        "suspend": "Suspend",
+        "restore": "Restore"
+      },
+      "confirm": {
+        "cancel": "Cancel",
+        "suspendTitle": "Suspend API Key?",
+        "suspendDescription": "Any integration using this key stops working immediately.",
+        "suspendConfirm": "Suspend Key",
+        "restoreTitle": "Restore API Key?",
+        "restoreDescription": "This key starts accepting requests again immediately.",
+        "restoreConfirm": "Restore Key"
+      }
+    },
+    "gcEmail": {
+      "title": "Gift Card Email Template",
+      "fields": {
+        "templateName": "Template Name",
+        "submittedOn": "Submitted on",
+        "submittedBy": "Submitted by",
+        "status": "Status",
+        "emailTemplate": "Email Template",
+        "previewLink": "Gift Card Preview Link"
+      },
+      "status": {
+        "pending": "Pending",
+        "approved": "Approved",
+        "rejected": "Rejected"
+      },
+      "actions": {
+        "reject": "Reject",
+        "approve": "Approve",
+        "download": "Download template",
+        "preview": "Preview template",
+        "openLink": "Open preview link"
+      },
+      "approve": {
+        "title": "Approve Email Template?",
+        "description": "This certification gate will be marked passed for the tenant.",
+        "cancel": "Cancel",
+        "confirm": "Approve"
+      },
+      "reject": {
+        "title": "Reject Email Template",
+        "description": "The tenant must correct and resubmit. A reason is required.",
+        "callout": "Tell the tenant what to fix. They can resubmit after correcting.",
+        "reasonLabel": "Reason for Rejection",
+        "reasonPlaceholder": "Type here...",
+        "cancel": "Cancel",
+        "confirm": "Confirm Rejection"
+      },
+      "preview": {
+        "title": "Template Preview",
+        "back": "Back",
+        "download": "Download",
+        "heroLabel": "Happy Work Anniversary",
+        "rewardBadge": "Reward from Merit",
+        "cardImage": "Card Image",
+        "giftCardLabel": "Gift Card",
+        "revealCta": "Reveal Gift Card Code →",
+        "termsTitle": "Terms & Conditions",
+        "termsBody": "Gift cards are subject to merchant terms. How to use: 1) Reveal your code, 2) Present at checkout, 3) Keep this email for your records.",
+        "supportNote": "For any customer service enquiry, please quote the order reference number.",
+        "cardReference": "CARD REFERENCE NO.:",
+        "orderReference": "ORDER REFERENCE NO.:",
+        "notForRedemption": "Not for redemption",
+        "copyright": "Copyright © 2024. Powered By Merit Incentives. All rights reserved."
+      }
+    }
+  }
+}

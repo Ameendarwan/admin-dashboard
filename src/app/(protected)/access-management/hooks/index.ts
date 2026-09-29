@@ -1,0 +1,1 @@
+export { useAccessManagementTable } from './useAccessManagementTable';

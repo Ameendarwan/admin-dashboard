@@ -1,0 +1,1 @@
+export { CatalogBrandSearchSelect } from './CatalogBrandSearchSelect';
